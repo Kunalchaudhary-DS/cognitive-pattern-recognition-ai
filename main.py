@@ -519,3 +519,179 @@ async def upload_dataset(file: UploadFile = File(...)):
     }
 
     return JSONResponse(content=response_data)
+
+@app.post("/feature-importance/")
+async def feature_importance(target_column: str = Form(...)):
+    global stored_df
+
+    if stored_df is None:
+        return JSONResponse(content={"error": "No dataset uploaded"})
+
+    df = stored_df.copy()
+
+    if target_column not in df.columns:
+        return JSONResponse(content={"error": "Invalid target column"})
+
+    # Detect problem type
+    target_dtype = df[target_column].dtype
+    unique_values = df[target_column].nunique()
+
+    if target_dtype == "object" or unique_values <= 10:
+        problem_type = "classification"
+    else:
+        problem_type = "regression"
+
+    # For classification → encode target temporarily
+    if problem_type == "classification":
+        le = LabelEncoder()
+        df[target_column] = le.fit_transform(df[target_column])
+
+    # Select only numerical features
+    numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+
+    if target_column not in numerical_cols:
+        return JSONResponse(content={
+            "error": "Target encoding failed"
+        })
+
+    correlations = df[numerical_cols].corr()[target_column].drop(target_column)
+    ranked = correlations.abs().sort_values(ascending=False)
+
+    result = [
+        {
+            "feature": feature,
+            "correlation": round(float(correlations[feature]), 3)
+        }
+        for feature in ranked.index
+    ]
+
+    return JSONResponse(content={
+        "feature_importance": result,
+        "problem_type": problem_type
+    })
+
+@app.post("/preprocess/")
+async def preprocess_data(target_column: str = Form(...)):
+    global stored_df, stored_X, stored_y, stored_problem_type, stored_target_column 
+    global stored_preprocessor, stored_feature_names
+
+    if stored_df is None:
+        return JSONResponse(content={"error": "No dataset uploaded"})
+
+    df = stored_df.copy()
+
+    if target_column not in df.columns:
+        return JSONResponse(content={"error": "Invalid target column"})
+
+    
+    # Detect Problem Type
+    target_dtype = df[target_column].dtype
+    unique_values = df[target_column].nunique()
+
+    if target_dtype == "object" or unique_values <= 10:
+        problem_type = "classification"
+    else:
+        problem_type = "regression"
+
+    original_shape = df.shape
+
+    # Drop rows where target is missing
+    df = df.dropna(subset=[target_column])
+
+    dropped_rows = original_shape[0] - df.shape[0]
+
+    # Impute Missing Values 
+    numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+    categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
+
+    if numerical_cols:
+        num_imputer = SimpleImputer(strategy="median")
+        df[numerical_cols] = num_imputer.fit_transform(df[numerical_cols])
+
+    if categorical_cols:
+        cat_imputer = SimpleImputer(strategy="most_frequent")
+        df[categorical_cols] = cat_imputer.fit_transform(df[categorical_cols])
+
+    # Separate Features and Target
+    X = df.drop(columns=[target_column])
+    y = df[target_column]
+
+    # Smart Encoding Strategy
+    num_features = X.select_dtypes(include=["int64", "float64"]).columns.tolist()
+    cat_features = X.select_dtypes(include=["object"]).columns.tolist()
+
+    binary_columns = []
+    low_cardinality = []
+    high_cardinality = []
+
+    for col in cat_features:
+        unique_count = X[col].nunique()
+
+        if unique_count == 2:
+            binary_columns.append(col)
+        elif unique_count <= 10:
+            low_cardinality.append(col)
+        else:
+            high_cardinality.append(col)
+
+    # 1️Binary → Label Encoding
+    for col in binary_columns:
+        le = LabelEncoder()
+        X[col] = le.fit_transform(X[col])
+
+    # 2️High Cardinality → Frequency Encoding
+    for col in high_cardinality:
+        freq = X[col].value_counts(normalize=True)
+        X[col] = X[col].map(freq)
+
+    # 3️Low Cardinality → OneHot Encoding
+    num_features = X.select_dtypes(include=["int64", "float64"]).columns.tolist()
+
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("num", "passthrough", num_features),
+            ("onehot", OneHotEncoder(drop="first", handle_unknown="ignore"), low_cardinality)
+        ],
+        remainder="drop"
+    )
+
+    X_processed = preprocessor.fit_transform(X)
+
+    # Save preprocessor globally
+    stored_preprocessor = preprocessor
+
+    # Extract feature names properly
+    feature_names = []
+
+    # Numerical features (passthrough)
+    feature_names.extend(num_features)
+
+    # OneHot encoded features
+    if low_cardinality:
+        onehot_features = preprocessor.named_transformers_["onehot"] \
+            .get_feature_names_out(low_cardinality)
+        feature_names.extend(onehot_features.tolist())
+
+    stored_feature_names = feature_names
+
+    # Convert sparse matrix to dense 
+    if hasattr(X_processed, "toarray"):
+        X_processed = X_processed.toarray()
+
+    # Store Processed Data
+    stored_X = X_processed
+    stored_y = y.values
+    stored_problem_type = problem_type
+    stored_target_column = target_column
+
+    return JSONResponse(content={
+        "original_shape": original_shape,
+        "processed_feature_shape": X_processed.shape,
+        "target_shape": y.shape,
+        "problem_type": problem_type,
+        "binary_encoded": binary_columns,
+        "onehot_encoded": low_cardinality,
+        "frequency_encoded": high_cardinality,
+        "dropped_target_rows": dropped_rows,
+        "message": "Preprocessing completed successfully"
+    })
