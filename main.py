@@ -695,3 +695,229 @@ async def preprocess_data(target_column: str = Form(...)):
         "dropped_target_rows": dropped_rows,
         "message": "Preprocessing completed successfully"
     })
+
+
+@app.post("/train/")
+async def train_model():
+
+    global stored_X, stored_y, stored_problem_type
+    global stored_training_results, stored_best_model, stored_feature_names
+    global stored_scaler, stored_needs_scaling
+
+    if stored_X is None:
+        return JSONResponse(content={"error": "Run preprocessing first"})
+
+    X = stored_X
+    y = stored_y
+    problem_type = stored_problem_type
+    results = {}
+
+    # Split once for fair comparison
+    if problem_type == "regression":
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42
+        )
+        cv_strategy = KFold(n_splits=5, shuffle=True, random_state=42)
+        scoring_metric = "r2"
+
+    else:
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42, stratify=y
+        )
+        cv_strategy = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+        scoring_metric = "accuracy"
+
+    scaler = RobustScaler()
+    X_scaled = scaler.fit_transform(X)
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+
+    # --------------------------
+    # MODEL POOL (AutoML Core)
+    # --------------------------
+
+    if problem_type == "regression":
+
+        models = {
+            "LinearRegression": {"model": LinearRegression(), "scale": True},
+            "Ridge": {"model": Ridge(), "scale": True},
+            "Lasso": {"model": Lasso(), "scale": True},
+            "ElasticNet": {"model": ElasticNet(), "scale": True},
+            "RandomForest": {"model": RandomForestRegressor(random_state=42), "scale": False},
+            "GradientBoosting": {"model": GradientBoostingRegressor(), "scale": False},
+            "ExtraTrees": {"model": ExtraTreesRegressor(), "scale": False},
+            "KNN": {"model": KNeighborsRegressor(), "scale": True},
+            "SVR": {"model": SVR(), "scale": True}
+        }
+
+    else:
+
+        models = {
+            "LogisticRegression": {"model": LogisticRegression(max_iter=1000), "scale": True},
+            "RandomForest": {"model": RandomForestClassifier(random_state=42), "scale": False},
+            "GradientBoosting": {"model": GradientBoostingClassifier(), "scale": False},
+            "ExtraTrees": {"model": ExtraTreesClassifier(), "scale": False},
+            "KNN": {"model": KNeighborsClassifier(), "scale": True},
+            "SVC": {"model": SVC(probability=True), "scale": True},
+            "DecisionTree": {"model": DecisionTreeClassifier(), "scale": False},
+            "NaiveBayes": {"model": GaussianNB(), "scale": False}
+        }
+
+    # --------------------------
+    # MODEL EVALUATION LOOP
+    # --------------------------
+
+    for name, config in models.items():
+
+        model = config["model"]
+        needs_scaling = config["scale"]
+
+        # Cross Validation
+        X_cv = X_scaled if needs_scaling else X
+        cv_scores = cross_val_score(model, X_cv, y, cv=cv_strategy, scoring=scoring_metric)
+        cv_mean = cv_scores.mean()
+
+        # Train-Test Evaluation
+        if needs_scaling:
+            model.fit(X_train_scaled, y_train)
+            y_pred = model.predict(X_test_scaled)
+        else:
+            model.fit(X_train, y_train)
+            y_pred = model.predict(X_test)
+
+        if problem_type == "regression":
+            test_score = r2_score(y_test, y_pred)
+            results[name] = {
+                "CV_R2_Mean": round(float(cv_mean), 4),
+                "Test_R2": round(float(test_score), 4)
+            }
+        else:
+            test_score = accuracy_score(y_test, y_pred)
+            results[name] = {
+                "CV_Accuracy_Mean": round(float(cv_mean), 4),
+                "Test_Accuracy": round(float(test_score), 4)
+            }
+
+    # --------------------------
+    # BEST MODEL SELECTION
+    # --------------------------
+
+    if problem_type == "regression":
+        best_model_name = max(results, key=lambda x: results[x]["CV_R2_Mean"])
+    else:
+        best_model_name = max(results, key=lambda x: results[x]["CV_Accuracy_Mean"])
+
+    best_model_config = models[best_model_name]
+    final_model = best_model_config["model"]
+    stored_needs_scaling = best_model_config["scale"]
+
+    if stored_needs_scaling:
+        stored_scaler = RobustScaler()
+        X_scaled = stored_scaler.fit_transform(X)
+        final_model.fit(X_scaled, y)
+    else:
+        stored_scaler = None
+        final_model.fit(X, y)
+
+    stored_best_model = final_model
+    stored_training_results = results
+
+    results["BestModel"] = best_model_name
+    results["ProblemType"] = problem_type
+
+    return JSONResponse(content=results)
+
+
+
+def generate_statistical_insight(df, graph):
+
+    insight = ""
+
+    if graph["type"] == "histogram":
+
+        col = graph["x"]
+        data = df[col].dropna()
+
+        if len(data) == 0:
+            return "No sufficient data available for analysis."
+
+        mean = data.mean()
+        median = data.median()
+        std = data.std()
+
+        skew = data.skew()
+
+        if skew > 0.5:
+            shape = "right-skewed"
+        elif skew < -0.5:
+            shape = "left-skewed"
+        else:
+            shape = "fairly symmetric"
+
+        insight = (
+            f"The distribution of {col} has an average value of {mean:.2f} "
+            f"with a median of {median:.2f}. The data appears {shape}, "
+            f"indicating how values are concentrated across the dataset."
+        )
+
+    elif graph["type"] == "scatter":
+
+        x = graph["x"]
+        y = graph["y"]
+
+        data = df[[x, y]].dropna()
+
+        if len(data) == 0:
+            return "Not enough data to evaluate relationship."
+
+        corr = data[x].corr(data[y])
+
+        if abs(corr) > 0.7:
+            strength = "strong"
+        elif abs(corr) > 0.4:
+            strength = "moderate"
+        else:
+            strength = "weak"
+
+        direction = "positive" if corr > 0 else "negative"
+
+        insight = (
+            f"{x} and {y} show a {strength} {direction} correlation "
+            f"({corr:.2f}). This suggests that changes in {x} "
+            f"are associated with changes in {y}."
+        )
+
+    elif graph["type"] == "bar":
+
+        col = graph["x"]
+
+        counts = df[col].value_counts()
+
+        if len(counts) == 0:
+            return "No categorical distribution available."
+
+        top = counts.idxmax()
+
+        insight = (
+            f"The category '{top}' appears most frequently in {col}, "
+            f"indicating it dominates the dataset distribution."
+        )
+
+    elif graph["type"] == "box":
+
+        x = graph["x"]
+        y = graph["y"]
+
+        groups = df.groupby(x)[y].mean().dropna()
+
+        if len(groups) == 0:
+            return "No group comparison insight available."
+
+        top_group = groups.idxmax()
+
+        insight = (
+            f"The category '{top_group}' has the highest average {y}, "
+            f"suggesting this group tends to produce larger values."
+        )
+
+    return insight
