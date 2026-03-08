@@ -921,3 +921,147 @@ def generate_statistical_insight(df, graph):
         )
 
     return insight
+
+
+def discover_patterns(df, target_column):
+
+    patterns = []
+
+    numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+
+    # ----------------------------------
+    # 1️⃣ STRONG CORRELATION DETECTION
+    # ----------------------------------
+
+    if len(numerical_cols) > 1:
+
+        corr_matrix = df[numerical_cols].corr()
+
+        for col1 in corr_matrix.columns:
+            for col2 in corr_matrix.columns:
+
+                if col1 != col2:
+
+                    corr = corr_matrix.loc[col1, col2]
+
+                    if abs(corr) > 0.75:
+
+                        direction = "positive" if corr > 0 else "negative"
+
+                        patterns.append(
+                            f"Strong {direction} relationship detected between "
+                            f"'{col1}' and '{col2}' (correlation {corr:.2f})."
+                        )
+
+    # ----------------------------------
+    # 2️⃣ OUTLIER DETECTION (IQR)
+    # ----------------------------------
+
+    for col in numerical_cols:
+
+        q1 = df[col].quantile(0.25)
+        q3 = df[col].quantile(0.75)
+        iqr = q3 - q1
+
+        lower = q1 - 1.5 * iqr
+        upper = q3 + 1.5 * iqr
+
+        outliers = df[(df[col] < lower) | (df[col] > upper)]
+
+        if len(outliers) > 0:
+
+            percentage = (len(outliers) / len(df)) * 100
+
+            if percentage > 3:
+                patterns.append(
+                    f"Potential outliers detected in '{col}', "
+                    f"representing {percentage:.1f}% of observations."
+                )
+
+    # ----------------------------------
+    # 3️⃣ TARGET FEATURE RELATIONSHIPS
+    # ----------------------------------
+
+    if target_column in numerical_cols:
+
+        correlations = df[numerical_cols].corr()[target_column].drop(target_column)
+
+        top_features = correlations.abs().sort_values(ascending=False).head(3)
+
+        for feature in top_features.index:
+
+            corr_value = correlations[feature]
+
+            direction = "positive" if corr_value > 0 else "negative"
+
+            patterns.append(
+                f"'{feature}' shows a {direction} relationship with "
+                f"the target variable '{target_column}'."
+            )
+
+    return patterns
+
+
+def discover_clusters(df):
+
+    cluster_insights = []
+
+    numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+
+    # Remove ID-like columns
+    numerical_cols = [
+        col for col in numerical_cols
+        if not any(x in col.lower() for x in ["id", "sl", "index"])
+    ]
+
+    # Need enough numeric features
+    if len(numerical_cols) < 2:
+        return cluster_insights
+
+    data = df[numerical_cols].dropna()
+
+    # Need enough rows
+    if len(data) < 20:
+        return cluster_insights
+
+    # Standardize scale
+    scaler = StandardScaler()
+    scaled_data = scaler.fit_transform(data)
+
+    # Use 3 clusters for interpretability
+    kmeans = KMeans(n_clusters=3, random_state=42)
+
+    clusters = kmeans.fit_predict(scaled_data)
+
+    data = data.copy()
+    data["cluster"] = clusters
+
+    cluster_summary = data.groupby("cluster").mean()
+
+    # Calculate overall dataset mean
+    overall_mean = data[numerical_cols].mean()
+
+    for cluster_id in cluster_summary.index:
+
+        cluster_mean = cluster_summary.loc[cluster_id]
+
+        # Compare cluster mean with dataset mean
+        differences = (cluster_mean - overall_mean).abs()
+
+        # Pick most distinctive features
+        top_features = differences.sort_values(ascending=False).head(2).index
+
+        description = []
+
+        for feature in top_features:
+
+            if cluster_mean[feature] > overall_mean[feature]:
+                description.append(f"higher {feature}")
+            else:
+                description.append(f"lower {feature}")
+
+        cluster_insights.append(
+            f"Cluster {cluster_id + 1} shows {', '.join(description)} compared to the overall dataset."
+        )
+
+    return cluster_insights
