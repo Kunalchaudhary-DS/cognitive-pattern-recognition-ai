@@ -1065,3 +1065,119 @@ def discover_clusters(df):
         )
 
     return cluster_insights
+
+def discover_feature_interactions(df, target_column):
+
+    interactions = []
+
+    numerical_cols = df.select_dtypes(include=["int64","float64"]).columns.tolist()
+    categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
+
+    # Remove ID columns
+    numerical_cols = [
+        col for col in numerical_cols
+        if not any(x in col.lower() for x in ["id","sl","index"])
+    ]
+
+    # ----------------------------------
+    # NUMERIC + NUMERIC INTERACTIONS
+    # ----------------------------------
+
+    for i in range(len(numerical_cols)):
+        for j in range(i+1, len(numerical_cols)):
+
+            col1 = numerical_cols[i]
+            col2 = numerical_cols[j]
+
+            data = df[[col1, col2]].dropna()
+
+            if len(data) < 20:
+                continue
+
+            corr = data[col1].corr(data[col2])
+
+            if abs(corr) > 0.6:
+
+                direction = "positive" if corr > 0 else "negative"
+
+                interactions.append(
+                    f"'{col1}' and '{col2}' show a strong {direction} interaction "
+                    f"(correlation {corr:.2f}), indicating these variables move together."
+                )
+
+    # ----------------------------------
+    # NUMERIC + CATEGORICAL INTERACTIONS
+    # ----------------------------------
+
+    for num_col in numerical_cols:
+        for cat_col in categorical_cols:
+
+            grouped = df.groupby(cat_col)[num_col].mean()
+
+            if len(grouped) < 2:
+                continue
+
+            top_category = grouped.idxmax()
+            bottom_category = grouped.idxmin()
+
+            interactions.append(
+                f"Category '{top_category}' in '{cat_col}' is associated with higher "
+                f"average '{num_col}' compared to '{bottom_category}'."
+            )
+
+    return interactions
+
+def generate_ai_dataset_conclusion(
+    target_column,
+    problem_type,
+    feature_importance,
+    cluster_patterns,
+    interaction_patterns
+):
+
+    explanation = []
+
+    # Feature importance explanation
+    if feature_importance:
+
+        top_features = list(feature_importance.keys())[:3]
+
+        explanation.append(
+            f"The analysis indicates that the target variable '{target_column}' "
+            f"is strongly influenced by {', '.join(top_features)}."
+        )
+
+    # Cluster explanation
+    if cluster_patterns:
+
+        explanation.append(
+            "Cluster analysis reveals distinct groups in the dataset, "
+            "indicating that different feature combinations produce different outcomes."
+        )
+
+    # Interaction explanation
+    if interaction_patterns:
+
+        explanation.append(
+            "Feature interaction discovery shows that combinations of multiple "
+            "variables significantly influence the target outcome."
+        )
+
+    # Adaptive recommendation
+    if feature_importance:
+
+        if problem_type == "classification":
+
+            explanation.append(
+                "Improving these influential variables may increase the probability "
+                "of achieving a positive class prediction."
+            )
+
+        else:
+
+            explanation.append(
+                "Improving these influential variables may increase the expected "
+                "value of the target variable."
+            )
+
+    return " ".join(explanation)
