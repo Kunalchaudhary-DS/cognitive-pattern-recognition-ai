@@ -1181,3 +1181,48 @@ def generate_ai_dataset_conclusion(
             )
 
     return " ".join(explanation)
+
+def compute_cognitive_pattern_score(
+    df,
+    feature_importance,
+    patterns,
+    cluster_patterns,
+    interaction_patterns
+):
+
+    score = 0
+
+    # Data quality component
+    missing_ratio = df.isnull().sum().sum() / (df.shape[0] * df.shape[1])
+
+    quality_score = int((1 - missing_ratio) * 40)
+
+    score += quality_score
+
+    # Pattern strength
+    pattern_strength = min(len(patterns) * 5, 20)
+    score += pattern_strength
+
+    # Cluster discovery
+    cluster_score = min(len(cluster_patterns) * 5, 20)
+    score += cluster_score
+
+    # Interaction discovery
+    interaction_score = min(len(interaction_patterns) * 5, 20)
+    score += interaction_score
+
+    total_score = min(score, 100)
+
+    # Interpret score
+    if total_score > 80:
+        level = "Strong"
+    elif total_score > 60:
+        level = "Moderate"
+    else:
+        level = "Weak"
+
+    return {
+        "score": total_score,
+        "pattern_strength": level,
+        "data_quality": quality_score
+    }
