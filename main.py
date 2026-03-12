@@ -1226,3 +1226,360 @@ def compute_cognitive_pattern_score(
         "pattern_strength": level,
         "data_quality": quality_score
     }
+def generate_pattern_visualizations(df, clusters, interactions, numerical_cols):
+
+    pattern_graphs = []
+
+    # -------------------------
+    # Cluster Visualization
+    # -------------------------
+
+    if len(numerical_cols) >= 2:
+
+        pattern_graphs.append({
+            "type": "cluster_scatter",
+            "x": numerical_cols[0],
+            "y": numerical_cols[1],
+            "title": f"Cluster Visualization: {numerical_cols[0]} vs {numerical_cols[1]}"
+        })
+
+    # -------------------------
+    # Feature Interaction Graphs
+    # -------------------------
+
+    for interaction in interactions[:3]:
+
+        cols = [c for c in numerical_cols if c in interaction]
+
+        if len(cols) >= 2:
+
+            pattern_graphs.append({
+                "type": "interaction_scatter",
+                "x": cols[0],
+                "y": cols[1],
+                "title": f"Interaction Pattern: {cols[0]} vs {cols[1]}"
+            })
+
+    # -------------------------
+    # Outlier Visualization
+    # -------------------------
+
+    if len(numerical_cols) >= 2:
+
+        pattern_graphs.append({
+            "type": "outlier_scatter",
+            "x": numerical_cols[0],
+            "y": numerical_cols[1],
+            "title": f"Outlier Detection: {numerical_cols[0]} vs {numerical_cols[1]}"
+        })
+
+    return pattern_graphs
+
+@app.get("/dashboard-data/")
+async def dashboard_data():
+
+    global stored_df
+    global stored_problem_type
+    global stored_training_results
+    global stored_target_column
+    global stored_feature_names
+    global stored_best_model
+    global stored_strong_correlations
+
+    if stored_df is None:
+        return JSONResponse(content={"error": "No dataset uploaded"})
+
+    if stored_target_column is None:
+        return JSONResponse(content={"error": "Run preprocessing first"})
+
+    df = stored_df.copy()
+
+    # ======================================================
+    # DATASET SUMMARY
+    # ======================================================
+
+    numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
+    categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
+
+    missing_total = df.isnull().sum().sum()
+
+    dataset_summary = (
+        f"Dataset contains {len(df)} rows and {len(df.columns)} columns. "
+        f"There are {len(numerical_cols)} numerical features and "
+        f"{len(categorical_cols)} categorical features. "
+    )
+
+    if missing_total > 0:
+        dataset_summary += "Some missing values are present."
+    else:
+        dataset_summary += "No missing values detected."
+
+
+    # ======================================================
+    # SMART GRAPH SELECTION ENGINE V2
+    # ======================================================
+
+    auto_graphs = []
+
+    target = stored_target_column
+
+    # -----------------------------
+    # 1️⃣ NUMERIC FEATURE DISTRIBUTIONS
+    # -----------------------------
+
+    for col in numerical_cols[:5]:
+
+        auto_graphs.append({
+            "type": "histogram",
+            "x": col,
+            "y": None,
+            "title": f"Distribution of {col}"
+        })
+
+
+    # -----------------------------
+    # 2️⃣ CATEGORICAL FEATURE DISTRIBUTIONS
+    # -----------------------------
+
+    for col in categorical_cols[:5]:
+
+        auto_graphs.append({
+            "type": "bar",
+            "x": col,
+            "y": None,
+            "title": f"Category Counts of {col}"
+        })
+
+
+    # -----------------------------
+    # 3️⃣ TARGET vs NUMERIC FEATURES
+    # -----------------------------
+
+    if target in numerical_cols:
+
+        for col in numerical_cols:
+
+            if col != target:
+
+                auto_graphs.append({
+                    "type": "scatter",
+                    "x": col,
+                    "y": target,
+                    "title": f"{col} vs {target}"
+                })
+
+
+    # -----------------------------
+    # 4️⃣ TARGET vs CATEGORICAL FEATURES
+    # -----------------------------
+
+    if target in numerical_cols:
+
+        for col in categorical_cols[:3]:
+
+            auto_graphs.append({
+                "type": "box",
+                "x": col,
+                "y": target,
+                "title": f"{target} across {col}"
+            })
+
+
+    # -----------------------------
+    # 5️⃣ STRONG CORRELATION SCATTERS
+    # -----------------------------
+
+    for item in stored_strong_correlations[:5]:
+
+        auto_graphs.append({
+            "type": "scatter",
+            "x": item["feature_1"],
+            "y": item["feature_2"],
+            "title": f"{item['feature_1']} vs {item['feature_2']}"
+        })
+
+    for graph in auto_graphs:
+        graph["insight"] = generate_statistical_insight(df, graph)
+
+    # ======================================================
+    # TARGET DISTRIBUTION
+    # ======================================================
+
+    target_distribution = df[stored_target_column].value_counts().to_dict()
+
+    # ======================================================
+    # CORRELATION MATRIX
+    # ======================================================
+
+    if len(numerical_cols) > 1:
+        correlation_matrix = df[numerical_cols].corr().fillna(0)
+        correlation_values = correlation_matrix.values.tolist()
+    else:
+        correlation_values = []
+
+    # ======================================================
+    # FEATURE IMPORTANCE (Tree + Linear Support)
+    # ======================================================
+
+    feature_importance = {}
+
+    if stored_best_model is not None:
+
+        importances = None
+
+        # Tree-based models
+        if hasattr(stored_best_model, "feature_importances_"):
+            importances = stored_best_model.feature_importances_
+
+        # Linear models
+        elif hasattr(stored_best_model, "coef_"):
+            importances = np.abs(stored_best_model.coef_)
+
+            # Multiclass case
+            if len(importances.shape) > 1:
+                importances = np.mean(np.abs(importances), axis=0)
+
+        if importances is not None and stored_feature_names is not None:
+            indices = np.argsort(importances)[::-1][:10]
+
+            feature_importance = {
+                stored_feature_names[i]: float(importances[i])
+                for i in indices
+            }
+
+    # ======================================================
+    # MODEL COMPARISON
+    # ======================================================
+
+    model_comparison = {}
+
+    if stored_training_results:
+        for model_name, metrics in stored_training_results.items():
+
+            if model_name in ["BestModel", "ProblemType", "ConfusionMatrix"]:
+                continue
+
+            # Take first metric (CV score)
+            metric_value = list(metrics.values())[0]
+            model_comparison[model_name] = metric_value
+
+    # ======================================================
+    # INTELLIGENT INSIGHTS
+    # ======================================================
+
+    insights = []
+
+    if stored_training_results:
+
+        best_model = stored_training_results.get("BestModel")
+
+        if best_model:
+
+            if stored_problem_type == "regression":
+                best_score = stored_training_results[best_model]["CV_R2_Mean"]
+
+                if best_score < 0:
+                    insights.append("Model performance is poor. Features may not explain target well.")
+                elif best_score < 0.5:
+                    insights.append("Model explains moderate variance in the target variable.")
+                else:
+                    insights.append("Model shows strong predictive performance.")
+
+            else:
+                best_score = stored_training_results[best_model]["CV_Accuracy_Mean"]
+
+                if best_score < 0.6:
+                    insights.append("Classification accuracy is relatively low.")
+                elif best_score < 0.8:
+                    insights.append("Model performs reasonably well.")
+                else:
+                    insights.append("Model achieves strong classification accuracy.")
+
+    if feature_importance:
+        top_feature = list(feature_importance.keys())[0]
+        insights.append(f"Feature '{top_feature}' has the highest influence on the target.")
+
+
+    # ======================================================
+    # PREDICTIVE PATTERN ANALYSIS
+    # ======================================================
+
+    prediction_analysis = ""
+
+    if feature_importance:
+
+        top_features = list(feature_importance.keys())[:3]
+
+        if stored_problem_type == "regression":
+
+            prediction_analysis = (
+                f"The trained model indicates that the target variable "
+                f"'{stored_target_column}' is strongly influenced by "
+                f"{', '.join(top_features)}. "
+
+                "Variations in these features are expected to produce the "
+                "largest changes in the predicted outcome. "
+
+                "Features with lower importance values contribute less to "
+                "the model's predictive behaviour."
+            )
+
+        else:
+
+            prediction_analysis = (
+                f"The classification model suggests that the target class "
+                f"'{stored_target_column}' is most affected by "
+                f"{', '.join(top_features)}. "
+
+                "Changes in these variables significantly influence "
+                "the probability of each class prediction."
+            )
+
+    patterns = discover_patterns(df, stored_target_column)
+    cluster_patterns = discover_clusters(df)
+    interaction_patterns = discover_feature_interactions(df, stored_target_column)
+    ai_conclusion = generate_ai_dataset_conclusion(
+        stored_target_column,
+        stored_problem_type,
+        feature_importance,
+        cluster_patterns,
+        interaction_patterns
+    )
+    pattern_score = compute_cognitive_pattern_score(
+        df,
+        feature_importance,
+        patterns,
+        cluster_patterns,
+        interaction_patterns
+    )
+    pattern_visualizations = generate_pattern_visualizations(
+        df,
+        cluster_patterns,
+        interaction_patterns,
+        numerical_cols
+    )
+    # ======================================================
+    # FINAL RESPONSE
+    # ======================================================
+
+    return JSONResponse(content={
+        "dataset_summary": dataset_summary,
+        "target_distribution": target_distribution,
+        "correlation_matrix": correlation_values,
+        "correlation_labels": numerical_cols,
+        "feature_importance": feature_importance,
+        "model_comparison": model_comparison,
+        "insights": insights,
+        "patterns": patterns,
+        "clusters": cluster_patterns,
+        "auto_graphs": auto_graphs,
+        "feature_interactions": interaction_patterns,
+        "ai_conclusion": ai_conclusion,
+        "prediction_analysis": prediction_analysis,
+        "pattern_score": pattern_score,
+        "pattern_visualizations": pattern_visualizations,
+        "full_data": df.replace([np.inf, -np.inf], np.nan)
+                    .astype(object)
+                    .where(pd.notnull(df), None)
+                    .to_dict(orient="records")
+    })
