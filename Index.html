@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cognitive Pattern Recognition System</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <style>
+        body { font-family:'Segoe UI',sans-serif;margin:0;background:#eef2f7;}
+        .navbar { background:#1f2937;color:white;padding:18px;text-align:center;font-size:26px;font-weight:bold;}
+        .tab-container { display:flex;justify-content:center;background:white;padding:10px;gap:10px;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+        .tab-button { padding:10px 20px;border:none;background:#e5e7eb;cursor:pointer;border-radius:6px;font-weight:500;}
+        .tab-button.active { background:#2563eb;color:white;}
+        .container { width:90%;margin:30px auto;}
+        .card { background:white;padding:20px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);margin-bottom:20px;}
+        button { padding:8px 16px;border:none;background:#2563eb;color:white;border-radius:5px;cursor:pointer;margin-left:5px;}
+        table { width:100%;border-collapse:collapse;font-size:14px;}
+        th { background:#1f2937;color:white;padding:8px;}
+        td { padding:8px;border-bottom:1px solid #ddd;}
+        .chart-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+        .chart-box { background:white;padding:15px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+
+
+        .dataset-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+            gap:15px;
+            margin-top:10px;
+        }
+
+        .dataset-card{
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            text-align:center;
+            transition:0.2s;
+        }
+
+        .dataset-card:hover{
+            transform:translateY(-3px);
+            box-shadow:0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        .dataset-card h4{
+            margin:5px 0;
+        }
+
+        .dataset-card p{
+            font-size:13px;
+            color:#666;
+            margin-bottom:10px;
+        }
+
+        .chart-box{
+        background:white;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">Cognitive Pattern Recognition System</div>
+
+<div class="tab-container">
+    <button class="tab-button active" onclick="showTab(event,'processingTab')">Data Processing</button>
+    <button class="tab-button" onclick="showTab(event,'trainingTab')">Model Training</button>
+    <button class="tab-button" onclick="showTab(event,'dashboardTab')">Pattern Dashboard</button>
+</div>
+
+<div class="container">
+
+
+<!-- ================= PROCESSING TAB ================= -->
+<div id="processingTab" class="tab-content">
+
+    <div class="card">
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload Dataset</button>
+
+        <button onclick="showDemoDatasets()">Choose Demo Dataset</button>
+
+        <div id="demoDatasetList"></div>
+        <div id="rowCount" style="margin-top:10px;"></div>
+
+        <div style="margin-top:15px;">
+            <select id="targetSelect"></select>
+            <button onclick="runFeatureImportance()">Analyze Target</button>
+            <button onclick="runPreprocessing()">Run Preprocessing</button>
+            <button onclick="trainModel()">Train Model</button>
+        </div>
+    </div>
+
+    <div id="analysisCards"></div>
+    <div id="missingSection"></div>
+    <div id="correlationSection"></div>
+    <div id="featureImportanceSection"></div>
+    <div id="preprocessSection"></div>
+
+    <!-- DATA PREVIEW -->
+    <div class="card">
+        <h3>Dataset Preview (Top 5 Rows)</h3>
+        <div id="tableContainer"></div>
+    </div>
+
+</div>
+
+<!-- ================= TRAINING TAB ================= -->
+<div id="trainingTab" class="tab-content" style="display:none;">
+    <div id="trainingSection"></div>
+</div>
+
+
+<!-- ================= DASHBOARD TAB ================= -->
+<div id="dashboardTab" class="tab-content" style="display:none;">
+
+    <!-- Dataset Summary -->
+    <div id="datasetSummary"></div>
+
+    <!-- Insights -->
+    <div id="insightsSection"></div>
+
+    <div class="card">
+        <h3>Predictive Pattern Analysis</h3>
+        <p id="predictionAnalysis"></p>
+    </div>
+
+    <!-- Core Model Charts -->
+    <div class="card">
+        <h2>Pattern Intelligence Dashboard</h2>
+        <div class="chart-grid">
+            <div class="chart-box">
+                <h4>Target Distribution</h4>
+                <div id="targetDistribution"></div>
+            </div>
+
+            <div class="chart-box">
+                <h4>Correlation Heatmap</h4>
+                <div id="correlationHeatmap"></div>
+            </div>
+
+            <div class="chart-box">
+                <h4>Feature Importance</h4>
+                <div id="featureImportanceChart"></div>
+            </div>
+
+            <div class="chart-box">
+                <h4>Model Comparison</h4>
+                <div id="modelComparisonChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Automatic Graph Engine Section -->
+    <div class="card">
+        <h2>Automatic Data Visualizations</h2>
+        <div id="autoGraphsContainer" class="chart-grid"></div>
+    </div>
+
+</div>
