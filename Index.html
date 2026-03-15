@@ -163,3 +163,50 @@
     </div>
 
 </div>
+
+
+<script>
+
+
+const chartLayout = {
+        template: "plotly_white",
+        font: {
+            family: "Segoe UI",
+            size: 13
+        },
+        margin: { l:60, r:20, t:40, b:70 },
+        paper_bgcolor: "#ffffff",
+        plot_bgcolor: "#f9fafb",
+        xaxis:{
+            showgrid:true,
+            gridcolor:"#e5e7eb",
+            zeroline:false
+        },
+        yaxis:{
+            showgrid:true,
+            gridcolor:"#e5e7eb",
+            zeroline:false
+        }
+    };
+
+
+/* UPLOAD */
+async function uploadFile(){
+    const file=document.getElementById("fileInput").files[0];
+    if(!file) return alert("Select file");
+    const formData=new FormData();
+    formData.append("file",file);
+    const response=await fetch("/upload/",{method:"POST",body:formData});
+    const data=await response.json();
+    
+    window.datasetData = data.full_data
+
+    document.getElementById("rowCount").innerText="Total Rows: "+data.rows;
+    populateTargetDropdown(data.columns);
+
+    showDatasetProfile(data.profile_summary);
+    showAnalysis(data);
+    showMissing(data);
+    showCorrelations(data);
+    createTable(data.columns,data.preview);
+}
