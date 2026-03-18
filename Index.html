@@ -210,3 +210,70 @@ async function uploadFile(){
     showCorrelations(data);
     createTable(data.columns,data.preview);
 }
+
+function populateTargetDropdown(columns){
+    const select=document.getElementById("targetSelect");
+    select.innerHTML="";
+    columns.forEach(col=>{
+        const option=document.createElement("option");
+        option.value=col;
+        option.text=col;
+        select.appendChild(option);
+    });
+}
+
+async function showDemoDatasets(){
+
+    const response = await fetch("/demo-datasets/");
+    const data = await response.json();
+
+    let html = "<div class='card'><h3>Choose Demo Dataset</h3>";
+    html += "<div class='dataset-grid'>";
+
+    data.datasets.forEach(ds=>{
+
+    html += `
+    <div class="dataset-card">
+
+    <h4>${ds.name}</h4>
+
+    <p>${ds.category}</p>
+
+    <button onclick="loadDemoDataset('${ds.file}')">
+    Use Dataset
+    </button>
+
+    </div>
+    `;
+
+    });
+
+    html += "</div></div>";
+
+    document.getElementById("demoDatasetList").innerHTML = html;
+}
+
+async function loadDemoDataset(dataset){
+
+    const formData = new FormData();
+    formData.append("dataset_name", dataset);
+
+    const response = await fetch("/load-demo-dataset/", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await response.json();
+
+    window.datasetData = data.full_data
+
+    document.getElementById("rowCount").innerText =
+        "Total Rows: " + data.rows;
+
+    populateTargetDropdown(data.columns);
+    showDatasetProfile(data.profile_summary);
+    showAnalysis(data);
+    showMissing(data);
+    showCorrelations(data);
+    createTable(data.columns, data.preview);
+}
