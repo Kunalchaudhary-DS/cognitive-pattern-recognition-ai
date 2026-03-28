@@ -1,0 +1,1149 @@
+,Match ID,Date,Venue,Bat First,Bat Second,Innings,Over,Ball,Batter,Non Striker,Bowler,Batter Runs,Extra Runs,Runs From Ball,Ball Rebowled,Extra Type,Wicket,Method,Player Out,Innings Runs,Innings Wickets,Target Score,Runs to Get,Balls Remaining,Winner,Chased Successfully,Total Batter Runs,Total Non Striker Runs,Batter Balls Faced,Non Striker Balls Faced,Player Out Runs,Player Out Balls Faced,Bowler Runs Conceded,Valid Ball
+84761,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,1,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,148,,119,India,1,0,0,1,0,,,0,1
+84762,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,2,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,148,,118,India,1,0,0,2,0,,,0,1
+84763,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,3,Mohammad Rizwan,Babar Azam,B Kumar,1,0,1,0,[],0,,,1,0,148,,117,India,1,1,0,3,0,,,1,1
+84764,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,4,Babar Azam,Mohammad Rizwan,B Kumar,4,0,4,0,[],0,,,5,0,148,,116,India,1,4,1,1,3,,,4,1
+84765,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,5,Babar Azam,Mohammad Rizwan,B Kumar,1,0,1,0,[],0,,,6,0,148,,115,India,1,5,1,2,3,,,1,1
+84766,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,1,6,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,6,0,148,,114,India,1,1,5,4,2,,,0,1
+84767,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,1,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,6,0,148,,113,India,1,5,1,3,4,,,0,1
+84768,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,2,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,1,1,1,['wides'],0,,,7,0,148,,113,India,1,5,1,3,4,,,1,0
+84769,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,2,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,7,0,148,,112,India,1,5,1,4,4,,,0,1
+84770,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,3,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,1,1,1,['wides'],0,,,8,0,148,,112,India,1,5,1,4,4,,,1,0
+84771,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,3,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,8,0,148,,111,India,1,5,1,5,4,,,0,1
+84772,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,4,Babar Azam,Mohammad Rizwan,Arshdeep Singh,1,0,1,0,[],0,,,9,0,148,,110,India,1,6,1,6,4,,,1,1
+84773,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,5,Mohammad Rizwan,Babar Azam,Arshdeep Singh,1,0,1,0,[],0,,,10,0,148,,109,India,1,2,6,5,6,,,1,1
+84774,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,2,6,Babar Azam,Mohammad Rizwan,Arshdeep Singh,4,0,4,0,[],0,,,14,0,148,,108,India,1,10,2,7,5,,,4,1
+84775,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,1,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,14,0,148,,107,India,1,2,10,6,7,,,0,1
+84776,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,2,Mohammad Rizwan,Babar Azam,B Kumar,1,0,1,0,[],0,,,15,0,148,,106,India,1,3,10,7,7,,,1,1
+84777,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,3,Babar Azam,Mohammad Rizwan,B Kumar,0,0,0,0,[],0,,,15,0,148,,105,India,1,10,3,8,7,,,0,1
+84778,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,4,Babar Azam,Mohammad Rizwan,B Kumar,0,0,0,0,[],1,caught,Babar Azam,15,1,148,,104,India,1,0,3,0,7,10,9,0,1
+84779,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,5,Fakhar Zaman,Mohammad Rizwan,B Kumar,4,0,4,0,[],0,,,19,1,148,,103,India,1,4,3,1,7,,,4,1
+84780,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,3,6,Fakhar Zaman,Mohammad Rizwan,B Kumar,0,0,0,0,[],0,,,19,1,148,,102,India,1,4,3,2,7,,,0,1
+84781,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,1,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,0,0,0,0,[],0,,,19,1,148,,101,India,1,3,4,8,2,,,0,1
+84782,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,2,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,0,0,0,0,[],0,,,19,1,148,,100,India,1,3,4,9,2,,,0,1
+84783,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,3,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,0,0,0,0,[],0,,,19,1,148,,99,India,1,3,4,10,2,,,0,1
+84784,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,4,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,4,0,4,0,[],0,,,23,1,148,,98,India,1,7,4,11,2,,,4,1
+84785,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,5,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,0,0,0,0,[],0,,,23,1,148,,97,India,1,7,4,12,2,,,0,1
+84786,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,4,6,Mohammad Rizwan,Fakhar Zaman,Arshdeep Singh,0,0,0,0,[],0,,,23,1,148,,96,India,1,7,4,13,2,,,0,1
+84787,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,1,Fakhar Zaman,Mohammad Rizwan,HH Pandya,4,0,4,0,[],0,,,27,1,148,,95,India,1,8,7,3,13,,,4,1
+84788,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,2,Fakhar Zaman,Mohammad Rizwan,HH Pandya,1,0,1,0,[],0,,,28,1,148,,94,India,1,9,7,4,13,,,1,1
+84789,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,3,Mohammad Rizwan,Fakhar Zaman,HH Pandya,0,0,0,0,[],0,,,28,1,148,,93,India,1,7,9,14,4,,,0,1
+84790,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,4,Mohammad Rizwan,Fakhar Zaman,HH Pandya,2,0,2,0,[],0,,,30,1,148,,92,India,1,9,9,15,4,,,2,1
+84791,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,5,Mohammad Rizwan,Fakhar Zaman,HH Pandya,0,0,0,0,[],0,,,30,1,148,,91,India,1,9,9,16,4,,,0,1
+84792,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,5,6,Mohammad Rizwan,Fakhar Zaman,HH Pandya,0,0,0,0,[],0,,,30,1,148,,90,India,1,9,9,17,4,,,0,1
+84793,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,1,Fakhar Zaman,Mohammad Rizwan,Avesh Khan,1,0,1,0,[],0,,,31,1,148,,89,India,1,10,9,5,17,,,1,1
+84794,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,2,Mohammad Rizwan,Fakhar Zaman,Avesh Khan,6,0,6,0,[],0,,,37,1,148,,88,India,1,15,10,18,5,,,6,1
+84795,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,3,Mohammad Rizwan,Fakhar Zaman,Avesh Khan,4,0,4,0,[],0,,,41,1,148,,87,India,1,19,10,19,5,,,4,1
+84796,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,4,Mohammad Rizwan,Fakhar Zaman,Avesh Khan,1,0,1,0,[],0,,,42,1,148,,86,India,1,20,10,20,5,,,1,1
+84797,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,5,Fakhar Zaman,Mohammad Rizwan,Avesh Khan,0,0,0,0,[],1,caught,Fakhar Zaman,42,2,148,,85,India,1,0,20,0,20,10,6,0,1
+84798,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,6,6,Iftikhar Ahmed,Mohammad Rizwan,Avesh Khan,1,0,1,0,[],0,,,43,2,148,,84,India,1,1,20,1,20,,,1,1
+84799,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,1,Iftikhar Ahmed,Mohammad Rizwan,HH Pandya,1,0,1,0,[],0,,,44,2,148,,83,India,1,2,20,2,20,,,1,1
+84800,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,2,Mohammad Rizwan,Iftikhar Ahmed,HH Pandya,1,0,1,0,[],0,,,45,2,148,,82,India,1,21,2,21,2,,,1,1
+84801,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,3,Iftikhar Ahmed,Mohammad Rizwan,HH Pandya,0,0,0,0,[],0,,,45,2,148,,81,India,1,2,21,3,21,,,0,1
+84802,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,4,Iftikhar Ahmed,Mohammad Rizwan,HH Pandya,4,0,4,0,[],0,,,49,2,148,,80,India,1,6,21,4,21,,,4,1
+84803,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,5,Iftikhar Ahmed,Mohammad Rizwan,HH Pandya,1,0,1,0,[],0,,,50,2,148,,79,India,1,7,21,5,21,,,1,1
+84804,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,7,6,Mohammad Rizwan,Iftikhar Ahmed,HH Pandya,1,0,1,0,[],0,,,51,2,148,,78,India,1,22,7,22,5,,,1,1
+84805,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,1,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,0,0,0,0,[],0,,,51,2,148,,77,India,1,22,7,23,5,,,0,1
+84806,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,2,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,52,2,148,,76,India,1,23,7,24,5,,,1,1
+84807,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,3,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,4,0,4,0,[],0,,,56,2,148,,75,India,1,11,23,6,24,,,4,1
+84808,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,4,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,57,2,148,,74,India,1,12,23,7,24,,,1,1
+84809,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,5,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,58,2,148,,73,India,1,24,12,25,7,,,1,1
+84810,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,8,6,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,59,2,148,,72,India,1,13,24,8,25,,,1,1
+84811,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,1,Iftikhar Ahmed,Mohammad Rizwan,RA Jadeja,0,0,0,0,[],0,,,59,2,148,,71,India,1,13,24,9,25,,,0,1
+84812,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,2,Iftikhar Ahmed,Mohammad Rizwan,RA Jadeja,1,0,1,0,[],0,,,60,2,148,,70,India,1,14,24,10,25,,,1,1
+84813,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,3,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,1,0,1,0,[],0,,,61,2,148,,69,India,1,25,14,26,10,,,1,1
+84814,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,4,Iftikhar Ahmed,Mohammad Rizwan,RA Jadeja,0,1,1,0,['byes'],0,,,62,2,148,,68,India,1,14,25,11,26,,,0,1
+84815,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,5,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,0,0,0,0,[],0,,,62,2,148,,67,India,1,25,14,27,11,,,0,1
+84816,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,9,6,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,1,0,1,0,[],0,,,63,2,148,,66,India,1,26,14,28,11,,,1,1
+84817,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,1,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,64,2,148,,65,India,1,27,14,29,11,,,1,1
+84818,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,2,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,0,0,0,0,[],0,,,64,2,148,,64,India,1,14,27,12,29,,,0,1
+84819,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,3,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,65,2,148,,63,India,1,15,27,13,29,,,1,1
+84820,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,4,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,66,2,148,,62,India,1,28,15,30,13,,,1,1
+84821,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,5,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,67,2,148,,61,India,1,16,28,14,30,,,1,1
+84822,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,10,6,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,68,2,148,,60,India,1,29,16,31,14,,,1,1
+84823,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,1,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,4,0,4,0,[],0,,,72,2,148,,59,India,1,33,16,32,14,,,4,1
+84824,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,2,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,1,0,1,0,[],0,,,73,2,148,,58,India,1,34,16,33,14,,,1,1
+84825,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,3,Iftikhar Ahmed,Mohammad Rizwan,RA Jadeja,1,0,1,0,[],0,,,74,2,148,,57,India,1,17,34,15,33,,,1,1
+84826,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,4,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,0,0,0,0,[],0,,,74,2,148,,56,India,1,34,17,34,15,,,0,1
+84827,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,5,Mohammad Rizwan,Iftikhar Ahmed,RA Jadeja,1,0,1,0,[],0,,,75,2,148,,55,India,1,35,17,35,15,,,1,1
+84828,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,11,6,Iftikhar Ahmed,Mohammad Rizwan,RA Jadeja,1,0,1,0,[],0,,,76,2,148,,54,India,1,18,35,16,35,,,1,1
+84829,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,1,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,2,0,2,0,[],0,,,78,2,148,,53,India,1,20,35,17,35,,,2,1
+84830,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,2,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,79,2,148,,52,India,1,21,35,18,35,,,1,1
+84831,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,3,Mohammad Rizwan,Iftikhar Ahmed,YS Chahal,1,0,1,0,[],0,,,80,2,148,,51,India,1,36,21,36,18,,,1,1
+84832,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,4,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,6,0,6,0,[],0,,,86,2,148,,50,India,1,27,36,19,36,,,6,1
+84833,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,5,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,0,0,0,0,[],0,,,86,2,148,,49,India,1,27,36,20,36,,,0,1
+84834,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,12,6,Iftikhar Ahmed,Mohammad Rizwan,YS Chahal,1,0,1,0,[],0,,,87,2,148,,48,India,1,28,36,21,36,,,1,1
+84835,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,1,Iftikhar Ahmed,Mohammad Rizwan,HH Pandya,0,0,0,0,[],1,caught,Iftikhar Ahmed,87,3,148,,47,India,1,0,36,0,36,28,22,0,1
+84836,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,2,Khushdil Shah,Mohammad Rizwan,HH Pandya,0,0,0,0,[],0,,,87,3,148,,46,India,1,0,36,1,36,,,0,1
+84837,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,3,Khushdil Shah,Mohammad Rizwan,HH Pandya,0,0,0,0,[],0,,,87,3,148,,45,India,1,0,36,2,36,,,0,1
+84838,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,4,Khushdil Shah,Mohammad Rizwan,HH Pandya,1,0,1,0,[],0,,,88,3,148,,44,India,1,1,36,3,36,,,1,1
+84839,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,5,Mohammad Rizwan,Khushdil Shah,HH Pandya,0,0,0,0,[],0,,,88,3,148,,43,India,1,36,1,37,3,,,0,1
+84840,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,13,6,Mohammad Rizwan,Khushdil Shah,HH Pandya,2,0,2,0,[],0,,,90,3,148,,42,India,1,38,1,38,3,,,2,1
+84841,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,1,Khushdil Shah,Mohammad Rizwan,Avesh Khan,0,0,0,0,[],0,,,90,3,148,,41,India,1,1,38,4,38,,,0,1
+84842,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,2,Khushdil Shah,Mohammad Rizwan,Avesh Khan,0,0,0,0,[],0,,,90,3,148,,40,India,1,1,38,5,38,,,0,1
+84843,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,3,Khushdil Shah,Mohammad Rizwan,Avesh Khan,1,0,1,0,[],0,,,91,3,148,,39,India,1,2,38,6,38,,,1,1
+84844,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,4,Mohammad Rizwan,Khushdil Shah,Avesh Khan,4,0,4,0,[],0,,,95,3,148,,38,India,1,42,2,39,6,,,4,1
+84845,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,5,Mohammad Rizwan,Khushdil Shah,Avesh Khan,0,0,0,0,[],0,,,95,3,148,,37,India,1,42,2,40,6,,,0,1
+84846,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,14,6,Mohammad Rizwan,Khushdil Shah,Avesh Khan,1,0,1,0,[],0,,,96,3,148,,36,India,1,43,2,41,6,,,1,1
+84847,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,1,Mohammad Rizwan,Khushdil Shah,HH Pandya,0,0,0,0,[],1,caught,Mohammad Rizwan,96,4,148,,35,India,1,0,2,0,6,43,42,0,1
+84848,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,2,Shadab Khan,Khushdil Shah,HH Pandya,1,0,1,0,[],0,,,97,4,148,,34,India,1,1,2,1,6,,,1,1
+84849,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,3,Khushdil Shah,Shadab Khan,HH Pandya,0,0,0,0,[],1,caught,Khushdil Shah,97,5,148,,33,India,1,0,1,0,1,2,7,0,1
+84850,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,4,Shadab Khan,Asif Ali,HH Pandya,0,1,1,1,['wides'],0,,,98,5,148,,33,India,1,1,0,2,0,,,1,0
+84851,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,4,Shadab Khan,Asif Ali,HH Pandya,0,1,1,1,['wides'],0,,,99,5,148,,33,India,1,1,0,2,0,,,1,0
+84852,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,4,Shadab Khan,Asif Ali,HH Pandya,1,0,1,0,[],0,,,100,5,148,,32,India,1,2,0,3,0,,,1,1
+84853,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,5,Asif Ali,Shadab Khan,HH Pandya,2,0,2,0,[],0,,,102,5,148,,31,India,1,2,2,1,3,,,2,1
+84854,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,15,6,Asif Ali,Shadab Khan,HH Pandya,1,0,1,0,[],0,,,103,5,148,,30,India,1,3,2,2,3,,,1,1
+84855,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,1,Asif Ali,Shadab Khan,YS Chahal,1,0,1,0,[],0,,,104,5,148,,29,India,1,4,2,3,3,,,1,1
+84856,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,2,Shadab Khan,Asif Ali,YS Chahal,1,0,1,0,[],0,,,105,5,148,,28,India,1,3,4,4,3,,,1,1
+84857,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,3,Asif Ali,Shadab Khan,YS Chahal,3,0,3,0,[],0,,,108,5,148,,27,India,1,7,3,4,4,,,3,1
+84858,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,4,Shadab Khan,Asif Ali,YS Chahal,1,0,1,0,[],0,,,109,5,148,,26,India,1,4,7,5,4,,,1,1
+84859,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,5,Asif Ali,Shadab Khan,YS Chahal,2,0,2,0,[],0,,,111,5,148,,25,India,1,9,4,5,5,,,2,1
+84860,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,16,6,Asif Ali,Shadab Khan,YS Chahal,0,0,0,0,[],0,,,111,5,148,,24,India,1,9,4,6,5,,,0,1
+84861,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,1,Shadab Khan,Asif Ali,B Kumar,0,0,0,0,[],0,,,111,5,148,,23,India,1,4,9,6,6,,,0,1
+84862,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,2,Shadab Khan,Asif Ali,B Kumar,1,0,1,0,[],0,,,112,5,148,,22,India,1,5,9,7,6,,,1,1
+84863,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,3,Asif Ali,Shadab Khan,B Kumar,0,0,0,0,[],1,caught,Asif Ali,112,6,148,,21,India,1,0,5,0,7,9,7,0,1
+84864,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,4,Shadab Khan,Mohammad Nawaz,B Kumar,1,0,1,0,[],0,,,113,6,148,,20,India,1,6,0,8,0,,,1,1
+84865,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,5,Mohammad Nawaz,Shadab Khan,B Kumar,0,0,0,0,[],0,,,113,6,148,,19,India,1,0,6,1,8,,,0,1
+84866,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,17,6,Mohammad Nawaz,Shadab Khan,B Kumar,1,0,1,0,[],0,,,114,6,148,,18,India,1,1,6,2,8,,,1,1
+84867,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,1,Mohammad Nawaz,Shadab Khan,Arshdeep Singh,0,0,0,0,[],1,caught,Mohammad Nawaz,114,7,148,,17,India,1,0,6,0,8,1,3,0,1
+84868,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,2,Haris Rauf,Shadab Khan,Arshdeep Singh,2,0,2,0,[],0,,,116,7,148,,16,India,1,2,6,1,8,,,2,1
+84869,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,3,Haris Rauf,Shadab Khan,Arshdeep Singh,4,0,4,0,[],0,,,120,7,148,,15,India,1,6,6,2,8,,,4,1
+84870,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,4,Haris Rauf,Shadab Khan,Arshdeep Singh,0,0,0,0,[],0,,,120,7,148,,14,India,1,6,6,3,8,,,0,1
+84871,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,5,Haris Rauf,Shadab Khan,Arshdeep Singh,0,0,0,0,[],0,,,120,7,148,,13,India,1,6,6,4,8,,,0,1
+84872,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,18,6,Haris Rauf,Shadab Khan,Arshdeep Singh,4,0,4,0,[],0,,,124,7,148,,12,India,1,10,6,5,8,,,4,1
+84873,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,1,Shadab Khan,Haris Rauf,B Kumar,4,0,4,0,[],0,,,128,7,148,,11,India,1,10,10,9,5,,,4,1
+84874,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,2,Shadab Khan,Haris Rauf,B Kumar,0,0,0,0,[],1,lbw,Shadab Khan,128,8,148,,10,India,1,0,10,0,5,10,10,0,1
+84875,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,3,Naseem Shah,Haris Rauf,B Kumar,0,0,0,0,[],1,lbw,Naseem Shah,128,9,148,,9,India,1,0,10,0,5,0,1,0,1
+84876,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,4,Shahnawaz Dhani,Haris Rauf,B Kumar,0,0,0,0,[],0,,,128,9,148,,8,India,1,0,10,1,5,,,0,1
+84877,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,5,Shahnawaz Dhani,Haris Rauf,B Kumar,6,0,6,0,[],0,,,134,9,148,,7,India,1,6,10,2,5,,,6,1
+84878,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,19,6,Shahnawaz Dhani,Haris Rauf,B Kumar,2,0,2,0,[],0,,,136,9,148,,6,India,1,8,10,3,5,,,2,1
+84879,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,20,1,Haris Rauf,Shahnawaz Dhani,Arshdeep Singh,0,0,0,0,[],0,,,136,9,148,,5,India,1,10,8,6,3,,,0,1
+84880,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,20,2,Haris Rauf,Shahnawaz Dhani,Arshdeep Singh,3,0,3,0,[],0,,,139,9,148,,4,India,1,13,8,7,3,,,3,1
+84881,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,20,3,Shahnawaz Dhani,Haris Rauf,Arshdeep Singh,2,0,2,0,[],0,,,141,9,148,,3,India,1,10,13,4,7,,,2,1
+84882,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,20,4,Shahnawaz Dhani,Haris Rauf,Arshdeep Singh,6,0,6,0,[],0,,,147,9,148,,2,India,1,16,13,5,7,,,6,1
+84883,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,1,20,5,Shahnawaz Dhani,Haris Rauf,Arshdeep Singh,0,0,0,0,[],1,bowled,Shahnawaz Dhani,147,10,148,,1,India,1,0,13,0,7,16,6,0,1
+84884,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,1,RG Sharma,KL Rahul,Naseem Shah,1,0,1,0,[],0,,,1,0,148,147,119,India,1,1,0,1,0,,,1,1
+84885,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,2,KL Rahul,RG Sharma,Naseem Shah,0,0,0,0,[],1,bowled,KL Rahul,1,1,148,147,118,India,1,0,1,0,1,0,1,0,1
+84886,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,3,V Kohli,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,1,1,148,147,117,India,1,0,1,1,1,,,0,1
+84887,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,4,V Kohli,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,1,1,148,147,116,India,1,0,1,2,1,,,0,1
+84888,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,5,V Kohli,RG Sharma,Naseem Shah,1,0,1,0,[],0,,,2,1,148,146,115,India,1,1,1,3,1,,,1,1
+84889,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,6,RG Sharma,V Kohli,Naseem Shah,0,1,1,1,['wides'],0,,,3,1,148,145,115,India,1,1,1,2,3,,,1,0
+84890,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,1,6,RG Sharma,V Kohli,Naseem Shah,0,0,0,0,[],0,,,3,1,148,145,114,India,1,1,1,3,3,,,0,1
+84891,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,1,V Kohli,RG Sharma,Shahnawaz Dhani,0,0,0,0,[],0,,,3,1,148,145,113,India,1,1,1,4,3,,,0,1
+84892,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,2,V Kohli,RG Sharma,Shahnawaz Dhani,0,0,0,0,[],0,,,3,1,148,145,112,India,1,1,1,5,3,,,0,1
+84893,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,3,V Kohli,RG Sharma,Shahnawaz Dhani,0,0,0,0,[],0,,,3,1,148,145,111,India,1,1,1,6,3,,,0,1
+84894,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,4,V Kohli,RG Sharma,Shahnawaz Dhani,2,0,2,0,[],0,,,5,1,148,143,110,India,1,3,1,7,3,,,2,1
+84895,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,5,V Kohli,RG Sharma,Shahnawaz Dhani,4,0,4,0,[],0,,,9,1,148,139,109,India,1,7,1,8,3,,,4,1
+84896,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,2,6,V Kohli,RG Sharma,Shahnawaz Dhani,1,0,1,0,[],0,,,10,1,148,138,108,India,1,8,1,9,3,,,1,1
+84897,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,1,V Kohli,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,10,1,148,138,107,India,1,8,1,10,3,,,0,1
+84898,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,2,V Kohli,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,10,1,148,138,106,India,1,8,1,11,3,,,0,1
+84899,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,3,V Kohli,RG Sharma,Naseem Shah,2,0,2,0,[],0,,,12,1,148,136,105,India,1,10,1,12,3,,,2,1
+84900,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,4,V Kohli,RG Sharma,Naseem Shah,1,0,1,0,[],0,,,13,1,148,135,104,India,1,11,1,13,3,,,1,1
+84901,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,5,RG Sharma,V Kohli,Naseem Shah,1,0,1,0,[],0,,,14,1,148,134,103,India,1,2,11,4,13,,,1,1
+84902,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,3,6,V Kohli,RG Sharma,Naseem Shah,1,0,1,0,[],0,,,15,1,148,133,102,India,1,12,2,14,4,,,1,1
+84903,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,1,V Kohli,RG Sharma,Haris Rauf,1,0,1,0,[],0,,,16,1,148,132,101,India,1,13,2,15,4,,,1,1
+84904,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,2,RG Sharma,V Kohli,Haris Rauf,0,0,0,0,[],0,,,16,1,148,132,100,India,1,2,13,5,15,,,0,1
+84905,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,3,RG Sharma,V Kohli,Haris Rauf,1,0,1,0,[],0,,,17,1,148,131,99,India,1,3,13,6,15,,,1,1
+84906,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,4,V Kohli,RG Sharma,Haris Rauf,0,0,0,0,[],0,,,17,1,148,131,98,India,1,13,3,16,6,,,0,1
+84907,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,5,V Kohli,RG Sharma,Haris Rauf,6,0,6,0,[],0,,,23,1,148,125,97,India,1,19,3,17,6,,,6,1
+84908,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,4,6,V Kohli,RG Sharma,Haris Rauf,0,0,0,0,[],0,,,23,1,148,125,96,India,1,19,3,18,6,,,0,1
+84909,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,1,RG Sharma,V Kohli,Shahnawaz Dhani,0,0,0,0,[],0,,,23,1,148,125,95,India,1,3,19,7,18,,,0,1
+84910,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,2,RG Sharma,V Kohli,Shahnawaz Dhani,0,0,0,0,[],0,,,23,1,148,125,94,India,1,3,19,8,18,,,0,1
+84911,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,3,RG Sharma,V Kohli,Shahnawaz Dhani,1,0,1,0,[],0,,,24,1,148,124,93,India,1,4,19,9,18,,,1,1
+84912,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,4,V Kohli,RG Sharma,Shahnawaz Dhani,4,0,4,0,[],0,,,28,1,148,120,92,India,1,23,4,19,9,,,4,1
+84913,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,5,V Kohli,RG Sharma,Shahnawaz Dhani,0,0,0,0,[],0,,,28,1,148,120,91,India,1,23,4,20,9,,,0,1
+84914,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,5,6,V Kohli,RG Sharma,Shahnawaz Dhani,1,0,1,0,[],0,,,29,1,148,119,90,India,1,24,4,21,9,,,1,1
+84915,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,1,V Kohli,RG Sharma,Haris Rauf,0,0,0,0,[],0,,,29,1,148,119,89,India,1,24,4,22,9,,,0,1
+84916,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,2,V Kohli,RG Sharma,Haris Rauf,4,0,4,0,[],0,,,33,1,148,115,88,India,1,28,4,23,9,,,4,1
+84917,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,3,V Kohli,RG Sharma,Haris Rauf,1,0,1,0,[],0,,,34,1,148,114,87,India,1,29,4,24,9,,,1,1
+84918,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,4,RG Sharma,V Kohli,Haris Rauf,0,4,4,0,['legbyes'],0,,,38,1,148,110,86,India,1,4,29,10,24,,,0,1
+84919,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,5,RG Sharma,V Kohli,Haris Rauf,0,0,0,0,[],0,,,38,1,148,110,85,India,1,4,29,11,24,,,0,1
+84920,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,6,6,RG Sharma,V Kohli,Haris Rauf,0,0,0,0,[],0,,,38,1,148,110,84,India,1,4,29,12,24,,,0,1
+84921,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,1,V Kohli,RG Sharma,Shadab Khan,0,0,0,0,[],0,,,38,1,148,110,83,India,1,29,4,25,12,,,0,1
+84922,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,2,V Kohli,RG Sharma,Shadab Khan,1,0,1,0,[],0,,,39,1,148,109,82,India,1,30,4,26,12,,,1,1
+84923,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,3,RG Sharma,V Kohli,Shadab Khan,0,0,0,0,[],0,,,39,1,148,109,81,India,1,4,30,13,26,,,0,1
+84924,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,4,RG Sharma,V Kohli,Shadab Khan,0,0,0,0,[],0,,,39,1,148,109,80,India,1,4,30,14,26,,,0,1
+84925,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,5,RG Sharma,V Kohli,Shadab Khan,1,0,1,0,[],0,,,40,1,148,108,79,India,1,5,30,15,26,,,1,1
+84926,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,7,6,V Kohli,RG Sharma,Shadab Khan,1,0,1,0,[],0,,,41,1,148,107,78,India,1,31,5,27,15,,,1,1
+84927,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,1,V Kohli,RG Sharma,Mohammad Nawaz,1,0,1,0,[],0,,,42,1,148,106,77,India,1,32,5,28,15,,,1,1
+84928,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,2,RG Sharma,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,43,1,148,105,76,India,1,6,32,16,28,,,1,1
+84929,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,3,V Kohli,RG Sharma,Mohammad Nawaz,1,0,1,0,[],0,,,44,1,148,104,75,India,1,33,6,29,16,,,1,1
+84930,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,4,RG Sharma,V Kohli,Mohammad Nawaz,6,0,6,0,[],0,,,50,1,148,98,74,India,1,12,33,17,29,,,6,1
+84931,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,5,RG Sharma,V Kohli,Mohammad Nawaz,0,0,0,0,[],0,,,50,1,148,98,73,India,1,12,33,18,29,,,0,1
+84932,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,8,6,RG Sharma,V Kohli,Mohammad Nawaz,0,0,0,0,[],1,caught,RG Sharma,50,2,148,98,72,India,1,0,33,0,29,12,19,0,1
+84933,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,1,V Kohli,RA Jadeja,Shadab Khan,0,0,0,0,[],0,,,50,2,148,98,71,India,1,33,0,30,0,,,0,1
+84934,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,2,V Kohli,RA Jadeja,Shadab Khan,1,0,1,0,[],0,,,51,2,148,97,70,India,1,34,0,31,0,,,1,1
+84935,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,3,RA Jadeja,V Kohli,Shadab Khan,0,0,0,0,[],0,,,51,2,148,97,69,India,1,0,34,1,31,,,0,1
+84936,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,4,RA Jadeja,V Kohli,Shadab Khan,1,0,1,0,[],0,,,52,2,148,96,68,India,1,1,34,2,31,,,1,1
+84937,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,5,V Kohli,RA Jadeja,Shadab Khan,0,0,0,0,[],0,,,52,2,148,96,67,India,1,34,1,32,2,,,0,1
+84938,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,9,6,V Kohli,RA Jadeja,Shadab Khan,1,0,1,0,[],0,,,53,2,148,95,66,India,1,35,1,33,2,,,1,1
+84939,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,1,V Kohli,RA Jadeja,Mohammad Nawaz,0,0,0,0,[],1,caught,V Kohli,53,3,148,95,65,India,1,0,1,0,2,35,34,0,1
+84940,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,2,SA Yadav,RA Jadeja,Mohammad Nawaz,1,0,1,0,[],0,,,54,3,148,94,64,India,1,1,1,1,2,,,1,1
+84941,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,3,RA Jadeja,SA Yadav,Mohammad Nawaz,0,0,0,0,[],0,,,54,3,148,94,63,India,1,1,1,3,1,,,0,1
+84942,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,4,RA Jadeja,SA Yadav,Mohammad Nawaz,6,0,6,0,[],0,,,60,3,148,88,62,India,1,7,1,4,1,,,6,1
+84943,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,5,RA Jadeja,SA Yadav,Mohammad Nawaz,1,0,1,0,[],0,,,61,3,148,87,61,India,1,8,1,5,1,,,1,1
+84944,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,10,6,SA Yadav,RA Jadeja,Mohammad Nawaz,1,0,1,0,[],0,,,62,3,148,86,60,India,1,2,8,2,5,,,1,1
+84945,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,1,SA Yadav,RA Jadeja,Shadab Khan,1,0,1,0,[],0,,,63,3,148,85,59,India,1,3,8,3,5,,,1,1
+84946,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,2,RA Jadeja,SA Yadav,Shadab Khan,1,0,1,0,[],0,,,64,3,148,84,58,India,1,9,3,6,3,,,1,1
+84947,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,3,SA Yadav,RA Jadeja,Shadab Khan,0,0,0,0,[],0,,,64,3,148,84,57,India,1,3,9,4,6,,,0,1
+84948,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,4,SA Yadav,RA Jadeja,Shadab Khan,4,0,4,0,[],0,,,68,3,148,80,56,India,1,7,9,5,6,,,4,1
+84949,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,5,SA Yadav,RA Jadeja,Shadab Khan,0,0,0,0,[],0,,,68,3,148,80,55,India,1,7,9,6,6,,,0,1
+84950,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,11,6,SA Yadav,RA Jadeja,Shadab Khan,1,0,1,0,[],0,,,69,3,148,79,54,India,1,8,9,7,6,,,1,1
+84951,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,1,SA Yadav,RA Jadeja,Mohammad Nawaz,0,0,0,0,[],0,,,69,3,148,79,53,India,1,8,9,8,6,,,0,1
+84952,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,2,SA Yadav,RA Jadeja,Mohammad Nawaz,1,0,1,0,[],0,,,70,3,148,78,52,India,1,9,9,9,6,,,1,1
+84953,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,3,RA Jadeja,SA Yadav,Mohammad Nawaz,4,0,4,0,[],0,,,74,3,148,74,51,India,1,13,9,7,9,,,4,1
+84954,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,4,RA Jadeja,SA Yadav,Mohammad Nawaz,1,0,1,0,[],0,,,75,3,148,73,50,India,1,14,9,8,9,,,1,1
+84955,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,5,SA Yadav,RA Jadeja,Mohammad Nawaz,1,0,1,0,[],0,,,76,3,148,72,49,India,1,10,14,10,8,,,1,1
+84956,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,12,6,RA Jadeja,SA Yadav,Mohammad Nawaz,1,0,1,0,[],0,,,77,3,148,71,48,India,1,15,10,9,10,,,1,1
+84957,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,1,RA Jadeja,SA Yadav,Shadab Khan,0,0,0,0,[],0,,,77,3,148,71,47,India,1,15,10,10,10,,,0,1
+84958,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,2,RA Jadeja,SA Yadav,Shadab Khan,0,0,0,0,[],0,,,77,3,148,71,46,India,1,15,10,11,10,,,0,1
+84959,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,3,RA Jadeja,SA Yadav,Shadab Khan,1,0,1,0,[],0,,,78,3,148,70,45,India,1,16,10,12,10,,,1,1
+84960,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,4,SA Yadav,RA Jadeja,Shadab Khan,2,0,2,0,[],0,,,80,3,148,68,44,India,1,12,16,11,12,,,2,1
+84961,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,5,SA Yadav,RA Jadeja,Shadab Khan,2,0,2,0,[],0,,,82,3,148,66,43,India,1,14,16,12,12,,,2,1
+84962,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,13,6,SA Yadav,RA Jadeja,Shadab Khan,1,0,1,0,[],0,,,83,3,148,65,42,India,1,15,16,13,12,,,1,1
+84963,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,1,SA Yadav,RA Jadeja,Shahnawaz Dhani,1,0,1,0,[],0,,,84,3,148,64,41,India,1,16,16,14,12,,,1,1
+84964,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,2,RA Jadeja,SA Yadav,Shahnawaz Dhani,0,0,0,0,[],0,,,84,3,148,64,40,India,1,16,16,13,14,,,0,1
+84965,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,3,RA Jadeja,SA Yadav,Shahnawaz Dhani,0,1,1,1,['wides'],0,,,85,3,148,63,40,India,1,16,16,13,14,,,1,0
+84966,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,3,RA Jadeja,SA Yadav,Shahnawaz Dhani,1,0,1,0,[],0,,,86,3,148,62,39,India,1,17,16,14,14,,,1,1
+84967,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,4,SA Yadav,RA Jadeja,Shahnawaz Dhani,1,0,1,0,[],0,,,87,3,148,61,38,India,1,17,17,15,14,,,1,1
+84968,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,5,RA Jadeja,SA Yadav,Shahnawaz Dhani,1,0,1,0,[],0,,,88,3,148,60,37,India,1,18,17,15,15,,,1,1
+84969,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,14,6,SA Yadav,RA Jadeja,Shahnawaz Dhani,1,0,1,0,[],0,,,89,3,148,59,36,India,1,18,18,16,15,,,1,1
+84970,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,1,SA Yadav,RA Jadeja,Naseem Shah,0,0,0,0,[],0,,,89,3,148,59,35,India,1,18,18,17,15,,,0,1
+84971,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,2,SA Yadav,RA Jadeja,Naseem Shah,0,0,0,0,[],1,bowled,SA Yadav,89,4,148,59,34,India,1,0,18,0,15,18,18,0,1
+84972,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,3,HH Pandya,RA Jadeja,Naseem Shah,2,0,2,0,[],0,,,91,4,148,57,33,India,1,2,18,1,15,,,2,1
+84973,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,4,HH Pandya,RA Jadeja,Naseem Shah,1,0,1,0,[],0,,,92,4,148,56,32,India,1,3,18,2,15,,,1,1
+84974,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,5,RA Jadeja,HH Pandya,Naseem Shah,1,0,1,0,[],0,,,93,4,148,55,31,India,1,19,3,16,2,,,1,1
+84975,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,15,6,HH Pandya,RA Jadeja,Naseem Shah,4,0,4,0,[],0,,,97,4,148,51,30,India,1,7,19,3,16,,,4,1
+84976,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,1,RA Jadeja,HH Pandya,Shahnawaz Dhani,1,0,1,0,[],0,,,98,4,148,50,29,India,1,20,7,17,3,,,1,1
+84977,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,2,HH Pandya,RA Jadeja,Shahnawaz Dhani,1,0,1,0,[],0,,,99,4,148,49,28,India,1,8,20,4,17,,,1,1
+84978,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,3,RA Jadeja,HH Pandya,Shahnawaz Dhani,1,0,1,0,[],0,,,100,4,148,48,27,India,1,21,8,18,4,,,1,1
+84979,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,4,HH Pandya,RA Jadeja,Shahnawaz Dhani,2,0,2,0,[],0,,,102,4,148,46,26,India,1,10,21,5,18,,,2,1
+84980,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,5,HH Pandya,RA Jadeja,Shahnawaz Dhani,1,0,1,0,[],0,,,103,4,148,45,25,India,1,11,21,6,18,,,1,1
+84981,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,6,RA Jadeja,HH Pandya,Shahnawaz Dhani,0,3,3,1,['wides'],0,,,106,4,148,42,25,India,1,21,11,19,6,,,3,0
+84982,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,16,6,RA Jadeja,HH Pandya,Shahnawaz Dhani,1,0,1,0,[],0,,,107,4,148,41,24,India,1,22,11,20,6,,,1,1
+84983,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,1,RA Jadeja,HH Pandya,Haris Rauf,0,2,2,1,['wides'],0,,,109,4,148,39,24,India,1,22,11,20,6,,,2,0
+84984,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,1,HH Pandya,RA Jadeja,Haris Rauf,0,0,0,0,[],0,,,109,4,148,39,23,India,1,11,22,7,20,,,0,1
+84985,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,2,HH Pandya,RA Jadeja,Haris Rauf,0,0,0,0,[],0,,,109,4,148,39,22,India,1,11,22,8,20,,,0,1
+84986,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,3,HH Pandya,RA Jadeja,Haris Rauf,2,0,2,0,[],0,,,111,4,148,37,21,India,1,13,22,9,20,,,2,1
+84987,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,4,HH Pandya,RA Jadeja,Haris Rauf,1,0,1,0,[],0,,,112,4,148,36,20,India,1,14,22,10,20,,,1,1
+84988,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,5,RA Jadeja,HH Pandya,Haris Rauf,0,1,1,1,['wides'],0,,,113,4,148,35,20,India,1,22,14,21,10,,,1,0
+84989,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,5,RA Jadeja,HH Pandya,Haris Rauf,2,0,2,0,[],0,,,115,4,148,33,19,India,1,24,14,22,10,,,2,1
+84990,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,17,6,RA Jadeja,HH Pandya,Haris Rauf,0,1,1,0,['legbyes'],0,,,116,4,148,32,18,India,1,24,14,23,10,,,0,1
+84991,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,1,RA Jadeja,HH Pandya,Naseem Shah,0,1,1,1,['wides'],0,,,117,4,148,31,18,India,1,24,14,23,10,,,1,0
+84992,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,1,RA Jadeja,HH Pandya,Naseem Shah,4,0,4,0,[],0,,,121,4,148,27,17,India,1,28,14,24,10,,,4,1
+84993,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,2,RA Jadeja,HH Pandya,Naseem Shah,0,0,0,0,[],0,,,121,4,148,27,16,India,1,28,14,25,10,,,0,1
+84994,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,3,RA Jadeja,HH Pandya,Naseem Shah,0,0,0,0,[],0,,,121,4,148,27,15,India,1,28,14,26,10,,,0,1
+84995,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,4,RA Jadeja,HH Pandya,Naseem Shah,0,0,0,0,[],0,,,121,4,148,27,14,India,1,28,14,27,10,,,0,1
+84996,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,5,RA Jadeja,HH Pandya,Naseem Shah,6,0,6,0,[],0,,,127,4,148,21,13,India,1,34,14,28,10,,,6,1
+84997,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,18,6,RA Jadeja,HH Pandya,Naseem Shah,0,0,0,0,[],0,,,127,4,148,21,12,India,1,34,14,29,10,,,0,1
+84998,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,1,HH Pandya,RA Jadeja,Haris Rauf,1,0,1,0,[],0,,,128,4,148,20,11,India,1,15,34,11,29,,,1,1
+84999,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,2,RA Jadeja,HH Pandya,Haris Rauf,1,0,1,0,[],0,,,129,4,148,19,10,India,1,35,15,30,11,,,1,1
+85000,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,3,HH Pandya,RA Jadeja,Haris Rauf,4,0,4,0,[],0,,,133,4,148,15,9,India,1,19,35,12,30,,,4,1
+85001,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,4,HH Pandya,RA Jadeja,Haris Rauf,4,0,4,0,[],0,,,137,4,148,11,8,India,1,23,35,13,30,,,4,1
+85002,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,5,HH Pandya,RA Jadeja,Haris Rauf,0,0,0,0,[],0,,,137,4,148,11,7,India,1,23,35,14,30,,,0,1
+85003,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,19,6,HH Pandya,RA Jadeja,Haris Rauf,4,0,4,0,[],0,,,141,4,148,7,6,India,1,27,35,15,30,,,4,1
+85004,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,20,1,RA Jadeja,HH Pandya,Mohammad Nawaz,0,0,0,0,[],1,bowled,RA Jadeja,141,5,148,7,5,India,1,0,27,0,15,35,31,0,1
+85005,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,20,2,KD Karthik,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,142,5,148,6,4,India,1,1,27,1,15,,,1,1
+85006,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,20,3,HH Pandya,KD Karthik,Mohammad Nawaz,0,0,0,0,[],0,,,142,5,148,6,3,India,1,27,1,16,1,,,0,1
+85007,1327270,8/28/2022,Dubai International Cricket Stadium,Pakistan,India,2,20,4,HH Pandya,KD Karthik,Mohammad Nawaz,6,0,6,0,[],0,,,148,5,148,0,2,India,1,33,1,17,1,,,6,1
+178798,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,1,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,160,,119,India,1,0,0,1,0,,,0,1
+178799,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,2,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,160,,118,India,1,0,0,2,0,,,0,1
+178800,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,3,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,160,,117,India,1,0,0,3,0,,,0,1
+178801,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,4,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,160,,116,India,1,0,0,4,0,,,0,1
+178802,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,5,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,0,0,160,,115,India,1,0,0,5,0,,,0,1
+178803,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,6,Mohammad Rizwan,Babar Azam,B Kumar,0,1,1,1,['wides'],0,,,1,0,160,,115,India,1,0,0,5,0,,,1,0
+178804,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,1,6,Mohammad Rizwan,Babar Azam,B Kumar,0,0,0,0,[],0,,,1,0,160,,114,India,1,0,0,6,0,,,0,1
+178805,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,1,Babar Azam,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],1,lbw,Babar Azam,1,1,160,,113,India,1,0,0,0,6,0,1,0,1
+178806,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,2,Shan Masood,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,1,1,160,,112,India,1,0,0,1,6,,,0,1
+178807,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,3,Shan Masood,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,1,1,160,,111,India,1,0,0,2,6,,,0,1
+178808,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,4,Shan Masood,Mohammad Rizwan,Arshdeep Singh,0,0,0,0,[],0,,,1,1,160,,110,India,1,0,0,3,6,,,0,1
+178809,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,5,Shan Masood,Mohammad Rizwan,Arshdeep Singh,1,0,1,0,[],0,,,2,1,160,,109,India,1,1,0,4,6,,,1,1
+178810,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,2,6,Mohammad Rizwan,Shan Masood,Arshdeep Singh,4,0,4,0,[],0,,,6,1,160,,108,India,1,4,1,7,4,,,4,1
+178811,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,1,Shan Masood,Mohammad Rizwan,B Kumar,0,1,1,1,['wides'],0,,,7,1,160,,108,India,1,1,4,5,7,,,1,0
+178812,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,1,Shan Masood,Mohammad Rizwan,B Kumar,0,0,0,0,[],0,,,7,1,160,,107,India,1,1,4,6,7,,,0,1
+178813,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,2,Shan Masood,Mohammad Rizwan,B Kumar,0,0,0,0,[],0,,,7,1,160,,106,India,1,1,4,7,7,,,0,1
+178814,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,3,Shan Masood,Mohammad Rizwan,B Kumar,2,0,2,0,[],0,,,9,1,160,,105,India,1,3,4,8,7,,,2,1
+178815,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,4,Shan Masood,Mohammad Rizwan,B Kumar,0,0,0,0,[],0,,,9,1,160,,104,India,1,3,4,9,7,,,0,1
+178816,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,5,Shan Masood,Mohammad Rizwan,B Kumar,1,0,1,0,[],0,,,10,1,160,,103,India,1,4,4,10,7,,,1,1
+178817,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,3,6,Mohammad Rizwan,Shan Masood,B Kumar,0,0,0,0,[],0,,,10,1,160,,102,India,1,4,4,8,10,,,0,1
+178818,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,1,Shan Masood,Mohammad Rizwan,Arshdeep Singh,4,0,4,0,[],0,,,14,1,160,,101,India,1,8,4,11,8,,,4,1
+178819,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,2,Shan Masood,Mohammad Rizwan,Arshdeep Singh,1,0,1,0,[],0,,,15,1,160,,100,India,1,9,4,12,8,,,1,1
+178820,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,3,Mohammad Rizwan,Shan Masood,Arshdeep Singh,0,0,0,0,[],0,,,15,1,160,,99,India,1,4,9,9,12,,,0,1
+178821,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,4,Mohammad Rizwan,Shan Masood,Arshdeep Singh,0,0,0,0,[],0,,,15,1,160,,98,India,1,4,9,10,12,,,0,1
+178822,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,5,Mohammad Rizwan,Shan Masood,Arshdeep Singh,0,0,0,0,[],0,,,15,1,160,,97,India,1,4,9,11,12,,,0,1
+178823,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,4,6,Mohammad Rizwan,Shan Masood,Arshdeep Singh,0,0,0,0,[],1,caught,Mohammad Rizwan,15,2,160,,96,India,1,0,9,0,12,4,12,0,1
+178824,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,1,Shan Masood,Iftikhar Ahmed,B Kumar,0,0,0,0,[],0,,,15,2,160,,95,India,1,9,0,13,0,,,0,1
+178825,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,2,Shan Masood,Iftikhar Ahmed,B Kumar,3,0,3,0,[],0,,,18,2,160,,94,India,1,12,0,14,0,,,3,1
+178826,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,3,Iftikhar Ahmed,Shan Masood,B Kumar,2,0,2,0,[],0,,,20,2,160,,93,India,1,2,12,1,14,,,2,1
+178827,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,4,Iftikhar Ahmed,Shan Masood,B Kumar,0,0,0,0,[],0,,,20,2,160,,92,India,1,2,12,2,14,,,0,1
+178828,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,5,Iftikhar Ahmed,Shan Masood,B Kumar,4,0,4,0,[],0,,,24,2,160,,91,India,1,6,12,3,14,,,4,1
+178829,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,5,6,Iftikhar Ahmed,Shan Masood,B Kumar,0,0,0,0,[],0,,,24,2,160,,90,India,1,6,12,4,14,,,0,1
+178830,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,1,Shan Masood,Iftikhar Ahmed,Mohammed Shami,0,0,0,0,[],0,,,24,2,160,,89,India,1,12,6,15,4,,,0,1
+178831,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,2,Shan Masood,Iftikhar Ahmed,Mohammed Shami,0,0,0,0,[],0,,,24,2,160,,88,India,1,12,6,16,4,,,0,1
+178832,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,3,Shan Masood,Iftikhar Ahmed,Mohammed Shami,4,0,4,0,[],0,,,28,2,160,,87,India,1,16,6,17,4,,,4,1
+178833,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,4,Shan Masood,Iftikhar Ahmed,Mohammed Shami,3,0,3,0,[],0,,,31,2,160,,86,India,1,19,6,18,4,,,3,1
+178834,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,5,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,31,2,160,,85,India,1,6,19,5,18,,,0,1
+178835,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,6,6,Iftikhar Ahmed,Shan Masood,Mohammed Shami,1,0,1,0,[],0,,,32,2,160,,84,India,1,7,19,6,18,,,1,1
+178836,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,1,Iftikhar Ahmed,Shan Masood,HH Pandya,0,0,0,0,[],0,,,32,2,160,,83,India,1,7,19,7,18,,,0,1
+178837,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,2,Iftikhar Ahmed,Shan Masood,HH Pandya,3,0,3,0,[],0,,,35,2,160,,82,India,1,10,19,8,18,,,3,1
+178838,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,3,Shan Masood,Iftikhar Ahmed,HH Pandya,0,0,0,0,[],0,,,35,2,160,,81,India,1,19,10,19,8,,,0,1
+178839,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,4,Shan Masood,Iftikhar Ahmed,HH Pandya,1,0,1,0,[],0,,,36,2,160,,80,India,1,20,10,20,8,,,1,1
+178840,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,5,Iftikhar Ahmed,Shan Masood,HH Pandya,1,0,1,0,[],0,,,37,2,160,,79,India,1,11,20,9,20,,,1,1
+178841,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,7,6,Shan Masood,Iftikhar Ahmed,HH Pandya,4,0,4,0,[],0,,,41,2,160,,78,India,1,24,11,21,9,,,4,1
+178842,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,1,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,1,1,1,['wides'],0,,,42,2,160,,78,India,1,11,24,10,21,,,1,0
+178843,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,1,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,42,2,160,,77,India,1,11,24,11,21,,,0,1
+178844,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,2,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,1,1,0,['legbyes'],0,,,43,2,160,,76,India,1,11,24,12,21,,,0,1
+178845,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,3,Shan Masood,Iftikhar Ahmed,Mohammed Shami,1,0,1,0,[],0,,,44,2,160,,75,India,1,25,11,22,12,,,1,1
+178846,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,4,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,44,2,160,,74,India,1,11,25,13,22,,,0,1
+178847,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,5,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,44,2,160,,73,India,1,11,25,14,22,,,0,1
+178848,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,8,6,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,44,2,160,,72,India,1,11,25,15,22,,,0,1
+178849,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,1,Shan Masood,Iftikhar Ahmed,R Ashwin,0,1,1,0,['legbyes'],0,,,45,2,160,,71,India,1,25,11,23,15,,,0,1
+178850,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,2,Iftikhar Ahmed,Shan Masood,R Ashwin,0,0,0,0,[],0,,,45,2,160,,70,India,1,11,25,16,23,,,0,1
+178851,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,3,Iftikhar Ahmed,Shan Masood,R Ashwin,1,0,1,0,[],0,,,46,2,160,,69,India,1,12,25,17,23,,,1,1
+178852,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,4,Shan Masood,Iftikhar Ahmed,R Ashwin,2,0,2,0,[],0,,,48,2,160,,68,India,1,27,12,24,17,,,2,1
+178853,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,5,Shan Masood,Iftikhar Ahmed,R Ashwin,1,0,1,0,[],0,,,49,2,160,,67,India,1,28,12,25,17,,,1,1
+178854,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,9,6,Iftikhar Ahmed,Shan Masood,R Ashwin,1,0,1,0,[],0,,,50,2,160,,66,India,1,13,28,18,25,,,1,1
+178855,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,1,Iftikhar Ahmed,Shan Masood,HH Pandya,2,0,2,0,[],0,,,52,2,160,,65,India,1,15,28,19,25,,,2,1
+178856,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,2,Iftikhar Ahmed,Shan Masood,HH Pandya,1,0,1,0,[],0,,,53,2,160,,64,India,1,16,28,20,25,,,1,1
+178857,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,3,Shan Masood,Iftikhar Ahmed,HH Pandya,1,0,1,0,[],0,,,54,2,160,,63,India,1,29,16,26,20,,,1,1
+178858,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,4,Iftikhar Ahmed,Shan Masood,HH Pandya,4,0,4,0,[],0,,,58,2,160,,62,India,1,20,29,21,26,,,4,1
+178859,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,5,Iftikhar Ahmed,Shan Masood,HH Pandya,1,0,1,0,[],0,,,59,2,160,,61,India,1,21,29,22,26,,,1,1
+178860,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,10,6,Shan Masood,Iftikhar Ahmed,HH Pandya,0,1,1,0,['legbyes'],0,,,60,2,160,,60,India,1,29,21,27,22,,,0,1
+178861,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,1,Shan Masood,Iftikhar Ahmed,R Ashwin,1,0,1,0,[],0,,,61,2,160,,59,India,1,30,21,28,22,,,1,1
+178862,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,2,Iftikhar Ahmed,Shan Masood,R Ashwin,0,0,0,0,[],0,,,61,2,160,,58,India,1,21,30,23,28,,,0,1
+178863,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,3,Iftikhar Ahmed,Shan Masood,R Ashwin,2,0,2,0,[],0,,,63,2,160,,57,India,1,23,30,24,28,,,2,1
+178864,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,4,Iftikhar Ahmed,Shan Masood,R Ashwin,0,0,0,0,[],0,,,63,2,160,,56,India,1,23,30,25,28,,,0,1
+178865,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,5,Iftikhar Ahmed,Shan Masood,R Ashwin,6,0,6,0,[],0,,,69,2,160,,55,India,1,29,30,26,28,,,6,1
+178866,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,11,6,Iftikhar Ahmed,Shan Masood,R Ashwin,1,0,1,0,[],0,,,70,2,160,,54,India,1,30,30,27,28,,,1,1
+178867,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,1,Iftikhar Ahmed,Shan Masood,AR Patel,6,0,6,0,[],0,,,76,2,160,,53,India,1,36,30,28,28,,,6,1
+178868,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,2,Iftikhar Ahmed,Shan Masood,AR Patel,0,0,0,0,[],0,,,76,2,160,,52,India,1,36,30,29,28,,,0,1
+178869,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,3,Iftikhar Ahmed,Shan Masood,AR Patel,6,0,6,0,[],0,,,82,2,160,,51,India,1,42,30,30,28,,,6,1
+178870,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,4,Iftikhar Ahmed,Shan Masood,AR Patel,6,0,6,0,[],0,,,88,2,160,,50,India,1,48,30,31,28,,,6,1
+178871,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,5,Iftikhar Ahmed,Shan Masood,AR Patel,0,0,0,0,[],0,,,88,2,160,,49,India,1,48,30,32,28,,,0,1
+178872,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,12,6,Iftikhar Ahmed,Shan Masood,AR Patel,3,0,3,0,[],0,,,91,2,160,,48,India,1,51,30,33,28,,,3,1
+178873,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,1,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,91,2,160,,47,India,1,51,30,34,28,,,0,1
+178874,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,2,Iftikhar Ahmed,Shan Masood,Mohammed Shami,0,0,0,0,[],1,lbw,Iftikhar Ahmed,91,3,160,,46,India,1,0,30,0,28,51,35,0,1
+178875,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,3,Shadab Khan,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,91,3,160,,45,India,1,0,30,1,28,,,0,1
+178876,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,4,Shadab Khan,Shan Masood,Mohammed Shami,4,0,4,0,[],0,,,95,3,160,,44,India,1,4,30,2,28,,,4,1
+178877,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,5,Shadab Khan,Shan Masood,Mohammed Shami,0,0,0,0,[],0,,,95,3,160,,43,India,1,4,30,3,28,,,0,1
+178878,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,13,6,Shadab Khan,Shan Masood,Mohammed Shami,1,0,1,0,[],0,,,96,3,160,,42,India,1,5,30,4,28,,,1,1
+178879,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,1,Shadab Khan,Shan Masood,HH Pandya,0,0,0,0,[],0,,,96,3,160,,41,India,1,5,30,5,28,,,0,1
+178880,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,2,Shadab Khan,Shan Masood,HH Pandya,0,0,0,0,[],1,caught,Shadab Khan,96,4,160,,40,India,1,0,30,0,28,5,6,0,1
+178881,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,3,Haider Ali,Shan Masood,HH Pandya,0,0,0,0,[],0,,,96,4,160,,39,India,1,0,30,1,28,,,0,1
+178882,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,4,Haider Ali,Shan Masood,HH Pandya,2,0,2,0,[],0,,,98,4,160,,38,India,1,2,30,2,28,,,2,1
+178883,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,5,Haider Ali,Shan Masood,HH Pandya,0,0,0,0,[],0,,,98,4,160,,37,India,1,2,30,3,28,,,0,1
+178884,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,14,6,Haider Ali,Shan Masood,HH Pandya,0,0,0,0,[],1,caught,Haider Ali,98,5,160,,36,India,1,0,30,0,28,2,4,0,1
+178885,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,1,Shan Masood,Mohammad Nawaz,R Ashwin,1,0,1,0,[],0,,,99,5,160,,35,India,1,31,0,29,0,,,1,1
+178886,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,2,Mohammad Nawaz,Shan Masood,R Ashwin,0,1,1,1,['wides'],0,,,100,5,160,,35,India,1,0,31,0,29,,,1,0
+178887,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,2,Mohammad Nawaz,Shan Masood,R Ashwin,0,0,0,0,[],0,,,100,5,160,,34,India,1,0,31,2,29,,,0,1
+178888,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,3,Mohammad Nawaz,Shan Masood,R Ashwin,1,0,1,0,[],0,,,101,5,160,,33,India,1,1,31,3,29,,,1,1
+178889,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,4,Shan Masood,Mohammad Nawaz,R Ashwin,2,0,2,0,[],0,,,103,5,160,,32,India,1,33,1,30,3,,,2,1
+178890,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,5,Shan Masood,Mohammad Nawaz,R Ashwin,2,0,2,0,[],0,,,105,5,160,,31,India,1,35,1,31,3,,,2,1
+178891,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,15,6,Shan Masood,Mohammad Nawaz,R Ashwin,1,0,1,0,[],0,,,106,5,160,,30,India,1,36,1,32,3,,,1,1
+178892,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,1,Shan Masood,Mohammad Nawaz,HH Pandya,1,0,1,0,[],0,,,107,5,160,,29,India,1,37,1,33,3,,,1,1
+178893,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,2,Mohammad Nawaz,Shan Masood,HH Pandya,4,0,4,0,[],0,,,111,5,160,,28,India,1,5,37,4,33,,,4,1
+178894,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,3,Mohammad Nawaz,Shan Masood,HH Pandya,0,0,0,0,[],0,,,111,5,160,,27,India,1,5,37,5,33,,,0,1
+178895,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,4,Mohammad Nawaz,Shan Masood,HH Pandya,4,0,4,0,[],0,,,115,5,160,,26,India,1,9,37,6,33,,,4,1
+178896,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,5,Mohammad Nawaz,Shan Masood,HH Pandya,0,0,0,0,[],1,caught,Mohammad Nawaz,115,6,160,,25,India,1,0,37,0,33,9,7,0,1
+178897,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,16,6,Asif Ali,Shan Masood,HH Pandya,1,0,1,0,[],0,,,116,6,160,,24,India,1,1,37,1,33,,,1,1
+178898,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,1,Asif Ali,Shan Masood,Arshdeep Singh,1,0,1,0,[],0,,,117,6,160,,23,India,1,2,37,2,33,,,1,1
+178899,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,2,Shan Masood,Asif Ali,Arshdeep Singh,2,0,2,0,[],0,,,119,6,160,,22,India,1,39,2,34,2,,,2,1
+178900,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,3,Shan Masood,Asif Ali,Arshdeep Singh,1,0,1,0,[],0,,,120,6,160,,21,India,1,40,2,35,2,,,1,1
+178901,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,4,Asif Ali,Shan Masood,Arshdeep Singh,0,0,0,0,[],1,caught,Asif Ali,120,7,160,,20,India,1,0,40,0,35,2,3,0,1
+178902,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,5,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,2,0,2,0,[],0,,,122,7,160,,19,India,1,2,40,1,35,,,2,1
+178903,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,6,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,0,1,1,1,['wides'],0,,,123,7,160,,19,India,1,2,40,0,35,,,1,0
+178904,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,17,6,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,2,0,2,0,[],0,,,125,7,160,,18,India,1,4,40,2,35,,,2,1
+178905,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,1,Shan Masood,Shaheen Shah Afridi,Mohammed Shami,0,0,0,0,[],0,,,125,7,160,,17,India,1,40,4,36,2,,,0,1
+178906,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,2,Shan Masood,Shaheen Shah Afridi,Mohammed Shami,4,0,4,0,[],0,,,129,7,160,,16,India,1,44,4,37,2,,,4,1
+178907,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,3,Shan Masood,Shaheen Shah Afridi,Mohammed Shami,4,0,4,0,[],0,,,133,7,160,,15,India,1,48,4,38,2,,,4,1
+178908,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,4,Shan Masood,Shaheen Shah Afridi,Mohammed Shami,0,0,0,0,[],0,,,133,7,160,,14,India,1,48,4,39,2,,,0,1
+178909,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,5,Shan Masood,Shaheen Shah Afridi,Mohammed Shami,1,0,1,0,[],0,,,134,7,160,,13,India,1,49,4,40,2,,,1,1
+178910,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,18,6,Shaheen Shah Afridi,Shan Masood,Mohammed Shami,1,0,1,0,[],0,,,135,7,160,,12,India,1,5,49,3,40,,,1,1
+178911,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,1,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,1,0,1,0,[],0,,,136,7,160,,11,India,1,6,49,4,40,,,1,1
+178912,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,2,Shan Masood,Shaheen Shah Afridi,Arshdeep Singh,1,0,1,0,[],0,,,137,7,160,,10,India,1,50,6,41,4,,,1,1
+178913,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,3,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,6,0,6,0,[],0,,,143,7,160,,9,India,1,12,50,5,41,,,6,1
+178914,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,4,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,4,0,4,0,[],0,,,147,7,160,,8,India,1,16,50,6,41,,,4,1
+178915,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,5,Shaheen Shah Afridi,Shan Masood,Arshdeep Singh,0,1,1,0,['legbyes'],0,,,148,7,160,,7,India,1,16,50,7,41,,,0,1
+178916,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,19,6,Shan Masood,Shaheen Shah Afridi,Arshdeep Singh,1,0,1,0,[],0,,,149,7,160,,6,India,1,51,16,42,7,,,1,1
+178917,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,1,Shan Masood,Shaheen Shah Afridi,B Kumar,0,1,1,1,['wides'],0,,,150,7,160,,6,India,1,51,16,42,7,,,1,0
+178918,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,1,Shan Masood,Shaheen Shah Afridi,B Kumar,1,0,1,0,[],0,,,151,7,160,,5,India,1,52,16,43,7,,,1,1
+178919,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,2,Shaheen Shah Afridi,Shan Masood,B Kumar,0,0,0,0,[],1,caught and bowled,Shaheen Shah Afridi,151,8,160,,4,India,1,0,52,0,43,16,8,0,1
+178920,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,3,Haris Rauf,Shan Masood,B Kumar,6,0,6,0,[],0,,,157,8,160,,3,India,1,6,52,1,43,,,6,1
+178921,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,4,Haris Rauf,Shan Masood,B Kumar,0,0,0,0,[],0,,,157,8,160,,2,India,1,6,52,2,43,,,0,1
+178922,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,5,Haris Rauf,Shan Masood,B Kumar,0,0,0,0,[],0,,,157,8,160,,1,India,1,6,52,3,43,,,0,1
+178923,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,1,20,6,Haris Rauf,Shan Masood,B Kumar,0,2,2,0,['byes'],0,,,159,8,160,,0,India,1,6,52,4,43,,,0,1
+178924,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,1,KL Rahul,RG Sharma,Shaheen Shah Afridi,0,0,0,0,[],0,,,0,0,160,160,119,India,1,0,0,1,0,,,0,1
+178925,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,2,KL Rahul,RG Sharma,Shaheen Shah Afridi,1,0,1,0,[],0,,,1,0,160,159,118,India,1,1,0,2,0,,,1,1
+178926,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,3,RG Sharma,KL Rahul,Shaheen Shah Afridi,1,0,1,0,[],0,,,2,0,160,158,117,India,1,1,1,1,2,,,1,1
+178927,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,4,KL Rahul,RG Sharma,Shaheen Shah Afridi,1,0,1,0,[],0,,,3,0,160,157,116,India,1,2,1,3,1,,,1,1
+178928,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,5,RG Sharma,KL Rahul,Shaheen Shah Afridi,0,0,0,0,[],0,,,3,0,160,157,115,India,1,1,2,2,3,,,0,1
+178929,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,1,6,RG Sharma,KL Rahul,Shaheen Shah Afridi,2,0,2,0,[],0,,,5,0,160,155,114,India,1,3,2,3,3,,,2,1
+178930,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,1,KL Rahul,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,5,0,160,155,113,India,1,2,3,4,3,,,0,1
+178931,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,2,KL Rahul,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,5,0,160,155,112,India,1,2,3,5,3,,,0,1
+178932,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,3,KL Rahul,RG Sharma,Naseem Shah,2,0,2,0,[],0,,,7,0,160,153,111,India,1,4,3,6,3,,,2,1
+178933,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,4,KL Rahul,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,7,0,160,153,110,India,1,4,3,7,3,,,0,1
+178934,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,5,KL Rahul,RG Sharma,Naseem Shah,0,0,0,0,[],1,bowled,KL Rahul,7,1,160,153,109,India,1,0,3,0,3,4,8,0,1
+178935,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,2,6,V Kohli,RG Sharma,Naseem Shah,0,0,0,0,[],0,,,7,1,160,153,108,India,1,0,3,1,3,,,0,1
+178936,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,1,RG Sharma,V Kohli,Shaheen Shah Afridi,0,0,0,0,[],0,,,7,1,160,153,107,India,1,3,0,4,1,,,0,1
+178937,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,2,RG Sharma,V Kohli,Shaheen Shah Afridi,1,0,1,0,[],0,,,8,1,160,152,106,India,1,4,0,5,1,,,1,1
+178938,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,3,V Kohli,RG Sharma,Shaheen Shah Afridi,0,0,0,0,[],0,,,8,1,160,152,105,India,1,0,4,2,5,,,0,1
+178939,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,4,V Kohli,RG Sharma,Shaheen Shah Afridi,2,0,2,0,[],0,,,10,1,160,150,104,India,1,2,4,3,5,,,2,1
+178940,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,5,V Kohli,RG Sharma,Shaheen Shah Afridi,0,0,0,0,[],0,,,10,1,160,150,103,India,1,2,4,4,5,,,0,1
+178941,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,3,6,V Kohli,RG Sharma,Shaheen Shah Afridi,0,0,0,0,[],0,,,10,1,160,150,102,India,1,2,4,5,5,,,0,1
+178942,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,1,RG Sharma,V Kohli,Haris Rauf,0,0,0,0,[],0,,,10,1,160,150,101,India,1,4,2,6,5,,,0,1
+178943,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,2,RG Sharma,V Kohli,Haris Rauf,0,0,0,0,[],1,caught,RG Sharma,10,2,160,150,100,India,1,0,2,0,5,4,7,0,1
+178944,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,3,SA Yadav,V Kohli,Haris Rauf,4,0,4,0,[],0,,,14,2,160,146,99,India,1,4,2,1,5,,,4,1
+178945,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,4,SA Yadav,V Kohli,Haris Rauf,3,0,3,0,[],0,,,17,2,160,143,98,India,1,7,2,2,5,,,3,1
+178946,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,5,V Kohli,SA Yadav,Haris Rauf,0,0,0,0,[],0,,,17,2,160,143,97,India,1,2,7,6,2,,,0,1
+178947,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,4,6,V Kohli,SA Yadav,Haris Rauf,0,0,0,0,[],0,,,17,2,160,143,96,India,1,2,7,7,2,,,0,1
+178948,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,1,SA Yadav,V Kohli,Naseem Shah,0,0,0,0,[],0,,,17,2,160,143,95,India,1,7,2,3,7,,,0,1
+178949,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,2,SA Yadav,V Kohli,Naseem Shah,0,0,0,0,[],0,,,17,2,160,143,94,India,1,7,2,4,7,,,0,1
+178950,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,3,SA Yadav,V Kohli,Naseem Shah,3,0,3,0,[],0,,,20,2,160,140,93,India,1,10,2,5,7,,,3,1
+178951,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,4,V Kohli,SA Yadav,Naseem Shah,1,0,1,0,[],0,,,21,2,160,139,92,India,1,3,10,8,5,,,1,1
+178952,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,5,SA Yadav,V Kohli,Naseem Shah,0,0,0,0,[],0,,,21,2,160,139,91,India,1,10,3,6,8,,,0,1
+178953,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,5,6,SA Yadav,V Kohli,Naseem Shah,1,0,1,0,[],0,,,22,2,160,138,90,India,1,11,3,7,8,,,1,1
+178954,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,1,SA Yadav,V Kohli,Haris Rauf,0,0,0,0,[],0,,,22,2,160,138,89,India,1,11,3,8,8,,,0,1
+178955,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,2,SA Yadav,V Kohli,Haris Rauf,4,0,4,0,[],0,,,26,2,160,134,88,India,1,15,3,9,8,,,4,1
+178956,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,3,SA Yadav,V Kohli,Haris Rauf,0,0,0,0,[],1,caught,SA Yadav,26,3,160,134,87,India,1,0,3,0,8,15,10,0,1
+178957,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,4,AR Patel,V Kohli,Haris Rauf,2,0,2,0,[],0,,,28,3,160,132,86,India,1,2,3,1,8,,,2,1
+178958,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,5,AR Patel,V Kohli,Haris Rauf,0,1,1,0,['legbyes'],0,,,29,3,160,131,85,India,1,2,3,2,8,,,0,1
+178959,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,6,6,V Kohli,AR Patel,Haris Rauf,2,0,2,0,[],0,,,31,3,160,129,84,India,1,5,2,9,2,,,2,1
+178960,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,1,AR Patel,V Kohli,Shadab Khan,0,0,0,0,[],1,run out,AR Patel,31,4,160,129,83,India,1,0,5,0,9,2,3,0,1
+178961,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,2,HH Pandya,V Kohli,Shadab Khan,0,0,0,0,[],0,,,31,4,160,129,82,India,1,0,5,1,9,,,0,1
+178962,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,3,HH Pandya,V Kohli,Shadab Khan,1,0,1,0,[],0,,,32,4,160,128,81,India,1,1,5,2,9,,,1,1
+178963,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,4,V Kohli,HH Pandya,Shadab Khan,0,0,0,0,[],0,,,32,4,160,128,80,India,1,5,1,10,2,,,0,1
+178964,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,5,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,33,4,160,127,79,India,1,6,1,11,2,,,1,1
+178965,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,7,6,HH Pandya,V Kohli,Shadab Khan,0,0,0,0,[],0,,,33,4,160,127,78,India,1,1,6,3,11,,,0,1
+178966,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,1,V Kohli,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,34,4,160,126,77,India,1,7,1,12,3,,,1,1
+178967,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,2,HH Pandya,V Kohli,Mohammad Nawaz,0,0,0,0,[],0,,,34,4,160,126,76,India,1,1,7,4,12,,,0,1
+178968,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,3,HH Pandya,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,35,4,160,125,75,India,1,2,7,5,12,,,1,1
+178969,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,4,V Kohli,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,36,4,160,124,74,India,1,8,2,13,5,,,1,1
+178970,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,5,HH Pandya,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,37,4,160,123,73,India,1,3,8,6,13,,,1,1
+178971,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,8,6,V Kohli,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,38,4,160,122,72,India,1,9,3,14,6,,,1,1
+178972,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,1,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,39,4,160,121,71,India,1,10,3,15,6,,,1,1
+178973,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,2,HH Pandya,V Kohli,Shadab Khan,1,0,1,0,[],0,,,40,4,160,120,70,India,1,4,10,7,15,,,1,1
+178974,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,3,V Kohli,HH Pandya,Shadab Khan,0,0,0,0,[],0,,,40,4,160,120,69,India,1,10,4,16,7,,,0,1
+178975,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,4,V Kohli,HH Pandya,Shadab Khan,0,0,0,0,[],0,,,40,4,160,120,68,India,1,10,4,17,7,,,0,1
+178976,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,5,V Kohli,HH Pandya,Shadab Khan,0,0,0,0,[],0,,,40,4,160,120,67,India,1,10,4,18,7,,,0,1
+178977,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,9,6,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,41,4,160,119,66,India,1,11,4,19,7,,,1,1
+178978,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,1,V Kohli,HH Pandya,Mohammad Nawaz,0,0,0,0,[],0,,,41,4,160,119,65,India,1,11,4,20,7,,,0,1
+178979,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,2,V Kohli,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,42,4,160,118,64,India,1,12,4,21,7,,,1,1
+178980,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,3,HH Pandya,V Kohli,Mohammad Nawaz,2,0,2,0,[],0,,,44,4,160,116,63,India,1,6,12,8,21,,,2,1
+178981,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,4,HH Pandya,V Kohli,Mohammad Nawaz,0,0,0,0,[],0,,,44,4,160,116,62,India,1,6,12,9,21,,,0,1
+178982,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,5,HH Pandya,V Kohli,Mohammad Nawaz,0,0,0,0,[],0,,,44,4,160,116,61,India,1,6,12,10,21,,,0,1
+178983,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,10,6,HH Pandya,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,45,4,160,115,60,India,1,7,12,11,21,,,1,1
+178984,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,1,HH Pandya,V Kohli,Shadab Khan,0,0,0,0,[],0,,,45,4,160,115,59,India,1,7,12,12,21,,,0,1
+178985,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,2,HH Pandya,V Kohli,Shadab Khan,4,0,4,0,[],0,,,49,4,160,111,58,India,1,11,12,13,21,,,4,1
+178986,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,3,HH Pandya,V Kohli,Shadab Khan,1,0,1,0,[],0,,,50,4,160,110,57,India,1,12,12,14,21,,,1,1
+178987,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,4,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,51,4,160,109,56,India,1,13,12,22,14,,,1,1
+178988,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,5,HH Pandya,V Kohli,Shadab Khan,1,0,1,0,[],0,,,52,4,160,108,55,India,1,13,13,15,22,,,1,1
+178989,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,11,6,V Kohli,HH Pandya,Shadab Khan,2,0,2,0,[],0,,,54,4,160,106,54,India,1,15,13,23,15,,,2,1
+178990,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,1,HH Pandya,V Kohli,Mohammad Nawaz,6,0,6,0,[],0,,,60,4,160,100,53,India,1,19,15,16,23,,,6,1
+178991,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,2,HH Pandya,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,61,4,160,99,52,India,1,20,15,17,23,,,1,1
+178992,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,3,V Kohli,HH Pandya,Mohammad Nawaz,0,0,0,0,[],0,,,61,4,160,99,51,India,1,15,20,24,17,,,0,1
+178993,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,4,V Kohli,HH Pandya,Mohammad Nawaz,6,0,6,0,[],0,,,67,4,160,93,50,India,1,21,20,25,17,,,6,1
+178994,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,5,V Kohli,HH Pandya,Mohammad Nawaz,1,0,1,0,[],0,,,68,4,160,92,49,India,1,22,20,26,17,,,1,1
+178995,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,12,6,HH Pandya,V Kohli,Mohammad Nawaz,6,0,6,0,[],0,,,74,4,160,86,48,India,1,26,22,18,26,,,6,1
+178996,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,1,V Kohli,HH Pandya,Shaheen Shah Afridi,1,0,1,0,[],0,,,75,4,160,85,47,India,1,23,26,27,18,,,1,1
+178997,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,2,HH Pandya,V Kohli,Shaheen Shah Afridi,2,0,2,0,[],0,,,77,4,160,83,46,India,1,28,23,19,27,,,2,1
+178998,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,3,HH Pandya,V Kohli,Shaheen Shah Afridi,1,0,1,0,[],0,,,78,4,160,82,45,India,1,29,23,20,27,,,1,1
+178999,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,4,V Kohli,HH Pandya,Shaheen Shah Afridi,4,0,4,0,[],0,,,82,4,160,78,44,India,1,27,29,28,20,,,4,1
+179000,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,5,V Kohli,HH Pandya,Shaheen Shah Afridi,1,0,1,0,[],0,,,83,4,160,77,43,India,1,28,29,29,20,,,1,1
+179001,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,13,6,HH Pandya,V Kohli,Shaheen Shah Afridi,0,0,0,0,[],0,,,83,4,160,77,42,India,1,29,28,21,29,,,0,1
+179002,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,1,V Kohli,HH Pandya,Shadab Khan,4,0,4,0,[],0,,,87,4,160,73,41,India,1,32,29,30,21,,,4,1
+179003,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,2,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,88,4,160,72,40,India,1,33,29,31,21,,,1,1
+179004,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,3,HH Pandya,V Kohli,Shadab Khan,0,0,0,0,[],0,,,88,4,160,72,39,India,1,29,33,22,31,,,0,1
+179005,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,4,HH Pandya,V Kohli,Shadab Khan,1,0,1,0,[],0,,,89,4,160,71,38,India,1,30,33,23,31,,,1,1
+179006,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,5,V Kohli,HH Pandya,Shadab Khan,0,0,0,0,[],0,,,89,4,160,71,37,India,1,33,30,32,23,,,0,1
+179007,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,14,6,V Kohli,HH Pandya,Shadab Khan,1,0,1,0,[],0,,,90,4,160,70,36,India,1,34,30,33,23,,,1,1
+179008,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,1,V Kohli,HH Pandya,Naseem Shah,2,0,2,0,[],0,,,92,4,160,68,35,India,1,36,30,34,23,,,2,1
+179009,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,2,V Kohli,HH Pandya,Naseem Shah,1,0,1,0,[],0,,,93,4,160,67,34,India,1,37,30,35,23,,,1,1
+179010,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,3,HH Pandya,V Kohli,Naseem Shah,1,0,1,0,[],0,,,94,4,160,66,33,India,1,31,37,24,35,,,1,1
+179011,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,4,V Kohli,HH Pandya,Naseem Shah,4,0,4,0,[],0,,,98,4,160,62,32,India,1,41,31,36,24,,,4,1
+179012,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,5,V Kohli,HH Pandya,Naseem Shah,1,0,1,0,[],0,,,99,4,160,61,31,India,1,42,31,37,24,,,1,1
+179013,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,15,6,HH Pandya,V Kohli,Naseem Shah,1,0,1,0,[],0,,,100,4,160,60,30,India,1,32,42,25,37,,,1,1
+179014,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,1,HH Pandya,V Kohli,Haris Rauf,0,0,0,0,[],0,,,100,4,160,60,29,India,1,32,42,26,37,,,0,1
+179015,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,2,HH Pandya,V Kohli,Haris Rauf,1,0,1,0,[],0,,,101,4,160,59,28,India,1,33,42,27,37,,,1,1
+179016,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,3,V Kohli,HH Pandya,Haris Rauf,0,0,0,0,[],0,,,101,4,160,59,27,India,1,42,33,38,27,,,0,1
+179017,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,4,V Kohli,HH Pandya,Haris Rauf,1,0,1,0,[],0,,,102,4,160,58,26,India,1,43,33,39,27,,,1,1
+179018,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,5,HH Pandya,V Kohli,Haris Rauf,0,3,3,1,['wides'],0,,,105,4,160,55,26,India,1,33,43,28,39,,,3,0
+179019,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,5,HH Pandya,V Kohli,Haris Rauf,0,0,0,0,[],0,,,105,4,160,55,25,India,1,33,43,29,39,,,0,1
+179020,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,16,6,HH Pandya,V Kohli,Haris Rauf,1,0,1,0,[],0,,,106,4,160,54,24,India,1,34,43,30,39,,,1,1
+179021,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,1,HH Pandya,V Kohli,Naseem Shah,1,0,1,0,[],0,,,107,4,160,53,23,India,1,35,43,31,39,,,1,1
+179022,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,2,V Kohli,HH Pandya,Naseem Shah,2,0,2,0,[],0,,,109,4,160,51,22,India,1,45,35,40,31,,,2,1
+179023,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,3,V Kohli,HH Pandya,Naseem Shah,0,0,0,0,[],0,,,109,4,160,51,21,India,1,45,35,41,31,,,0,1
+179024,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,4,V Kohli,HH Pandya,Naseem Shah,1,0,1,0,[],0,,,110,4,160,50,20,India,1,46,35,42,31,,,1,1
+179025,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,5,HH Pandya,V Kohli,Naseem Shah,0,0,0,0,[],0,,,110,4,160,50,19,India,1,35,46,32,42,,,0,1
+179026,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,17,6,HH Pandya,V Kohli,Naseem Shah,2,0,2,0,[],0,,,112,4,160,48,18,India,1,37,46,33,42,,,2,1
+179027,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,1,V Kohli,HH Pandya,Shaheen Shah Afridi,4,0,4,0,[],0,,,116,4,160,44,17,India,1,50,37,43,33,,,4,1
+179028,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,2,V Kohli,HH Pandya,Shaheen Shah Afridi,0,1,1,1,['wides'],0,,,117,4,160,43,17,India,1,50,37,43,33,,,1,0
+179029,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,2,V Kohli,HH Pandya,Shaheen Shah Afridi,2,0,2,0,[],0,,,119,4,160,41,16,India,1,52,37,44,33,,,2,1
+179030,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,3,V Kohli,HH Pandya,Shaheen Shah Afridi,4,0,4,0,[],0,,,123,4,160,37,15,India,1,56,37,45,33,,,4,1
+179031,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,4,V Kohli,HH Pandya,Shaheen Shah Afridi,1,0,1,0,[],0,,,124,4,160,36,14,India,1,57,37,46,33,,,1,1
+179032,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,5,HH Pandya,V Kohli,Shaheen Shah Afridi,1,0,1,0,[],0,,,125,4,160,35,13,India,1,38,57,34,46,,,1,1
+179033,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,18,6,V Kohli,HH Pandya,Shaheen Shah Afridi,4,0,4,0,[],0,,,129,4,160,31,12,India,1,61,38,47,34,,,4,1
+179034,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,1,HH Pandya,V Kohli,Haris Rauf,1,0,1,0,[],0,,,130,4,160,30,11,India,1,39,61,35,47,,,1,1
+179035,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,2,V Kohli,HH Pandya,Haris Rauf,1,0,1,0,[],0,,,131,4,160,29,10,India,1,62,39,48,35,,,1,1
+179036,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,3,HH Pandya,V Kohli,Haris Rauf,0,0,0,0,[],0,,,131,4,160,29,9,India,1,39,62,36,48,,,0,1
+179037,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,4,HH Pandya,V Kohli,Haris Rauf,1,0,1,0,[],0,,,132,4,160,28,8,India,1,40,62,37,48,,,1,1
+179038,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,5,V Kohli,HH Pandya,Haris Rauf,6,0,6,0,[],0,,,138,4,160,22,7,India,1,68,40,49,37,,,6,1
+179039,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,19,6,V Kohli,HH Pandya,Haris Rauf,6,0,6,0,[],0,,,144,4,160,16,6,India,1,74,40,50,37,,,6,1
+179040,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,1,HH Pandya,V Kohli,Mohammad Nawaz,0,0,0,0,[],1,caught,HH Pandya,144,5,160,16,5,India,1,0,74,0,50,40,38,0,1
+179041,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,2,KD Karthik,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,145,5,160,15,4,India,1,1,74,1,50,,,1,1
+179042,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,3,V Kohli,KD Karthik,Mohammad Nawaz,2,0,2,0,[],0,,,147,5,160,13,3,India,1,76,1,51,1,,,2,1
+179043,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,4,V Kohli,KD Karthik,Mohammad Nawaz,6,1,7,1,['noballs'],0,,,154,5,160,6,3,India,1,82,1,51,1,,,7,0
+179044,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,4,V Kohli,KD Karthik,Mohammad Nawaz,0,1,1,1,['wides'],0,,,155,5,160,5,3,India,1,82,1,51,1,,,1,0
+179045,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,4,V Kohli,KD Karthik,Mohammad Nawaz,0,3,3,0,['byes'],0,,,158,5,160,2,2,India,1,82,1,52,1,,,0,1
+179046,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,5,KD Karthik,V Kohli,Mohammad Nawaz,0,0,0,0,[],1,stumped,KD Karthik,158,6,160,2,1,India,1,0,82,0,52,1,2,0,1
+179047,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,6,R Ashwin,V Kohli,Mohammad Nawaz,0,1,1,1,['wides'],0,,,159,6,160,1,1,India,1,0,82,0,52,,,1,0
+179048,1298150,10/23/2022,Melbourne Cricket Ground,Pakistan,India,2,20,6,R Ashwin,V Kohli,Mohammad Nawaz,1,0,1,0,[],0,,,160,6,160,0,0,India,1,1,82,2,52,,,1,1
+256498,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,1,Mohammad Hafeez,Imran Nazir,Z Khan,0,1,1,1,['wides'],0,,,1,0,129,,120,India,1,0,0,0,0,,,1,0
+256499,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,1,Mohammad Hafeez,Imran Nazir,Z Khan,0,0,0,0,[],0,,,1,0,129,,119,India,1,0,0,2,0,,,0,1
+256500,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,2,Mohammad Hafeez,Imran Nazir,Z Khan,1,0,1,0,[],0,,,2,0,129,,118,India,1,1,0,3,0,,,1,1
+256501,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,3,Imran Nazir,Mohammad Hafeez,Z Khan,4,0,4,0,[],0,,,6,0,129,,117,India,1,4,1,1,3,,,4,1
+256502,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,4,Imran Nazir,Mohammad Hafeez,Z Khan,0,5,5,1,['wides'],0,,,11,0,129,,117,India,1,4,1,0,3,,,5,0
+256503,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,4,Imran Nazir,Mohammad Hafeez,Z Khan,0,0,0,0,[],0,,,11,0,129,,116,India,1,4,1,2,3,,,0,1
+256504,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,5,Imran Nazir,Mohammad Hafeez,Z Khan,0,0,0,0,[],0,,,11,0,129,,115,India,1,4,1,3,3,,,0,1
+256505,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,6,Imran Nazir,Mohammad Hafeez,Z Khan,0,2,2,1,['wides'],0,,,13,0,129,,115,India,1,4,1,3,3,,,2,0
+256506,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,1,6,Mohammad Hafeez,Imran Nazir,Z Khan,0,0,0,0,[],0,,,13,0,129,,114,India,1,1,4,4,3,,,0,1
+256507,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,1,Imran Nazir,Mohammad Hafeez,IK Pathan,4,0,4,0,[],0,,,17,0,129,,113,India,1,8,1,4,4,,,4,1
+256508,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,2,Imran Nazir,Mohammad Hafeez,IK Pathan,0,0,0,0,[],1,lbw,Imran Nazir,17,1,129,,112,India,1,0,1,0,4,8,5,0,1
+256509,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,3,Shahid Afridi,Mohammad Hafeez,IK Pathan,4,0,4,0,[],0,,,21,1,129,,111,India,1,4,1,1,4,,,4,1
+256510,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,4,Shahid Afridi,Mohammad Hafeez,IK Pathan,0,0,0,0,[],0,,,21,1,129,,110,India,1,4,1,2,4,,,0,1
+256511,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,5,Shahid Afridi,Mohammad Hafeez,IK Pathan,0,1,1,1,['wides'],0,,,22,1,129,,110,India,1,4,1,2,4,,,1,0
+256512,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,5,Shahid Afridi,Mohammad Hafeez,IK Pathan,0,0,0,0,[],0,,,22,1,129,,109,India,1,4,1,3,4,,,0,1
+256513,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,2,6,Shahid Afridi,Mohammad Hafeez,IK Pathan,4,0,4,0,[],0,,,26,1,129,,108,India,1,8,1,4,4,,,4,1
+256514,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,1,Mohammad Hafeez,Shahid Afridi,Z Khan,0,0,0,0,[],0,,,26,1,129,,107,India,1,1,8,5,4,,,0,1
+256515,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,2,Mohammad Hafeez,Shahid Afridi,Z Khan,0,0,0,0,[],0,,,26,1,129,,106,India,1,1,8,6,4,,,0,1
+256516,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,3,Mohammad Hafeez,Shahid Afridi,Z Khan,0,0,0,0,[],0,,,26,1,129,,105,India,1,1,8,7,4,,,0,1
+256517,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,4,Mohammad Hafeez,Shahid Afridi,Z Khan,0,0,0,0,[],0,,,26,1,129,,104,India,1,1,8,8,4,,,0,1
+256518,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,5,Mohammad Hafeez,Shahid Afridi,Z Khan,1,0,1,0,[],0,,,27,1,129,,103,India,1,2,8,9,4,,,1,1
+256519,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,3,6,Shahid Afridi,Mohammad Hafeez,Z Khan,1,0,1,0,[],0,,,28,1,129,,102,India,1,9,2,5,9,,,1,1
+256520,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,1,Shahid Afridi,Mohammad Hafeez,IK Pathan,0,0,0,0,[],0,,,28,1,129,,101,India,1,9,2,6,9,,,0,1
+256521,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,2,Shahid Afridi,Mohammad Hafeez,IK Pathan,0,0,0,0,[],0,,,28,1,129,,100,India,1,9,2,7,9,,,0,1
+256522,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,3,Shahid Afridi,Mohammad Hafeez,IK Pathan,1,0,1,0,[],0,,,29,1,129,,99,India,1,10,2,8,9,,,1,1
+256523,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,4,Mohammad Hafeez,Shahid Afridi,IK Pathan,1,0,1,0,[],0,,,30,1,129,,98,India,1,3,10,10,8,,,1,1
+256524,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,5,Shahid Afridi,Mohammad Hafeez,IK Pathan,2,0,2,0,[],0,,,32,1,129,,97,India,1,12,3,9,10,,,2,1
+256525,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,4,6,Shahid Afridi,Mohammad Hafeez,IK Pathan,1,0,1,0,[],0,,,33,1,129,,96,India,1,13,3,10,10,,,1,1
+256526,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,1,Shahid Afridi,Mohammad Hafeez,L Balaji,1,0,1,0,[],0,,,34,1,129,,95,India,1,14,3,11,10,,,1,1
+256527,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,2,Mohammad Hafeez,Shahid Afridi,L Balaji,0,0,0,0,[],0,,,34,1,129,,94,India,1,3,14,11,11,,,0,1
+256528,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,3,Mohammad Hafeez,Shahid Afridi,L Balaji,1,0,1,0,[],0,,,35,1,129,,93,India,1,4,14,12,11,,,1,1
+256529,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,4,Shahid Afridi,Mohammad Hafeez,L Balaji,0,0,0,0,[],1,caught,Shahid Afridi,35,2,129,,92,India,1,0,4,0,12,14,12,0,1
+256530,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,5,Nasir Jamshed,Mohammad Hafeez,L Balaji,1,0,1,0,[],0,,,36,2,129,,91,India,1,1,4,1,12,,,1,1
+256531,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,5,6,Mohammad Hafeez,Nasir Jamshed,L Balaji,0,0,0,0,[],0,,,36,2,129,,90,India,1,4,1,13,1,,,0,1
+256532,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,1,Nasir Jamshed,Mohammad Hafeez,R Ashwin,1,0,1,0,[],0,,,37,2,129,,89,India,1,2,4,2,13,,,1,1
+256533,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,2,Mohammad Hafeez,Nasir Jamshed,R Ashwin,0,0,0,0,[],0,,,37,2,129,,88,India,1,4,2,14,2,,,0,1
+256534,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,3,Mohammad Hafeez,Nasir Jamshed,R Ashwin,2,0,2,0,[],0,,,39,2,129,,87,India,1,6,2,15,2,,,2,1
+256535,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,4,Mohammad Hafeez,Nasir Jamshed,R Ashwin,1,0,1,0,[],0,,,40,2,129,,86,India,1,7,2,16,2,,,1,1
+256536,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,5,Nasir Jamshed,Mohammad Hafeez,R Ashwin,0,0,0,0,[],0,,,40,2,129,,85,India,1,2,7,3,16,,,0,1
+256537,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,6,6,Nasir Jamshed,Mohammad Hafeez,R Ashwin,2,0,2,0,[],0,,,42,2,129,,84,India,1,4,7,4,16,,,2,1
+256538,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,1,Mohammad Hafeez,Nasir Jamshed,Yuvraj Singh,0,0,0,0,[],0,,,42,2,129,,83,India,1,7,4,17,4,,,0,1
+256539,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,2,Mohammad Hafeez,Nasir Jamshed,Yuvraj Singh,0,0,0,0,[],0,,,42,2,129,,82,India,1,7,4,18,4,,,0,1
+256540,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,3,Mohammad Hafeez,Nasir Jamshed,Yuvraj Singh,1,0,1,0,[],0,,,43,2,129,,81,India,1,8,4,19,4,,,1,1
+256541,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,4,Nasir Jamshed,Mohammad Hafeez,Yuvraj Singh,0,0,0,0,[],1,caught,Nasir Jamshed,43,3,129,,80,India,1,0,8,0,19,4,5,0,1
+256542,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,5,Kamran Akmal,Mohammad Hafeez,Yuvraj Singh,1,0,1,0,[],0,,,44,3,129,,79,India,1,1,8,1,19,,,1,1
+256543,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,7,6,Mohammad Hafeez,Kamran Akmal,Yuvraj Singh,0,0,0,0,[],0,,,44,3,129,,78,India,1,8,1,20,1,,,0,1
+256544,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,1,Kamran Akmal,Mohammad Hafeez,V Kohli,1,0,1,0,[],0,,,45,3,129,,77,India,1,2,8,2,20,,,1,1
+256545,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,2,Mohammad Hafeez,Kamran Akmal,V Kohli,0,0,0,0,[],0,,,45,3,129,,76,India,1,8,2,21,2,,,0,1
+256546,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,3,Mohammad Hafeez,Kamran Akmal,V Kohli,0,0,0,0,[],0,,,45,3,129,,75,India,1,8,2,22,2,,,0,1
+256547,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,4,Mohammad Hafeez,Kamran Akmal,V Kohli,1,0,1,0,[],0,,,46,3,129,,74,India,1,9,2,23,2,,,1,1
+256548,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,5,Kamran Akmal,Mohammad Hafeez,V Kohli,0,0,0,0,[],0,,,46,3,129,,73,India,1,2,9,3,23,,,0,1
+256549,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,8,6,Kamran Akmal,Mohammad Hafeez,V Kohli,1,0,1,0,[],0,,,47,3,129,,72,India,1,3,9,4,23,,,1,1
+256550,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,1,Kamran Akmal,Mohammad Hafeez,Yuvraj Singh,2,0,2,0,[],0,,,49,3,129,,71,India,1,5,9,5,23,,,2,1
+256551,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,2,Kamran Akmal,Mohammad Hafeez,Yuvraj Singh,0,0,0,0,[],1,caught,Kamran Akmal,49,4,129,,70,India,1,0,9,0,23,5,6,0,1
+256552,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,3,Shoaib Malik,Mohammad Hafeez,Yuvraj Singh,1,0,1,0,[],0,,,50,4,129,,69,India,1,1,9,1,23,,,1,1
+256553,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,4,Mohammad Hafeez,Shoaib Malik,Yuvraj Singh,0,0,0,0,[],0,,,50,4,129,,68,India,1,9,1,24,1,,,0,1
+256554,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,5,Mohammad Hafeez,Shoaib Malik,Yuvraj Singh,2,0,2,0,[],0,,,52,4,129,,67,India,1,11,1,25,1,,,2,1
+256555,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,9,6,Mohammad Hafeez,Shoaib Malik,Yuvraj Singh,4,0,4,0,[],0,,,56,4,129,,66,India,1,15,1,26,1,,,4,1
+256556,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,1,Shoaib Malik,Mohammad Hafeez,V Kohli,1,0,1,0,[],0,,,57,4,129,,65,India,1,2,15,2,26,,,1,1
+256557,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,2,Mohammad Hafeez,Shoaib Malik,V Kohli,0,0,0,0,[],0,,,57,4,129,,64,India,1,15,2,27,2,,,0,1
+256558,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,3,Mohammad Hafeez,Shoaib Malik,V Kohli,0,1,1,0,['legbyes'],0,,,58,4,129,,63,India,1,15,2,28,2,,,0,1
+256559,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,4,Shoaib Malik,Mohammad Hafeez,V Kohli,1,0,1,0,[],0,,,59,4,129,,62,India,1,3,15,3,28,,,1,1
+256560,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,5,Mohammad Hafeez,Shoaib Malik,V Kohli,0,0,0,0,[],1,bowled,Mohammad Hafeez,59,5,129,,61,India,1,0,3,0,3,15,29,0,1
+256561,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,10,6,Umar Akmal,Shoaib Malik,V Kohli,1,0,1,0,[],0,,,60,5,129,,60,India,1,1,3,1,3,,,1,1
+256562,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,1,Umar Akmal,Shoaib Malik,Yuvraj Singh,1,0,1,0,[],0,,,61,5,129,,59,India,1,2,3,2,3,,,1,1
+256563,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,2,Shoaib Malik,Umar Akmal,Yuvraj Singh,1,0,1,0,[],0,,,62,5,129,,58,India,1,4,2,4,2,,,1,1
+256564,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,3,Umar Akmal,Shoaib Malik,Yuvraj Singh,1,0,1,0,[],0,,,63,5,129,,57,India,1,3,4,3,4,,,1,1
+256565,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,4,Shoaib Malik,Umar Akmal,Yuvraj Singh,1,0,1,0,[],0,,,64,5,129,,56,India,1,5,3,5,3,,,1,1
+256566,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,5,Umar Akmal,Shoaib Malik,Yuvraj Singh,0,0,0,0,[],0,,,64,5,129,,55,India,1,3,5,4,5,,,0,1
+256567,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,11,6,Umar Akmal,Shoaib Malik,Yuvraj Singh,1,0,1,0,[],0,,,65,5,129,,54,India,1,4,5,5,5,,,1,1
+256568,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,1,Umar Akmal,Shoaib Malik,V Kohli,1,1,2,1,['noballs'],0,,,67,5,129,,54,India,1,5,5,5,5,,,2,0
+256569,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,1,Shoaib Malik,Umar Akmal,V Kohli,4,0,4,0,[],0,,,71,5,129,,53,India,1,9,5,6,5,,,4,1
+256570,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,2,Shoaib Malik,Umar Akmal,V Kohli,1,0,1,0,[],0,,,72,5,129,,52,India,1,10,5,7,5,,,1,1
+256571,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,3,Umar Akmal,Shoaib Malik,V Kohli,1,0,1,0,[],0,,,73,5,129,,51,India,1,6,10,6,7,,,1,1
+256572,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,4,Shoaib Malik,Umar Akmal,V Kohli,4,0,4,0,[],0,,,77,5,129,,50,India,1,14,6,8,6,,,4,1
+256573,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,5,Shoaib Malik,Umar Akmal,V Kohli,1,0,1,0,[],0,,,78,5,129,,49,India,1,15,6,9,6,,,1,1
+256574,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,12,6,Umar Akmal,Shoaib Malik,V Kohli,2,0,2,0,[],0,,,80,5,129,,48,India,1,8,15,7,9,,,2,1
+256575,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,1,Shoaib Malik,Umar Akmal,IK Pathan,2,0,2,0,[],0,,,82,5,129,,47,India,1,17,8,10,7,,,2,1
+256576,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,2,Shoaib Malik,Umar Akmal,IK Pathan,1,0,1,0,[],0,,,83,5,129,,46,India,1,18,8,11,7,,,1,1
+256577,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,3,Umar Akmal,Shoaib Malik,IK Pathan,2,0,2,0,[],0,,,85,5,129,,45,India,1,10,18,8,11,,,2,1
+256578,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,4,Umar Akmal,Shoaib Malik,IK Pathan,6,0,6,0,[],0,,,91,5,129,,44,India,1,16,18,9,11,,,6,1
+256579,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,5,Umar Akmal,Shoaib Malik,IK Pathan,1,0,1,0,[],0,,,92,5,129,,43,India,1,17,18,10,11,,,1,1
+256580,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,13,6,Shoaib Malik,Umar Akmal,IK Pathan,0,0,0,0,[],0,,,92,5,129,,42,India,1,18,17,12,10,,,0,1
+256581,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,1,Umar Akmal,Shoaib Malik,R Ashwin,0,1,1,1,['wides'],0,,,93,5,129,,42,India,1,17,18,11,12,,,1,0
+256582,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,1,Umar Akmal,Shoaib Malik,R Ashwin,0,0,0,0,[],0,,,93,5,129,,41,India,1,17,18,12,12,,,0,1
+256583,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,2,Umar Akmal,Shoaib Malik,R Ashwin,1,0,1,0,[],0,,,94,5,129,,40,India,1,18,18,13,12,,,1,1
+256584,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,3,Shoaib Malik,Umar Akmal,R Ashwin,0,0,0,0,[],0,,,94,5,129,,39,India,1,18,18,13,13,,,0,1
+256585,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,4,Shoaib Malik,Umar Akmal,R Ashwin,0,0,0,0,[],0,,,94,5,129,,38,India,1,18,18,14,13,,,0,1
+256586,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,5,Shoaib Malik,Umar Akmal,R Ashwin,2,0,2,0,[],0,,,96,5,129,,37,India,1,20,18,15,13,,,2,1
+256587,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,14,6,Shoaib Malik,Umar Akmal,R Ashwin,1,0,1,0,[],0,,,97,5,129,,36,India,1,21,18,16,13,,,1,1
+256588,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,1,Shoaib Malik,Umar Akmal,L Balaji,1,0,1,0,[],0,,,98,5,129,,35,India,1,22,18,17,13,,,1,1
+256589,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,2,Umar Akmal,Shoaib Malik,L Balaji,1,0,1,0,[],0,,,99,5,129,,34,India,1,19,22,14,17,,,1,1
+256590,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,3,Shoaib Malik,Umar Akmal,L Balaji,2,0,2,0,[],0,,,101,5,129,,33,India,1,24,19,18,14,,,2,1
+256591,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,4,Shoaib Malik,Umar Akmal,L Balaji,0,0,0,0,[],0,,,101,5,129,,32,India,1,24,19,19,14,,,0,1
+256592,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,5,Shoaib Malik,Umar Akmal,L Balaji,4,0,4,0,[],0,,,105,5,129,,31,India,1,28,19,20,14,,,4,1
+256593,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,15,6,Shoaib Malik,Umar Akmal,L Balaji,0,0,0,0,[],0,,,105,5,129,,30,India,1,28,19,21,14,,,0,1
+256594,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,1,Umar Akmal,Shoaib Malik,R Ashwin,1,0,1,0,[],0,,,106,5,129,,29,India,1,20,28,15,21,,,1,1
+256595,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,2,Shoaib Malik,Umar Akmal,R Ashwin,0,0,0,0,[],1,caught,Shoaib Malik,106,6,129,,28,India,1,0,20,0,15,28,22,0,1
+256596,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,3,Yasir Arafat,Umar Akmal,R Ashwin,1,0,1,0,[],0,,,107,6,129,,27,India,1,1,20,1,15,,,1,1
+256597,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,4,Umar Akmal,Yasir Arafat,R Ashwin,1,0,1,0,[],0,,,108,6,129,,26,India,1,21,1,16,1,,,1,1
+256598,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,5,Yasir Arafat,Umar Akmal,R Ashwin,0,0,0,0,[],0,,,108,6,129,,25,India,1,1,21,2,16,,,0,1
+256599,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,16,6,Yasir Arafat,Umar Akmal,R Ashwin,1,0,1,0,[],0,,,109,6,129,,24,India,1,2,21,3,16,,,1,1
+256600,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,1,Yasir Arafat,Umar Akmal,L Balaji,0,0,0,0,[],0,,,109,6,129,,23,India,1,2,21,4,16,,,0,1
+256601,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,2,Yasir Arafat,Umar Akmal,L Balaji,0,0,0,0,[],0,,,109,6,129,,22,India,1,2,21,5,16,,,0,1
+256602,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,3,Yasir Arafat,Umar Akmal,L Balaji,0,0,0,0,[],0,,,109,6,129,,21,India,1,2,21,6,16,,,0,1
+256603,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,4,Yasir Arafat,Umar Akmal,L Balaji,0,0,0,0,[],0,,,109,6,129,,20,India,1,2,21,7,16,,,0,1
+256604,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,5,Yasir Arafat,Umar Akmal,L Balaji,4,0,4,0,[],0,,,113,6,129,,19,India,1,6,21,8,16,,,4,1
+256605,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,17,6,Yasir Arafat,Umar Akmal,L Balaji,1,0,1,0,[],0,,,114,6,129,,18,India,1,7,21,9,16,,,1,1
+256606,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,1,Yasir Arafat,Umar Akmal,R Ashwin,1,0,1,0,[],0,,,115,6,129,,17,India,1,8,21,10,16,,,1,1
+256607,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,2,Umar Akmal,Yasir Arafat,R Ashwin,0,0,0,0,[],0,,,115,6,129,,16,India,1,21,8,17,10,,,0,1
+256608,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,3,Umar Akmal,Yasir Arafat,R Ashwin,0,0,0,0,[],1,caught,Umar Akmal,115,7,129,,15,India,1,0,8,0,10,21,18,0,1
+256609,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,4,Umar Gul,Yasir Arafat,R Ashwin,0,0,0,0,[],0,,,115,7,129,,14,India,1,0,8,1,10,,,0,1
+256610,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,5,Umar Gul,Yasir Arafat,R Ashwin,0,0,0,0,[],0,,,115,7,129,,13,India,1,0,8,2,10,,,0,1
+256611,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,18,6,Umar Gul,Yasir Arafat,R Ashwin,0,0,0,0,[],0,,,115,7,129,,12,India,1,0,8,3,10,,,0,1
+256612,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,1,Yasir Arafat,Umar Gul,Z Khan,0,0,0,0,[],1,run out,Yasir Arafat,115,8,129,,11,India,1,0,0,0,3,8,11,0,1
+256613,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,2,Umar Gul,Saeed Ajmal,Z Khan,4,0,4,0,[],0,,,119,8,129,,10,India,1,4,0,4,0,,,4,1
+256614,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,3,Umar Gul,Saeed Ajmal,Z Khan,1,0,1,0,[],0,,,120,8,129,,9,India,1,5,0,5,0,,,1,1
+256615,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,4,Saeed Ajmal,Umar Gul,Z Khan,1,0,1,0,[],0,,,121,8,129,,8,India,1,1,5,1,5,,,1,1
+256616,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,5,Umar Gul,Saeed Ajmal,Z Khan,0,0,0,0,[],0,,,121,8,129,,7,India,1,5,1,6,1,,,0,1
+256617,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,19,6,Umar Gul,Saeed Ajmal,Z Khan,1,0,1,0,[],0,,,122,8,129,,6,India,1,6,1,7,1,,,1,1
+256618,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,20,1,Umar Gul,Saeed Ajmal,L Balaji,0,0,0,0,[],0,,,122,8,129,,5,India,1,6,1,8,1,,,0,1
+256619,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,20,2,Umar Gul,Saeed Ajmal,L Balaji,6,0,6,0,[],0,,,128,8,129,,4,India,1,12,1,9,1,,,6,1
+256620,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,20,3,Umar Gul,Saeed Ajmal,L Balaji,0,0,0,0,[],1,caught,Umar Gul,128,9,129,,3,India,1,0,1,0,1,12,10,0,1
+256621,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,1,20,4,Saeed Ajmal,Raza Hasan,L Balaji,0,0,0,0,[],1,caught,Saeed Ajmal,128,10,129,,2,India,1,0,0,0,0,1,2,0,1
+256622,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,1,G Gambhir,V Sehwag,Raza Hasan,0,1,1,1,['wides'],0,,,1,0,129,128,120,India,1,0,0,0,0,,,1,0
+256623,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,1,G Gambhir,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,1,0,129,128,119,India,1,0,0,2,0,,,0,1
+256624,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,2,G Gambhir,V Sehwag,Raza Hasan,0,0,0,0,[],1,caught and bowled,G Gambhir,1,1,129,128,118,India,1,0,0,0,0,0,3,0,1
+256625,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,3,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,1,1,129,128,117,India,1,0,0,1,0,,,0,1
+256626,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,4,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,1,1,129,128,116,India,1,0,0,2,0,,,0,1
+256627,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,5,V Kohli,V Sehwag,Raza Hasan,4,0,4,0,[],0,,,5,1,129,124,115,India,1,4,0,3,0,,,4,1
+256628,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,1,6,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,6,1,129,123,114,India,1,5,0,4,0,,,1,1
+256629,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,1,V Kohli,V Sehwag,Umar Gul,0,0,0,0,[],0,,,6,1,129,123,113,India,1,5,0,5,0,,,0,1
+256630,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,2,V Kohli,V Sehwag,Umar Gul,1,0,1,0,[],0,,,7,1,129,122,112,India,1,6,0,6,0,,,1,1
+256631,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,3,V Sehwag,V Kohli,Umar Gul,0,0,0,0,[],0,,,7,1,129,122,111,India,1,0,6,1,6,,,0,1
+256632,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,4,V Sehwag,V Kohli,Umar Gul,1,0,1,0,[],0,,,8,1,129,121,110,India,1,1,6,2,6,,,1,1
+256633,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,5,V Kohli,V Sehwag,Umar Gul,1,0,1,0,[],0,,,9,1,129,120,109,India,1,7,1,7,2,,,1,1
+256634,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,2,6,V Sehwag,V Kohli,Umar Gul,0,0,0,0,[],0,,,9,1,129,120,108,India,1,1,7,3,7,,,0,1
+256635,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,1,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,9,1,129,120,107,India,1,7,1,8,3,,,0,1
+256636,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,2,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,9,1,129,120,106,India,1,7,1,9,3,,,0,1
+256637,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,3,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,9,1,129,120,105,India,1,7,1,10,3,,,0,1
+256638,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,4,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,9,1,129,120,104,India,1,7,1,11,3,,,0,1
+256639,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,5,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,10,1,129,119,103,India,1,8,1,12,3,,,1,1
+256640,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,3,6,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,11,1,129,118,102,India,1,2,8,4,12,,,1,1
+256641,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,1,V Sehwag,V Kohli,Umar Gul,4,0,4,0,[],0,,,15,1,129,114,101,India,1,6,8,5,12,,,4,1
+256642,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,2,V Sehwag,V Kohli,Umar Gul,0,0,0,0,[],0,,,15,1,129,114,100,India,1,6,8,6,12,,,0,1
+256643,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,3,V Sehwag,V Kohli,Umar Gul,0,0,0,0,[],0,,,15,1,129,114,99,India,1,6,8,7,12,,,0,1
+256644,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,4,V Sehwag,V Kohli,Umar Gul,1,0,1,0,[],0,,,16,1,129,113,98,India,1,7,8,8,12,,,1,1
+256645,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,5,V Kohli,V Sehwag,Umar Gul,1,0,1,0,[],0,,,17,1,129,112,97,India,1,9,7,13,8,,,1,1
+256646,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,6,V Sehwag,V Kohli,Umar Gul,0,1,1,1,['wides'],0,,,18,1,129,111,97,India,1,7,9,9,13,,,1,0
+256647,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,4,6,V Sehwag,V Kohli,Umar Gul,4,0,4,0,[],0,,,22,1,129,107,96,India,1,11,9,10,13,,,4,1
+256648,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,1,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,23,1,129,106,95,India,1,10,11,14,10,,,1,1
+256649,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,2,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,24,1,129,105,94,India,1,12,10,11,14,,,1,1
+256650,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,3,V Kohli,V Sehwag,Raza Hasan,0,0,0,0,[],0,,,24,1,129,105,93,India,1,10,12,15,11,,,0,1
+256651,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,4,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,25,1,129,104,92,India,1,11,12,16,11,,,1,1
+256652,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,5,V Sehwag,V Kohli,Raza Hasan,4,0,4,0,[],0,,,29,1,129,100,91,India,1,16,11,12,16,,,4,1
+256653,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,5,6,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,30,1,129,99,90,India,1,17,11,13,16,,,1,1
+256654,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,1,V Sehwag,V Kohli,Saeed Ajmal,0,0,0,0,[],0,,,30,1,129,99,89,India,1,17,11,14,16,,,0,1
+256655,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,2,V Sehwag,V Kohli,Saeed Ajmal,1,0,1,0,[],0,,,31,1,129,98,88,India,1,18,11,15,16,,,1,1
+256656,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,3,V Kohli,V Sehwag,Saeed Ajmal,0,0,0,0,[],0,,,31,1,129,98,87,India,1,11,18,17,15,,,0,1
+256657,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,4,V Kohli,V Sehwag,Saeed Ajmal,4,0,4,0,[],0,,,35,1,129,94,86,India,1,15,18,18,15,,,4,1
+256658,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,5,V Kohli,V Sehwag,Saeed Ajmal,1,0,1,0,[],0,,,36,1,129,93,85,India,1,16,18,19,15,,,1,1
+256659,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,6,6,V Sehwag,V Kohli,Saeed Ajmal,0,0,0,0,[],0,,,36,1,129,93,84,India,1,18,16,16,19,,,0,1
+256660,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,1,V Kohli,V Sehwag,Shahid Afridi,0,0,0,0,[],0,,,36,1,129,93,83,India,1,16,18,20,16,,,0,1
+256661,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,2,V Kohli,V Sehwag,Shahid Afridi,1,0,1,0,[],0,,,37,1,129,92,82,India,1,17,18,21,16,,,1,1
+256662,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,3,V Sehwag,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,38,1,129,91,81,India,1,19,17,17,21,,,1,1
+256663,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,4,V Kohli,V Sehwag,Shahid Afridi,6,0,6,0,[],0,,,44,1,129,85,80,India,1,23,19,22,17,,,6,1
+256664,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,5,V Kohli,V Sehwag,Shahid Afridi,0,0,0,0,[],0,,,44,1,129,85,79,India,1,23,19,23,17,,,0,1
+256665,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,7,6,V Kohli,V Sehwag,Shahid Afridi,1,0,1,0,[],0,,,45,1,129,84,78,India,1,24,19,24,17,,,1,1
+256666,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,1,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,46,1,129,83,77,India,1,25,19,25,17,,,1,1
+256667,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,2,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,47,1,129,82,76,India,1,20,25,18,25,,,1,1
+256668,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,3,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,48,1,129,81,75,India,1,26,20,26,18,,,1,1
+256669,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,4,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,49,1,129,80,74,India,1,21,26,19,26,,,1,1
+256670,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,5,V Kohli,V Sehwag,Raza Hasan,1,0,1,0,[],0,,,50,1,129,79,73,India,1,27,21,27,19,,,1,1
+256671,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,8,6,V Sehwag,V Kohli,Raza Hasan,1,0,1,0,[],0,,,51,1,129,78,72,India,1,22,27,20,27,,,1,1
+256672,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,1,V Sehwag,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,52,1,129,77,71,India,1,23,27,21,27,,,1,1
+256673,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,2,V Kohli,V Sehwag,Shahid Afridi,0,0,0,0,[],0,,,52,1,129,77,70,India,1,27,23,28,21,,,0,1
+256674,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,3,V Kohli,V Sehwag,Shahid Afridi,4,0,4,0,[],0,,,56,1,129,73,69,India,1,31,23,29,21,,,4,1
+256675,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,4,V Kohli,V Sehwag,Shahid Afridi,1,0,1,0,[],0,,,57,1,129,72,68,India,1,32,23,30,21,,,1,1
+256676,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,5,V Sehwag,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,58,1,129,71,67,India,1,24,32,22,30,,,1,1
+256677,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,9,6,V Kohli,V Sehwag,Shahid Afridi,1,0,1,0,[],0,,,59,1,129,70,66,India,1,33,24,31,22,,,1,1
+256678,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,1,V Kohli,V Sehwag,Yasir Arafat,4,0,4,0,[],0,,,63,1,129,66,65,India,1,37,24,32,22,,,4,1
+256679,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,2,V Kohli,V Sehwag,Yasir Arafat,4,0,4,0,[],0,,,67,1,129,62,64,India,1,41,24,33,22,,,4,1
+256680,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,3,V Kohli,V Sehwag,Yasir Arafat,1,0,1,0,[],0,,,68,1,129,61,63,India,1,42,24,34,22,,,1,1
+256681,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,4,V Sehwag,V Kohli,Yasir Arafat,1,0,1,0,[],0,,,69,1,129,60,62,India,1,25,42,23,34,,,1,1
+256682,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,5,V Kohli,V Sehwag,Yasir Arafat,0,0,0,0,[],0,,,69,1,129,60,61,India,1,42,25,35,23,,,0,1
+256683,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,10,6,V Kohli,V Sehwag,Yasir Arafat,1,0,1,0,[],0,,,70,1,129,59,60,India,1,43,25,36,23,,,1,1
+256684,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,1,V Kohli,V Sehwag,Shahid Afridi,1,0,1,0,[],0,,,71,1,129,58,59,India,1,44,25,37,23,,,1,1
+256685,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,2,V Sehwag,V Kohli,Shahid Afridi,4,0,4,0,[],0,,,75,1,129,54,58,India,1,29,44,24,37,,,4,1
+256686,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,3,V Sehwag,V Kohli,Shahid Afridi,0,0,0,0,[],1,caught,V Sehwag,75,2,129,54,57,India,1,0,44,0,37,29,25,0,1
+256687,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,4,Yuvraj Singh,V Kohli,Shahid Afridi,0,0,0,0,[],0,,,75,2,129,54,56,India,1,0,44,1,37,,,0,1
+256688,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,5,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,76,2,129,53,55,India,1,1,44,2,37,,,1,1
+256689,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,11,6,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,77,2,129,52,54,India,1,45,1,38,2,,,1,1
+256690,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,1,V Kohli,Yuvraj Singh,Saeed Ajmal,0,0,0,0,[],0,,,77,2,129,52,53,India,1,45,1,39,2,,,0,1
+256691,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,2,V Kohli,Yuvraj Singh,Saeed Ajmal,4,0,4,0,[],0,,,81,2,129,48,52,India,1,49,1,40,2,,,4,1
+256692,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,3,V Kohli,Yuvraj Singh,Saeed Ajmal,2,0,2,0,[],0,,,83,2,129,46,51,India,1,51,1,41,2,,,2,1
+256693,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,4,V Kohli,Yuvraj Singh,Saeed Ajmal,1,0,1,0,[],0,,,84,2,129,45,50,India,1,52,1,42,2,,,1,1
+256694,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,5,Yuvraj Singh,V Kohli,Saeed Ajmal,0,0,0,0,[],0,,,84,2,129,45,49,India,1,1,52,3,42,,,0,1
+256695,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,12,6,Yuvraj Singh,V Kohli,Saeed Ajmal,0,0,0,0,[],0,,,84,2,129,45,48,India,1,1,52,4,42,,,0,1
+256696,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,1,V Kohli,Yuvraj Singh,Mohammad Hafeez,0,0,0,0,[],0,,,84,2,129,45,47,India,1,52,1,43,4,,,0,1
+256697,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,2,V Kohli,Yuvraj Singh,Mohammad Hafeez,0,0,0,0,[],0,,,84,2,129,45,46,India,1,52,1,44,4,,,0,1
+256698,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,3,V Kohli,Yuvraj Singh,Mohammad Hafeez,1,0,1,0,[],0,,,85,2,129,44,45,India,1,53,1,45,4,,,1,1
+256699,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,4,Yuvraj Singh,V Kohli,Mohammad Hafeez,1,0,1,0,[],0,,,86,2,129,43,44,India,1,2,53,5,45,,,1,1
+256700,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,5,V Kohli,Yuvraj Singh,Mohammad Hafeez,1,0,1,0,[],0,,,87,2,129,42,43,India,1,54,2,46,5,,,1,1
+256701,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,13,6,Yuvraj Singh,V Kohli,Mohammad Hafeez,4,0,4,0,[],0,,,91,2,129,38,42,India,1,6,54,6,46,,,4,1
+256702,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,1,V Kohli,Yuvraj Singh,Saeed Ajmal,6,0,6,0,[],0,,,97,2,129,32,41,India,1,60,6,47,6,,,6,1
+256703,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,2,V Kohli,Yuvraj Singh,Saeed Ajmal,1,0,1,0,[],0,,,98,2,129,31,40,India,1,61,6,48,6,,,1,1
+256704,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,3,Yuvraj Singh,V Kohli,Saeed Ajmal,0,0,0,0,[],0,,,98,2,129,31,39,India,1,6,61,7,48,,,0,1
+256705,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,4,Yuvraj Singh,V Kohli,Saeed Ajmal,1,0,1,0,[],0,,,99,2,129,30,38,India,1,7,61,8,48,,,1,1
+256706,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,5,V Kohli,Yuvraj Singh,Saeed Ajmal,0,0,0,0,[],0,,,99,2,129,30,37,India,1,61,7,49,8,,,0,1
+256707,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,14,6,V Kohli,Yuvraj Singh,Saeed Ajmal,1,0,1,0,[],0,,,100,2,129,29,36,India,1,62,7,50,8,,,1,1
+256708,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,1,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,101,2,129,28,35,India,1,63,7,51,8,,,1,1
+256709,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,2,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,102,2,129,27,34,India,1,8,63,9,51,,,1,1
+256710,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,3,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,103,2,129,26,33,India,1,64,8,52,9,,,1,1
+256711,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,4,Yuvraj Singh,V Kohli,Shahid Afridi,4,0,4,0,[],0,,,107,2,129,22,32,India,1,12,64,10,52,,,4,1
+256712,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,5,Yuvraj Singh,V Kohli,Shahid Afridi,2,0,2,0,[],0,,,109,2,129,20,31,India,1,14,64,11,52,,,2,1
+256713,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,15,6,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,110,2,129,19,30,India,1,15,64,12,52,,,1,1
+256714,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,1,Yuvraj Singh,V Kohli,Umar Gul,1,0,1,0,[],0,,,111,2,129,18,29,India,1,16,64,13,52,,,1,1
+256715,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,2,V Kohli,Yuvraj Singh,Umar Gul,1,0,1,0,[],0,,,112,2,129,17,28,India,1,65,16,53,13,,,1,1
+256716,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,3,Yuvraj Singh,V Kohli,Umar Gul,1,0,1,0,[],0,,,113,2,129,16,27,India,1,17,65,14,53,,,1,1
+256717,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,4,V Kohli,Yuvraj Singh,Umar Gul,4,0,4,0,[],0,,,117,2,129,12,26,India,1,69,17,54,14,,,4,1
+256718,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,5,V Kohli,Yuvraj Singh,Umar Gul,2,0,2,0,[],0,,,119,2,129,10,25,India,1,71,17,55,14,,,2,1
+256719,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,6,V Kohli,Yuvraj Singh,Umar Gul,2,1,3,1,['noballs'],0,,,122,2,129,7,25,India,1,73,17,55,14,,,3,0
+256720,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,16,6,V Kohli,Yuvraj Singh,Umar Gul,4,0,4,0,[],0,,,126,2,129,3,24,India,1,77,17,56,14,,,4,1
+256721,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,1,Yuvraj Singh,V Kohli,Saeed Ajmal,1,0,1,0,[],0,,,127,2,129,2,23,India,1,18,77,15,56,,,1,1
+256722,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,2,V Kohli,Yuvraj Singh,Saeed Ajmal,0,0,0,0,[],0,,,127,2,129,2,22,India,1,77,18,57,15,,,0,1
+256723,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,3,V Kohli,Yuvraj Singh,Saeed Ajmal,0,0,0,0,[],0,,,127,2,129,2,21,India,1,77,18,58,15,,,0,1
+256724,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,4,V Kohli,Yuvraj Singh,Saeed Ajmal,0,0,0,0,[],0,,,127,2,129,2,20,India,1,77,18,59,15,,,0,1
+256725,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,5,V Kohli,Yuvraj Singh,Saeed Ajmal,1,0,1,0,[],0,,,128,2,129,1,19,India,1,78,18,60,15,,,1,1
+256726,533291,9/30/2012,R Premadasa Stadium,Pakistan,India,2,17,6,Yuvraj Singh,V Kohli,Saeed Ajmal,1,0,1,0,[],0,,,129,2,129,0,18,India,1,19,78,16,60,,,1,1
+393806,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,1,Mohammad Hafeez,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,0,0,84,,119,India,1,0,0,1,0,,,0,1
+393807,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,2,Mohammad Hafeez,Sharjeel Khan,A Nehra,4,0,4,0,[],0,,,4,0,84,,118,India,1,4,0,2,0,,,4,1
+393808,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,3,Mohammad Hafeez,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,4,0,84,,117,India,1,4,0,3,0,,,0,1
+393809,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,4,Mohammad Hafeez,Sharjeel Khan,A Nehra,0,0,0,0,[],1,caught,Mohammad Hafeez,4,1,84,,116,India,1,0,0,0,0,4,4,0,1
+393810,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,5,Khurram Manzoor,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,4,1,84,,115,India,1,0,0,1,0,,,0,1
+393811,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,1,6,Khurram Manzoor,Sharjeel Khan,A Nehra,1,0,1,0,[],0,,,5,1,84,,114,India,1,1,0,2,0,,,1,1
+393812,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,1,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,113,India,1,1,0,3,0,,,0,1
+393813,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,2,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,112,India,1,1,0,4,0,,,0,1
+393814,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,3,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,111,India,1,1,0,5,0,,,0,1
+393815,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,4,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,110,India,1,1,0,6,0,,,0,1
+393816,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,5,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,109,India,1,1,0,7,0,,,0,1
+393817,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,2,6,Khurram Manzoor,Sharjeel Khan,JJ Bumrah,0,0,0,0,[],0,,,5,1,84,,108,India,1,1,0,8,0,,,0,1
+393818,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,1,Sharjeel Khan,Khurram Manzoor,A Nehra,0,2,2,1,['wides'],0,,,7,1,84,,108,India,1,0,1,0,8,,,2,0
+393819,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,1,Khurram Manzoor,Sharjeel Khan,A Nehra,4,0,4,0,[],0,,,11,1,84,,107,India,1,5,0,9,1,,,4,1
+393820,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,2,Khurram Manzoor,Sharjeel Khan,A Nehra,3,0,3,0,[],0,,,14,1,84,,106,India,1,8,0,10,1,,,3,1
+393821,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,3,Sharjeel Khan,Khurram Manzoor,A Nehra,0,0,0,0,[],0,,,14,1,84,,105,India,1,0,8,2,10,,,0,1
+393822,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,4,Sharjeel Khan,Khurram Manzoor,A Nehra,3,0,3,0,[],0,,,17,1,84,,104,India,1,3,8,3,10,,,3,1
+393823,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,5,Khurram Manzoor,Sharjeel Khan,A Nehra,0,1,1,1,['wides'],0,,,18,1,84,,104,India,1,8,3,11,3,,,1,0
+393824,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,5,Khurram Manzoor,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,18,1,84,,103,India,1,8,3,12,3,,,0,1
+393825,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,3,6,Khurram Manzoor,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,18,1,84,,102,India,1,8,3,13,3,,,0,1
+393826,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,1,Sharjeel Khan,Khurram Manzoor,JJ Bumrah,4,0,4,0,[],0,,,22,1,84,,101,India,1,7,8,4,13,,,4,1
+393827,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,2,Sharjeel Khan,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,22,1,84,,100,India,1,7,8,5,13,,,0,1
+393828,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,3,Sharjeel Khan,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],1,caught,Sharjeel Khan,22,2,84,,99,India,1,0,8,0,13,7,6,0,1
+393829,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,4,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,22,2,84,,98,India,1,0,8,1,13,,,0,1
+393830,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,5,Shoaib Malik,Khurram Manzoor,JJ Bumrah,4,0,4,0,[],0,,,26,2,84,,97,India,1,4,8,2,13,,,4,1
+393831,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,4,6,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,26,2,84,,96,India,1,4,8,3,13,,,0,1
+393832,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,1,Khurram Manzoor,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,26,2,84,,95,India,1,8,4,14,3,,,0,1
+393833,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,2,Khurram Manzoor,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,26,2,84,,94,India,1,8,4,15,3,,,0,1
+393834,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,3,Khurram Manzoor,Shoaib Malik,A Nehra,2,0,2,0,[],0,,,28,2,84,,93,India,1,10,4,16,3,,,2,1
+393835,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,4,Khurram Manzoor,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,28,2,84,,92,India,1,10,4,17,3,,,0,1
+393836,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,5,Khurram Manzoor,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,28,2,84,,91,India,1,10,4,18,3,,,0,1
+393837,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,5,6,Khurram Manzoor,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,28,2,84,,90,India,1,10,4,19,3,,,0,1
+393838,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,1,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,4,4,0,['legbyes'],0,,,32,2,84,,89,India,1,4,10,4,19,,,0,1
+393839,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,2,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,32,2,84,,88,India,1,4,10,5,19,,,0,1
+393840,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,3,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,32,2,84,,87,India,1,4,10,6,19,,,0,1
+393841,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,4,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],0,,,32,2,84,,86,India,1,4,10,7,19,,,0,1
+393842,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,5,Shoaib Malik,Khurram Manzoor,JJ Bumrah,0,0,0,0,[],1,run out,Khurram Manzoor,32,3,84,,85,India,1,4,0,8,0,10,19,0,1
+393843,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,6,6,Shoaib Malik,Umar Akmal,JJ Bumrah,0,0,0,0,[],0,,,32,3,84,,84,India,1,4,0,9,0,,,0,1
+393844,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,1,Umar Akmal,Shoaib Malik,HH Pandya,2,0,2,0,[],0,,,34,3,84,,83,India,1,2,4,1,9,,,2,1
+393845,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,2,Umar Akmal,Shoaib Malik,HH Pandya,0,0,0,0,[],0,,,34,3,84,,82,India,1,2,4,2,9,,,0,1
+393846,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,3,Umar Akmal,Shoaib Malik,HH Pandya,1,0,1,0,[],0,,,35,3,84,,81,India,1,3,4,3,9,,,1,1
+393847,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,4,Shoaib Malik,Umar Akmal,HH Pandya,0,0,0,0,[],0,,,35,3,84,,80,India,1,4,3,10,3,,,0,1
+393848,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,5,Shoaib Malik,Umar Akmal,HH Pandya,0,0,0,0,[],0,,,35,3,84,,79,India,1,4,3,11,3,,,0,1
+393849,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,7,6,Shoaib Malik,Umar Akmal,HH Pandya,0,0,0,0,[],1,caught,Shoaib Malik,35,4,84,,78,India,1,0,3,0,3,4,12,0,1
+393850,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,1,Umar Akmal,Sarfraz Ahmed,Yuvraj Singh,0,0,0,0,[],1,lbw,Umar Akmal,35,5,84,,77,India,1,0,0,0,0,3,4,0,1
+393851,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,2,Shahid Afridi,Sarfraz Ahmed,Yuvraj Singh,1,0,1,0,[],0,,,36,5,84,,76,India,1,1,0,1,0,,,1,1
+393852,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,3,Sarfraz Ahmed,Shahid Afridi,Yuvraj Singh,0,0,0,0,[],0,,,36,5,84,,75,India,1,0,1,1,1,,,0,1
+393853,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,4,Sarfraz Ahmed,Shahid Afridi,Yuvraj Singh,4,0,4,0,[],0,,,40,5,84,,74,India,1,4,1,2,1,,,4,1
+393854,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,5,Sarfraz Ahmed,Shahid Afridi,Yuvraj Singh,1,0,1,0,[],0,,,41,5,84,,73,India,1,5,1,3,1,,,1,1
+393855,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,8,6,Shahid Afridi,Sarfraz Ahmed,Yuvraj Singh,1,0,1,0,[],1,run out,Shahid Afridi,42,6,84,,72,India,1,0,5,0,3,2,2,1,1
+393856,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,1,Sarfraz Ahmed,Wahab Riaz,HH Pandya,0,0,0,0,[],0,,,42,6,84,,71,India,1,5,0,4,0,,,0,1
+393857,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,2,Sarfraz Ahmed,Wahab Riaz,HH Pandya,0,0,0,0,[],0,,,42,6,84,,70,India,1,5,0,5,0,,,0,1
+393858,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,3,Sarfraz Ahmed,Wahab Riaz,HH Pandya,0,0,0,0,[],0,,,42,6,84,,69,India,1,5,0,6,0,,,0,1
+393859,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,4,Sarfraz Ahmed,Wahab Riaz,HH Pandya,1,0,1,0,[],0,,,43,6,84,,68,India,1,6,0,7,0,,,1,1
+393860,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,5,Wahab Riaz,Sarfraz Ahmed,HH Pandya,0,0,0,0,[],0,,,43,6,84,,67,India,1,0,6,1,7,,,0,1
+393861,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,9,6,Wahab Riaz,Sarfraz Ahmed,HH Pandya,0,0,0,0,[],0,,,43,6,84,,66,India,1,0,6,2,7,,,0,1
+393862,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,1,Sarfraz Ahmed,Wahab Riaz,Yuvraj Singh,1,0,1,0,[],0,,,44,6,84,,65,India,1,7,0,8,2,,,1,1
+393863,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,2,Wahab Riaz,Sarfraz Ahmed,Yuvraj Singh,1,0,1,0,[],0,,,45,6,84,,64,India,1,1,7,3,8,,,1,1
+393864,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,3,Sarfraz Ahmed,Wahab Riaz,Yuvraj Singh,1,0,1,0,[],0,,,46,6,84,,63,India,1,8,1,9,3,,,1,1
+393865,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,4,Wahab Riaz,Sarfraz Ahmed,Yuvraj Singh,0,0,0,0,[],0,,,46,6,84,,62,India,1,1,8,4,9,,,0,1
+393866,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,5,Wahab Riaz,Sarfraz Ahmed,Yuvraj Singh,0,0,0,0,[],0,,,46,6,84,,61,India,1,1,8,5,9,,,0,1
+393867,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,10,6,Wahab Riaz,Sarfraz Ahmed,Yuvraj Singh,1,0,1,0,[],0,,,47,6,84,,60,India,1,2,8,6,9,,,1,1
+393868,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,1,Wahab Riaz,Sarfraz Ahmed,HH Pandya,1,0,1,0,[],0,,,48,6,84,,59,India,1,3,8,7,9,,,1,1
+393869,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,2,Sarfraz Ahmed,Wahab Riaz,HH Pandya,0,0,0,0,[],0,,,48,6,84,,58,India,1,8,3,10,7,,,0,1
+393870,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,3,Sarfraz Ahmed,Wahab Riaz,HH Pandya,1,0,1,0,[],0,,,49,6,84,,57,India,1,9,3,11,7,,,1,1
+393871,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,4,Wahab Riaz,Sarfraz Ahmed,HH Pandya,1,0,1,0,[],0,,,50,6,84,,56,India,1,4,9,8,11,,,1,1
+393872,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,5,Sarfraz Ahmed,Wahab Riaz,HH Pandya,1,0,1,0,[],0,,,51,6,84,,55,India,1,10,4,12,8,,,1,1
+393873,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,11,6,Wahab Riaz,Sarfraz Ahmed,HH Pandya,0,0,0,0,[],0,,,51,6,84,,54,India,1,4,10,9,12,,,0,1
+393874,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,1,Sarfraz Ahmed,Wahab Riaz,RA Jadeja,1,0,1,0,[],0,,,52,6,84,,53,India,1,11,4,13,9,,,1,1
+393875,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,2,Wahab Riaz,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],0,,,52,6,84,,52,India,1,4,11,10,13,,,0,1
+393876,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,3,Wahab Riaz,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],0,,,52,6,84,,51,India,1,4,11,11,13,,,0,1
+393877,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,4,Wahab Riaz,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],1,lbw,Wahab Riaz,52,7,84,,50,India,1,0,11,0,13,4,12,0,1
+393878,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,5,Mohammad Sami,Sarfraz Ahmed,RA Jadeja,0,2,2,1,['wides'],0,,,54,7,84,,50,India,1,0,11,0,13,,,2,0
+393879,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,5,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,54,7,84,,49,India,1,11,0,14,1,,,0,1
+393880,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,12,6,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,2,0,2,0,[],0,,,56,7,84,,48,India,1,13,0,15,1,,,2,1
+393881,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,1,Mohammad Sami,Sarfraz Ahmed,R Ashwin,0,0,0,0,[],0,,,56,7,84,,47,India,1,0,13,2,15,,,0,1
+393882,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,2,Mohammad Sami,Sarfraz Ahmed,R Ashwin,1,0,1,0,[],0,,,57,7,84,,46,India,1,1,13,3,15,,,1,1
+393883,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,3,Sarfraz Ahmed,Mohammad Sami,R Ashwin,1,0,1,0,[],0,,,58,7,84,,45,India,1,14,1,16,3,,,1,1
+393884,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,4,Mohammad Sami,Sarfraz Ahmed,R Ashwin,0,0,0,0,[],0,,,58,7,84,,44,India,1,1,14,4,16,,,0,1
+393885,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,5,Mohammad Sami,Sarfraz Ahmed,R Ashwin,0,0,0,0,[],0,,,58,7,84,,43,India,1,1,14,5,16,,,0,1
+393886,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,13,6,Mohammad Sami,Sarfraz Ahmed,R Ashwin,0,0,0,0,[],0,,,58,7,84,,42,India,1,1,14,6,16,,,0,1
+393887,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,1,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,58,7,84,,41,India,1,14,1,17,6,,,0,1
+393888,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,2,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,4,0,4,0,[],0,,,62,7,84,,40,India,1,18,1,18,6,,,4,1
+393889,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,3,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,1,0,1,0,[],0,,,63,7,84,,39,India,1,19,1,19,6,,,1,1
+393890,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,4,Mohammad Sami,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],0,,,63,7,84,,38,India,1,1,19,7,19,,,0,1
+393891,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,5,Mohammad Sami,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],0,,,63,7,84,,37,India,1,1,19,8,19,,,0,1
+393892,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,14,6,Mohammad Sami,Sarfraz Ahmed,RA Jadeja,0,0,0,0,[],0,,,63,7,84,,36,India,1,1,19,9,19,,,0,1
+393893,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,1,Sarfraz Ahmed,Mohammad Sami,R Ashwin,4,0,4,0,[],0,,,67,7,84,,35,India,1,23,1,20,9,,,4,1
+393894,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,2,Sarfraz Ahmed,Mohammad Sami,R Ashwin,1,0,1,0,[],0,,,68,7,84,,34,India,1,24,1,21,9,,,1,1
+393895,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,3,Mohammad Sami,Sarfraz Ahmed,R Ashwin,0,0,0,0,[],0,,,68,7,84,,33,India,1,1,24,10,21,,,0,1
+393896,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,4,Mohammad Sami,Sarfraz Ahmed,R Ashwin,1,0,1,0,[],0,,,69,7,84,,32,India,1,2,24,11,21,,,1,1
+393897,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,5,Sarfraz Ahmed,Mohammad Sami,R Ashwin,0,0,0,0,[],0,,,69,7,84,,31,India,1,24,2,22,11,,,0,1
+393898,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,15,6,Sarfraz Ahmed,Mohammad Sami,R Ashwin,1,0,1,0,[],0,,,70,7,84,,30,India,1,25,2,23,11,,,1,1
+393899,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,1,Sarfraz Ahmed,Mohammad Sami,RA Jadeja,0,0,0,0,[],1,bowled,Sarfraz Ahmed,70,8,84,,29,India,1,0,2,0,11,25,24,0,1
+393900,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,2,Mohammad Amir,Mohammad Sami,RA Jadeja,0,1,1,1,['wides'],0,,,71,8,84,,29,India,1,0,2,0,11,,,1,0
+393901,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,2,Mohammad Amir,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,71,8,84,,28,India,1,0,2,2,11,,,0,1
+393902,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,3,Mohammad Amir,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,71,8,84,,27,India,1,0,2,3,11,,,0,1
+393903,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,4,Mohammad Amir,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,71,8,84,,26,India,1,0,2,4,11,,,0,1
+393904,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,5,Mohammad Amir,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,71,8,84,,25,India,1,0,2,5,11,,,0,1
+393905,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,16,6,Mohammad Amir,Mohammad Sami,RA Jadeja,0,0,0,0,[],0,,,71,8,84,,24,India,1,0,2,6,11,,,0,1
+393906,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,1,Mohammad Sami,Mohammad Amir,R Ashwin,4,0,4,0,[],0,,,75,8,84,,23,India,1,6,0,12,6,,,4,1
+393907,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,2,Mohammad Sami,Mohammad Amir,R Ashwin,0,5,5,1,['wides'],0,,,80,8,84,,23,India,1,6,0,12,6,,,5,0
+393908,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,2,Mohammad Sami,Mohammad Amir,R Ashwin,1,0,1,0,[],0,,,81,8,84,,22,India,1,7,0,13,6,,,1,1
+393909,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,3,Mohammad Amir,Mohammad Sami,R Ashwin,0,0,0,0,[],0,,,81,8,84,,21,India,1,0,7,7,13,,,0,1
+393910,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,4,Mohammad Amir,Mohammad Sami,R Ashwin,1,0,1,0,[],0,,,82,8,84,,20,India,1,1,7,8,13,,,1,1
+393911,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,5,Mohammad Sami,Mohammad Amir,R Ashwin,0,0,0,0,[],0,,,82,8,84,,19,India,1,7,1,14,8,,,0,1
+393912,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,17,6,Mohammad Sami,Mohammad Amir,R Ashwin,1,0,1,0,[],0,,,83,8,84,,18,India,1,8,1,15,8,,,1,1
+393913,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,18,1,Mohammad Sami,Mohammad Amir,HH Pandya,0,0,0,0,[],0,,,83,8,84,,17,India,1,8,1,16,8,,,0,1
+393914,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,18,2,Mohammad Sami,Mohammad Amir,HH Pandya,0,0,0,0,[],1,caught,Mohammad Sami,83,9,84,,16,India,1,0,1,0,8,8,17,0,1
+393915,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,1,18,3,Mohammad Amir,Mohammad Irfan,HH Pandya,0,0,0,0,[],1,bowled,Mohammad Amir,83,10,84,,15,India,1,0,0,0,0,1,9,0,1
+393916,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,1,RG Sharma,AM Rahane,Mohammad Amir,0,0,0,0,[],0,,,0,0,84,84,119,India,1,0,0,1,0,,,0,1
+393917,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,2,RG Sharma,AM Rahane,Mohammad Amir,0,0,0,0,[],1,lbw,RG Sharma,0,1,84,84,118,India,1,0,0,0,0,0,2,0,1
+393918,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,3,V Kohli,AM Rahane,Mohammad Amir,1,0,1,0,[],0,,,1,1,84,83,117,India,1,1,0,1,0,,,1,1
+393919,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,4,AM Rahane,V Kohli,Mohammad Amir,0,1,1,1,['wides'],0,,,2,1,84,82,117,India,1,0,1,0,1,,,1,0
+393920,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,4,AM Rahane,V Kohli,Mohammad Amir,0,0,0,0,[],1,lbw,AM Rahane,2,2,84,82,116,India,1,0,1,0,1,0,2,0,1
+393921,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,5,SK Raina,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,2,2,84,82,115,India,1,0,1,1,1,,,0,1
+393922,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,1,6,SK Raina,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,2,2,84,82,114,India,1,0,1,2,1,,,0,1
+393923,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,1,V Kohli,SK Raina,Mohammad Sami,0,0,0,0,[],0,,,2,2,84,82,113,India,1,1,0,2,2,,,0,1
+393924,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,2,V Kohli,SK Raina,Mohammad Sami,0,0,0,0,[],0,,,2,2,84,82,112,India,1,1,0,3,2,,,0,1
+393925,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,3,V Kohli,SK Raina,Mohammad Sami,2,0,2,0,[],0,,,4,2,84,80,111,India,1,3,0,4,2,,,2,1
+393926,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,4,V Kohli,SK Raina,Mohammad Sami,0,0,0,0,[],0,,,4,2,84,80,110,India,1,3,0,5,2,,,0,1
+393927,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,5,V Kohli,SK Raina,Mohammad Sami,2,0,2,0,[],0,,,6,2,84,78,109,India,1,5,0,6,2,,,2,1
+393928,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,2,6,V Kohli,SK Raina,Mohammad Sami,0,0,0,0,[],0,,,6,2,84,78,108,India,1,5,0,7,2,,,0,1
+393929,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,1,SK Raina,V Kohli,Mohammad Amir,1,0,1,0,[],0,,,7,2,84,77,107,India,1,1,5,3,7,,,1,1
+393930,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,2,V Kohli,SK Raina,Mohammad Amir,0,0,0,0,[],0,,,7,2,84,77,106,India,1,5,1,8,3,,,0,1
+393931,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,3,V Kohli,SK Raina,Mohammad Amir,0,1,1,0,['legbyes'],0,,,8,2,84,76,105,India,1,5,1,9,3,,,0,1
+393932,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,4,SK Raina,V Kohli,Mohammad Amir,0,0,0,0,[],1,caught,SK Raina,8,3,84,76,104,India,1,0,5,0,9,1,4,0,1
+393933,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,5,Yuvraj Singh,V Kohli,Mohammad Amir,0,1,1,0,['byes'],0,,,9,3,84,75,103,India,1,0,5,1,9,,,0,1
+393934,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,3,6,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,9,3,84,75,102,India,1,5,0,10,1,,,0,1
+393935,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,1,Yuvraj Singh,V Kohli,Mohammad Irfan,4,0,4,0,[],0,,,13,3,84,71,101,India,1,4,5,2,10,,,4,1
+393936,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,2,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,13,3,84,71,100,India,1,4,5,3,10,,,0,1
+393937,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,3,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,13,3,84,71,99,India,1,4,5,4,10,,,0,1
+393938,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,4,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,13,3,84,71,98,India,1,4,5,5,10,,,0,1
+393939,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,5,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,13,3,84,71,97,India,1,4,5,6,10,,,0,1
+393940,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,4,6,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,13,3,84,71,96,India,1,4,5,7,10,,,0,1
+393941,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,1,V Kohli,Yuvraj Singh,Mohammad Amir,0,5,5,1,['wides'],0,,,18,3,84,66,96,India,1,5,4,11,7,,,5,0
+393942,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,1,V Kohli,Yuvraj Singh,Mohammad Amir,1,0,1,0,[],0,,,19,3,84,65,95,India,1,6,4,12,7,,,1,1
+393943,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,2,Yuvraj Singh,V Kohli,Mohammad Amir,1,0,1,0,[],0,,,20,3,84,64,94,India,1,5,6,8,12,,,1,1
+393944,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,3,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,20,3,84,64,93,India,1,6,5,13,8,,,0,1
+393945,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,4,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,20,3,84,64,92,India,1,6,5,14,8,,,0,1
+393946,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,5,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,20,3,84,64,91,India,1,6,5,15,8,,,0,1
+393947,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,5,6,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,20,3,84,64,90,India,1,6,5,16,8,,,0,1
+393948,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,1,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,20,3,84,64,89,India,1,5,6,9,16,,,0,1
+393949,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,2,Yuvraj Singh,V Kohli,Mohammad Irfan,0,1,1,1,['wides'],0,,,21,3,84,63,89,India,1,5,6,9,16,,,1,0
+393950,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,2,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,21,3,84,63,88,India,1,5,6,10,16,,,0,1
+393951,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,3,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,21,3,84,63,87,India,1,5,6,11,16,,,0,1
+393952,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,4,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,21,3,84,63,86,India,1,5,6,12,16,,,0,1
+393953,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,5,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,21,3,84,63,85,India,1,5,6,13,16,,,0,1
+393954,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,6,6,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,21,3,84,63,84,India,1,5,6,14,16,,,0,1
+393955,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,1,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,21,3,84,63,83,India,1,6,5,17,14,,,0,1
+393956,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,2,V Kohli,Yuvraj Singh,Mohammad Amir,4,0,4,0,[],0,,,25,3,84,59,82,India,1,10,5,18,14,,,4,1
+393957,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,3,V Kohli,Yuvraj Singh,Mohammad Amir,4,0,4,0,[],0,,,29,3,84,55,81,India,1,14,5,19,14,,,4,1
+393958,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,4,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,29,3,84,55,80,India,1,14,5,20,14,,,0,1
+393959,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,5,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,29,3,84,55,79,India,1,14,5,21,14,,,0,1
+393960,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,7,6,V Kohli,Yuvraj Singh,Mohammad Amir,0,0,0,0,[],0,,,29,3,84,55,78,India,1,14,5,22,14,,,0,1
+393961,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,1,Yuvraj Singh,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,29,3,84,55,77,India,1,5,14,15,22,,,0,1
+393962,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,2,Yuvraj Singh,V Kohli,Mohammad Irfan,1,0,1,0,[],0,,,30,3,84,54,76,India,1,6,14,16,22,,,1,1
+393963,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,3,V Kohli,Yuvraj Singh,Mohammad Irfan,0,0,0,0,[],0,,,30,3,84,54,75,India,1,14,6,23,16,,,0,1
+393964,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,4,V Kohli,Yuvraj Singh,Mohammad Irfan,0,0,0,0,[],0,,,30,3,84,54,74,India,1,14,6,24,16,,,0,1
+393965,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,5,V Kohli,Yuvraj Singh,Mohammad Irfan,4,0,4,0,[],0,,,34,3,84,50,73,India,1,18,6,25,16,,,4,1
+393966,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,8,6,V Kohli,Yuvraj Singh,Mohammad Irfan,0,1,1,0,['legbyes'],0,,,35,3,84,49,72,India,1,18,6,26,16,,,0,1
+393967,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,1,V Kohli,Yuvraj Singh,Wahab Riaz,4,0,4,0,[],0,,,39,3,84,45,71,India,1,22,6,27,16,,,4,1
+393968,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,2,V Kohli,Yuvraj Singh,Wahab Riaz,2,0,2,0,[],0,,,41,3,84,43,70,India,1,24,6,28,16,,,2,1
+393969,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,3,V Kohli,Yuvraj Singh,Wahab Riaz,4,0,4,0,[],0,,,45,3,84,39,69,India,1,28,6,29,16,,,4,1
+393970,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,4,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,46,3,84,38,68,India,1,29,6,30,16,,,1,1
+393971,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,5,Yuvraj Singh,V Kohli,Wahab Riaz,4,0,4,0,[],0,,,50,3,84,34,67,India,1,10,29,17,30,,,4,1
+393972,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,9,6,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,50,3,84,34,66,India,1,10,29,18,30,,,0,1
+393973,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,1,V Kohli,Yuvraj Singh,Mohammad Sami,2,0,2,0,[],0,,,52,3,84,32,65,India,1,31,10,31,18,,,2,1
+393974,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,2,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,52,3,84,32,64,India,1,31,10,32,18,,,0,1
+393975,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,3,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,52,3,84,32,63,India,1,31,10,33,18,,,0,1
+393976,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,4,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,52,3,84,32,62,India,1,31,10,34,18,,,0,1
+393977,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,5,V Kohli,Yuvraj Singh,Mohammad Sami,1,0,1,0,[],0,,,53,3,84,31,61,India,1,32,10,35,18,,,1,1
+393978,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,10,6,Yuvraj Singh,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,53,3,84,31,60,India,1,10,32,19,35,,,0,1
+393979,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,1,V Kohli,Yuvraj Singh,Wahab Riaz,1,1,2,1,['noballs'],0,,,55,3,84,29,60,India,1,33,10,36,19,,,2,0
+393980,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,1,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,55,3,84,29,59,India,1,10,33,20,36,,,0,1
+393981,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,2,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,55,3,84,29,58,India,1,10,33,21,36,,,0,1
+393982,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,3,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,55,3,84,29,57,India,1,10,33,22,36,,,0,1
+393983,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,4,Yuvraj Singh,V Kohli,Wahab Riaz,0,1,1,1,['wides'],0,,,56,3,84,28,57,India,1,10,33,22,36,,,1,0
+393984,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,4,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,56,3,84,28,56,India,1,10,33,23,36,,,0,1
+393985,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,5,Yuvraj Singh,V Kohli,Wahab Riaz,1,0,1,0,[],0,,,57,3,84,27,55,India,1,11,33,24,36,,,1,1
+393986,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,11,6,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,58,3,84,26,54,India,1,34,11,37,24,,,1,1
+393987,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,1,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,58,3,84,26,53,India,1,34,11,38,24,,,0,1
+393988,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,2,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,58,3,84,26,52,India,1,34,11,39,24,,,0,1
+393989,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,3,V Kohli,Yuvraj Singh,Mohammad Sami,4,0,4,0,[],0,,,62,3,84,22,51,India,1,38,11,40,24,,,4,1
+393990,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,4,V Kohli,Yuvraj Singh,Mohammad Sami,1,0,1,0,[],0,,,63,3,84,21,50,India,1,39,11,41,24,,,1,1
+393991,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,5,Yuvraj Singh,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,63,3,84,21,49,India,1,11,39,25,41,,,0,1
+393992,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,12,6,Yuvraj Singh,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,63,3,84,21,48,India,1,11,39,26,41,,,0,1
+393993,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,1,V Kohli,Yuvraj Singh,Mohammad Irfan,0,0,0,0,[],0,,,63,3,84,21,47,India,1,39,11,42,26,,,0,1
+393994,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,2,V Kohli,Yuvraj Singh,Mohammad Irfan,2,0,2,0,[],0,,,65,3,84,19,46,India,1,41,11,43,26,,,2,1
+393995,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,3,V Kohli,Yuvraj Singh,Mohammad Irfan,0,0,0,0,[],0,,,65,3,84,19,45,India,1,41,11,44,26,,,0,1
+393996,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,4,V Kohli,Yuvraj Singh,Mohammad Irfan,0,0,0,0,[],0,,,65,3,84,19,44,India,1,41,11,45,26,,,0,1
+393997,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,5,V Kohli,Yuvraj Singh,Mohammad Irfan,1,1,2,1,['noballs'],0,,,67,3,84,17,44,India,1,42,11,45,26,,,2,0
+393998,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,5,Yuvraj Singh,V Kohli,Mohammad Irfan,1,0,1,0,[],0,,,68,3,84,16,43,India,1,12,42,27,45,,,1,1
+393999,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,13,6,V Kohli,Yuvraj Singh,Mohammad Irfan,1,0,1,0,[],0,,,69,3,84,15,42,India,1,43,12,46,27,,,1,1
+394000,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,1,V Kohli,Yuvraj Singh,Wahab Riaz,0,0,0,0,[],0,,,69,3,84,15,41,India,1,43,12,47,27,,,0,1
+394001,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,2,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,70,3,84,14,40,India,1,44,12,48,27,,,1,1
+394002,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,3,Yuvraj Singh,V Kohli,Wahab Riaz,1,0,1,0,[],0,,,71,3,84,13,39,India,1,13,44,28,48,,,1,1
+394003,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,4,V Kohli,Yuvraj Singh,Wahab Riaz,4,0,4,0,[],0,,,75,3,84,9,38,India,1,48,13,49,28,,,4,1
+394004,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,5,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,76,3,84,8,37,India,1,49,13,50,28,,,1,1
+394005,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,14,6,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,76,3,84,8,36,India,1,13,49,29,50,,,0,1
+394006,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,1,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],1,lbw,V Kohli,76,4,84,8,35,India,1,0,13,0,29,49,51,0,1
+394007,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,2,HH Pandya,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,76,4,84,8,34,India,1,0,13,1,29,,,0,1
+394008,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,3,HH Pandya,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],1,caught,HH Pandya,76,5,84,8,33,India,1,0,13,0,29,0,2,0,1
+394009,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,4,MS Dhoni,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,76,5,84,8,32,India,1,0,13,1,29,,,0,1
+394010,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,5,MS Dhoni,Yuvraj Singh,Mohammad Sami,3,0,3,0,[],0,,,79,5,84,5,31,India,1,3,13,2,29,,,3,1
+394011,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,15,6,Yuvraj Singh,MS Dhoni,Mohammad Sami,1,0,1,0,[],0,,,80,5,84,4,30,India,1,14,3,30,2,,,1,1
+394012,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,16,1,Yuvraj Singh,MS Dhoni,Wahab Riaz,0,0,0,0,[],0,,,80,5,84,4,29,India,1,14,3,31,2,,,0,1
+394013,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,16,2,Yuvraj Singh,MS Dhoni,Wahab Riaz,0,1,1,0,['legbyes'],0,,,81,5,84,3,28,India,1,14,3,32,2,,,0,1
+394014,966751,2/27/2016,Shere Bangla National Stadium,Pakistan,India,2,16,3,MS Dhoni,Yuvraj Singh,Wahab Riaz,4,0,4,0,[],0,,,85,5,84,-1,27,India,1,7,14,3,32,,,4,1
+417706,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,1,Sharjeel Khan,Ahmed Shehzad,A Nehra,1,0,1,0,[],0,,,1,0,119,,119,India,1,1,0,1,0,,,1,1
+417707,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,2,Ahmed Shehzad,Sharjeel Khan,A Nehra,1,0,1,0,[],0,,,2,0,119,,118,India,1,1,1,1,1,,,1,1
+417708,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,3,Sharjeel Khan,Ahmed Shehzad,A Nehra,0,0,0,0,[],0,,,2,0,119,,117,India,1,1,1,2,1,,,0,1
+417709,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,4,Sharjeel Khan,Ahmed Shehzad,A Nehra,1,0,1,0,[],0,,,3,0,119,,116,India,1,2,1,3,1,,,1,1
+417710,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,5,Ahmed Shehzad,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,3,0,119,,115,India,1,1,2,2,3,,,0,1
+417711,951341,3/19/2016,Eden Gardens,Pakistan,India,1,1,6,Ahmed Shehzad,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,3,0,119,,114,India,1,1,2,3,3,,,0,1
+417712,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,1,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,3,0,119,,113,India,1,2,1,4,3,,,0,1
+417713,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,2,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,3,0,119,,112,India,1,2,1,5,3,,,0,1
+417714,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,3,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,3,0,119,,111,India,1,2,1,6,3,,,0,1
+417715,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,4,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,3,0,119,,110,India,1,2,1,7,3,,,0,1
+417716,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,5,Sharjeel Khan,Ahmed Shehzad,R Ashwin,1,0,1,0,[],0,,,4,0,119,,109,India,1,3,1,8,3,,,1,1
+417717,951341,3/19/2016,Eden Gardens,Pakistan,India,1,2,6,Ahmed Shehzad,Sharjeel Khan,R Ashwin,0,1,1,0,['byes'],0,,,5,0,119,,108,India,1,1,3,4,8,,,0,1
+417718,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,1,Ahmed Shehzad,Sharjeel Khan,A Nehra,1,0,1,0,[],0,,,6,0,119,,107,India,1,2,3,5,8,,,1,1
+417719,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,2,Sharjeel Khan,Ahmed Shehzad,A Nehra,1,0,1,0,[],0,,,7,0,119,,106,India,1,4,2,9,5,,,1,1
+417720,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,3,Ahmed Shehzad,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,7,0,119,,105,India,1,2,4,6,9,,,0,1
+417721,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,4,Ahmed Shehzad,Sharjeel Khan,A Nehra,0,0,0,0,[],0,,,7,0,119,,104,India,1,2,4,7,9,,,0,1
+417722,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,5,Ahmed Shehzad,Sharjeel Khan,A Nehra,1,0,1,0,[],0,,,8,0,119,,103,India,1,3,4,8,9,,,1,1
+417723,951341,3/19/2016,Eden Gardens,Pakistan,India,1,3,6,Sharjeel Khan,Ahmed Shehzad,A Nehra,4,0,4,0,[],0,,,12,0,119,,102,India,1,8,3,10,8,,,4,1
+417724,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,1,Ahmed Shehzad,Sharjeel Khan,R Ashwin,1,0,1,0,[],0,,,13,0,119,,101,India,1,4,8,9,10,,,1,1
+417725,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,2,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,13,0,119,,100,India,1,8,4,11,9,,,0,1
+417726,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,3,Sharjeel Khan,Ahmed Shehzad,R Ashwin,1,0,1,0,[],0,,,14,0,119,,99,India,1,9,4,12,9,,,1,1
+417727,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,4,Ahmed Shehzad,Sharjeel Khan,R Ashwin,4,0,4,0,[],0,,,18,0,119,,98,India,1,8,9,10,12,,,4,1
+417728,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,5,Ahmed Shehzad,Sharjeel Khan,R Ashwin,0,0,0,0,[],0,,,18,0,119,,97,India,1,8,9,11,12,,,0,1
+417729,951341,3/19/2016,Eden Gardens,Pakistan,India,1,4,6,Ahmed Shehzad,Sharjeel Khan,R Ashwin,1,0,1,0,[],0,,,19,0,119,,96,India,1,9,9,12,12,,,1,1
+417730,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,1,Ahmed Shehzad,Sharjeel Khan,JJ Bumrah,1,0,1,0,[],0,,,20,0,119,,95,India,1,10,9,13,12,,,1,1
+417731,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,2,Sharjeel Khan,Ahmed Shehzad,JJ Bumrah,0,0,0,0,[],0,,,20,0,119,,94,India,1,9,10,13,13,,,0,1
+417732,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,3,Sharjeel Khan,Ahmed Shehzad,JJ Bumrah,0,0,0,0,[],0,,,20,0,119,,93,India,1,9,10,14,13,,,0,1
+417733,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,4,Sharjeel Khan,Ahmed Shehzad,JJ Bumrah,0,0,0,0,[],0,,,20,0,119,,92,India,1,9,10,15,13,,,0,1
+417734,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,5,Sharjeel Khan,Ahmed Shehzad,JJ Bumrah,0,0,0,0,[],0,,,20,0,119,,91,India,1,9,10,16,13,,,0,1
+417735,951341,3/19/2016,Eden Gardens,Pakistan,India,1,5,6,Sharjeel Khan,Ahmed Shehzad,JJ Bumrah,4,0,4,0,[],0,,,24,0,119,,90,India,1,13,10,17,13,,,4,1
+417736,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,1,Ahmed Shehzad,Sharjeel Khan,R Ashwin,0,0,0,0,[],0,,,24,0,119,,89,India,1,10,13,14,17,,,0,1
+417737,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,2,Ahmed Shehzad,Sharjeel Khan,R Ashwin,1,0,1,0,[],0,,,25,0,119,,88,India,1,11,13,15,17,,,1,1
+417738,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,3,Sharjeel Khan,Ahmed Shehzad,R Ashwin,1,0,1,0,[],0,,,26,0,119,,87,India,1,14,11,18,15,,,1,1
+417739,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,4,Ahmed Shehzad,Sharjeel Khan,R Ashwin,1,0,1,0,[],0,,,27,0,119,,86,India,1,12,14,16,18,,,1,1
+417740,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,5,Sharjeel Khan,Ahmed Shehzad,R Ashwin,0,0,0,0,[],0,,,27,0,119,,85,India,1,14,12,19,16,,,0,1
+417741,951341,3/19/2016,Eden Gardens,Pakistan,India,1,6,6,Sharjeel Khan,Ahmed Shehzad,R Ashwin,1,0,1,0,[],0,,,28,0,119,,84,India,1,15,12,20,16,,,1,1
+417742,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,1,Sharjeel Khan,Ahmed Shehzad,RA Jadeja,0,1,1,1,['wides'],0,,,29,0,119,,84,India,1,15,12,20,16,,,1,0
+417743,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,1,Sharjeel Khan,Ahmed Shehzad,RA Jadeja,0,0,0,0,[],0,,,29,0,119,,83,India,1,15,12,21,16,,,0,1
+417744,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,2,Sharjeel Khan,Ahmed Shehzad,RA Jadeja,1,0,1,0,[],0,,,30,0,119,,82,India,1,16,12,22,16,,,1,1
+417745,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,3,Ahmed Shehzad,Sharjeel Khan,RA Jadeja,0,0,0,0,[],0,,,30,0,119,,81,India,1,12,16,17,22,,,0,1
+417746,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,4,Ahmed Shehzad,Sharjeel Khan,RA Jadeja,4,0,4,0,[],0,,,34,0,119,,80,India,1,16,16,18,22,,,4,1
+417747,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,5,Ahmed Shehzad,Sharjeel Khan,RA Jadeja,0,0,0,0,[],0,,,34,0,119,,79,India,1,16,16,19,22,,,0,1
+417748,951341,3/19/2016,Eden Gardens,Pakistan,India,1,7,6,Ahmed Shehzad,Sharjeel Khan,RA Jadeja,0,0,0,0,[],0,,,34,0,119,,78,India,1,16,16,20,22,,,0,1
+417749,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,1,Sharjeel Khan,Ahmed Shehzad,SK Raina,1,0,1,0,[],0,,,35,0,119,,77,India,1,17,16,23,20,,,1,1
+417750,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,2,Ahmed Shehzad,Sharjeel Khan,SK Raina,2,0,2,0,[],0,,,37,0,119,,76,India,1,18,17,21,23,,,2,1
+417751,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,3,Ahmed Shehzad,Sharjeel Khan,SK Raina,1,0,1,0,[],0,,,38,0,119,,75,India,1,19,17,22,23,,,1,1
+417752,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,4,Sharjeel Khan,Ahmed Shehzad,SK Raina,0,0,0,0,[],1,caught,Sharjeel Khan,38,1,119,,74,India,1,0,19,0,22,17,24,0,1
+417753,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,5,Ahmed Shehzad,Shahid Afridi,SK Raina,0,0,0,0,[],0,,,38,1,119,,73,India,1,19,0,23,0,,,0,1
+417754,951341,3/19/2016,Eden Gardens,Pakistan,India,1,8,6,Ahmed Shehzad,Shahid Afridi,SK Raina,0,1,1,0,['legbyes'],0,,,39,1,119,,72,India,1,19,0,24,0,,,0,1
+417755,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,1,Ahmed Shehzad,Shahid Afridi,RA Jadeja,1,0,1,0,[],0,,,40,1,119,,71,India,1,20,0,25,0,,,1,1
+417756,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,2,Shahid Afridi,Ahmed Shehzad,RA Jadeja,0,0,0,0,[],0,,,40,1,119,,70,India,1,0,20,1,25,,,0,1
+417757,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,3,Shahid Afridi,Ahmed Shehzad,RA Jadeja,0,0,0,0,[],0,,,40,1,119,,69,India,1,0,20,2,25,,,0,1
+417758,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,4,Shahid Afridi,Ahmed Shehzad,RA Jadeja,1,0,1,0,[],0,,,41,1,119,,68,India,1,1,20,3,25,,,1,1
+417759,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,5,Ahmed Shehzad,Shahid Afridi,RA Jadeja,1,0,1,0,[],0,,,42,1,119,,67,India,1,21,1,26,3,,,1,1
+417760,951341,3/19/2016,Eden Gardens,Pakistan,India,1,9,6,Shahid Afridi,Ahmed Shehzad,RA Jadeja,0,0,0,0,[],0,,,42,1,119,,66,India,1,1,21,4,26,,,0,1
+417761,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,1,Ahmed Shehzad,Shahid Afridi,JJ Bumrah,4,0,4,0,[],0,,,46,1,119,,65,India,1,25,1,27,4,,,4,1
+417762,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,2,Ahmed Shehzad,Shahid Afridi,JJ Bumrah,0,0,0,0,[],1,caught,Ahmed Shehzad,46,2,119,,64,India,1,0,1,0,4,25,28,0,1
+417763,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,3,Shahid Afridi,Umar Akmal,JJ Bumrah,4,0,4,0,[],0,,,50,2,119,,63,India,1,5,0,5,0,,,4,1
+417764,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,4,Shahid Afridi,Umar Akmal,JJ Bumrah,0,0,0,0,[],0,,,50,2,119,,62,India,1,5,0,6,0,,,0,1
+417765,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,5,Shahid Afridi,Umar Akmal,JJ Bumrah,0,0,0,0,[],0,,,50,2,119,,61,India,1,5,0,7,0,,,0,1
+417766,951341,3/19/2016,Eden Gardens,Pakistan,India,1,10,6,Shahid Afridi,Umar Akmal,JJ Bumrah,1,0,1,0,[],0,,,51,2,119,,60,India,1,6,0,8,0,,,1,1
+417767,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,1,Shahid Afridi,Umar Akmal,RA Jadeja,0,0,0,0,[],0,,,51,2,119,,59,India,1,6,0,9,0,,,0,1
+417768,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,2,Shahid Afridi,Umar Akmal,RA Jadeja,1,0,1,0,[],0,,,52,2,119,,58,India,1,7,0,10,0,,,1,1
+417769,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,3,Umar Akmal,Shahid Afridi,RA Jadeja,0,0,0,0,[],0,,,52,2,119,,57,India,1,0,7,1,10,,,0,1
+417770,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,4,Umar Akmal,Shahid Afridi,RA Jadeja,0,0,0,0,[],0,,,52,2,119,,56,India,1,0,7,2,10,,,0,1
+417771,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,5,Umar Akmal,Shahid Afridi,RA Jadeja,1,0,1,0,[],0,,,53,2,119,,55,India,1,1,7,3,10,,,1,1
+417772,951341,3/19/2016,Eden Gardens,Pakistan,India,1,11,6,Shahid Afridi,Umar Akmal,RA Jadeja,1,0,1,0,[],0,,,54,2,119,,54,India,1,8,1,11,3,,,1,1
+417773,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,1,Shahid Afridi,Umar Akmal,HH Pandya,0,1,1,0,['legbyes'],0,,,55,2,119,,53,India,1,8,1,12,3,,,0,1
+417774,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,2,Umar Akmal,Shahid Afridi,HH Pandya,4,0,4,0,[],0,,,59,2,119,,52,India,1,5,8,4,12,,,4,1
+417775,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,3,Umar Akmal,Shahid Afridi,HH Pandya,1,0,1,0,[],0,,,60,2,119,,51,India,1,6,8,5,12,,,1,1
+417776,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,4,Shahid Afridi,Umar Akmal,HH Pandya,0,0,0,0,[],0,,,60,2,119,,50,India,1,8,6,13,5,,,0,1
+417777,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,5,Shahid Afridi,Umar Akmal,HH Pandya,0,0,0,0,[],1,caught,Shahid Afridi,60,3,119,,49,India,1,0,6,0,5,8,14,0,1
+417778,951341,3/19/2016,Eden Gardens,Pakistan,India,1,12,6,Umar Akmal,Shoaib Malik,HH Pandya,5,0,5,0,[],0,,,65,3,119,,48,India,1,11,0,6,0,,,5,1
+417779,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,1,Umar Akmal,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,65,3,119,,47,India,1,11,0,7,0,,,0,1
+417780,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,2,Umar Akmal,Shoaib Malik,A Nehra,0,0,0,0,[],0,,,65,3,119,,46,India,1,11,0,8,0,,,0,1
+417781,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,3,Umar Akmal,Shoaib Malik,A Nehra,1,0,1,0,[],0,,,66,3,119,,45,India,1,12,0,9,0,,,1,1
+417782,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,4,Shoaib Malik,Umar Akmal,A Nehra,0,0,0,0,[],0,,,66,3,119,,44,India,1,0,12,1,9,,,0,1
+417783,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,5,Shoaib Malik,Umar Akmal,A Nehra,0,0,0,0,[],0,,,66,3,119,,43,India,1,0,12,2,9,,,0,1
+417784,951341,3/19/2016,Eden Gardens,Pakistan,India,1,13,6,Shoaib Malik,Umar Akmal,A Nehra,1,0,1,0,[],0,,,67,3,119,,42,India,1,1,12,3,9,,,1,1
+417785,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,1,Shoaib Malik,Umar Akmal,HH Pandya,1,0,1,0,[],0,,,68,3,119,,41,India,1,2,12,4,9,,,1,1
+417786,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,2,Umar Akmal,Shoaib Malik,HH Pandya,1,0,1,0,[],0,,,69,3,119,,40,India,1,13,2,10,4,,,1,1
+417787,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,3,Shoaib Malik,Umar Akmal,HH Pandya,0,0,0,0,[],0,,,69,3,119,,39,India,1,2,13,5,10,,,0,1
+417788,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,4,Shoaib Malik,Umar Akmal,HH Pandya,6,0,6,0,[],0,,,75,3,119,,38,India,1,8,13,6,10,,,6,1
+417789,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,5,Shoaib Malik,Umar Akmal,HH Pandya,1,0,1,0,[],0,,,76,3,119,,37,India,1,9,13,7,10,,,1,1
+417790,951341,3/19/2016,Eden Gardens,Pakistan,India,1,14,6,Umar Akmal,Shoaib Malik,HH Pandya,6,0,6,0,[],0,,,82,3,119,,36,India,1,19,9,11,7,,,6,1
+417791,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,1,Shoaib Malik,Umar Akmal,JJ Bumrah,1,0,1,0,[],0,,,83,3,119,,35,India,1,10,19,8,11,,,1,1
+417792,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,2,Umar Akmal,Shoaib Malik,JJ Bumrah,1,1,2,1,['noballs'],0,,,85,3,119,,35,India,1,20,10,12,8,,,2,0
+417793,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,2,Shoaib Malik,Umar Akmal,JJ Bumrah,1,0,1,0,[],0,,,86,3,119,,34,India,1,11,20,9,12,,,1,1
+417794,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,3,Umar Akmal,Shoaib Malik,JJ Bumrah,1,0,1,0,[],0,,,87,3,119,,33,India,1,21,11,13,9,,,1,1
+417795,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,4,Shoaib Malik,Umar Akmal,JJ Bumrah,4,0,4,0,[],0,,,91,3,119,,32,India,1,15,21,10,13,,,4,1
+417796,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,5,Shoaib Malik,Umar Akmal,JJ Bumrah,4,0,4,0,[],0,,,95,3,119,,31,India,1,19,21,11,13,,,4,1
+417797,951341,3/19/2016,Eden Gardens,Pakistan,India,1,15,6,Shoaib Malik,Umar Akmal,JJ Bumrah,0,0,0,0,[],0,,,95,3,119,,30,India,1,19,21,12,13,,,0,1
+417798,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,1,Umar Akmal,Shoaib Malik,RA Jadeja,0,0,0,0,[],0,,,95,3,119,,29,India,1,21,19,14,12,,,0,1
+417799,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,2,Umar Akmal,Shoaib Malik,RA Jadeja,1,0,1,0,[],0,,,96,3,119,,28,India,1,22,19,15,12,,,1,1
+417800,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,3,Shoaib Malik,Umar Akmal,RA Jadeja,4,0,4,0,[],0,,,100,3,119,,27,India,1,23,22,13,15,,,4,1
+417801,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,4,Shoaib Malik,Umar Akmal,RA Jadeja,1,0,1,0,[],0,,,101,3,119,,26,India,1,24,22,14,15,,,1,1
+417802,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,5,Umar Akmal,Shoaib Malik,RA Jadeja,0,0,0,0,[],1,caught,Umar Akmal,101,4,119,,25,India,1,0,24,0,14,22,16,0,1
+417803,951341,3/19/2016,Eden Gardens,Pakistan,India,1,16,6,Sarfraz Ahmed,Shoaib Malik,RA Jadeja,2,0,2,0,[],0,,,103,4,119,,24,India,1,2,24,1,14,,,2,1
+417804,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,1,Shoaib Malik,Sarfraz Ahmed,A Nehra,2,0,2,0,[],0,,,105,4,119,,23,India,1,26,2,15,1,,,2,1
+417805,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,2,Shoaib Malik,Sarfraz Ahmed,A Nehra,0,0,0,0,[],1,caught,Shoaib Malik,105,5,119,,22,India,1,0,2,0,1,26,16,0,1
+417806,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,3,Sarfraz Ahmed,Mohammad Hafeez,A Nehra,1,0,1,0,[],0,,,106,5,119,,21,India,1,3,0,2,0,,,1,1
+417807,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,4,Mohammad Hafeez,Sarfraz Ahmed,A Nehra,1,0,1,0,[],0,,,107,5,119,,20,India,1,1,3,1,2,,,1,1
+417808,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,5,Sarfraz Ahmed,Mohammad Hafeez,A Nehra,4,0,4,0,[],0,,,111,5,119,,19,India,1,7,1,3,1,,,4,1
+417809,951341,3/19/2016,Eden Gardens,Pakistan,India,1,17,6,Sarfraz Ahmed,Mohammad Hafeez,A Nehra,0,0,0,0,[],0,,,111,5,119,,18,India,1,7,1,4,1,,,0,1
+417810,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,1,Mohammad Hafeez,Sarfraz Ahmed,JJ Bumrah,1,0,1,0,[],0,,,112,5,119,,17,India,1,2,7,2,4,,,1,1
+417811,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,2,Sarfraz Ahmed,Mohammad Hafeez,JJ Bumrah,1,0,1,0,[],0,,,113,5,119,,16,India,1,8,2,5,2,,,1,1
+417812,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,3,Mohammad Hafeez,Sarfraz Ahmed,JJ Bumrah,2,0,2,0,[],0,,,115,5,119,,15,India,1,4,8,3,5,,,2,1
+417813,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,4,Mohammad Hafeez,Sarfraz Ahmed,JJ Bumrah,1,0,1,0,[],0,,,116,5,119,,14,India,1,5,8,4,5,,,1,1
+417814,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,5,Sarfraz Ahmed,Mohammad Hafeez,JJ Bumrah,0,1,1,0,['byes'],0,,,117,5,119,,13,India,1,8,5,6,4,,,0,1
+417815,951341,3/19/2016,Eden Gardens,Pakistan,India,1,18,6,Mohammad Hafeez,Sarfraz Ahmed,JJ Bumrah,0,1,1,0,['legbyes'],0,,,118,5,119,,12,India,1,5,8,5,6,,,0,1
+417816,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,1,RG Sharma,S Dhawan,Mohammad Amir,0,0,0,0,[],0,,,0,0,119,119,119,India,1,0,0,1,0,,,0,1
+417817,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,2,RG Sharma,S Dhawan,Mohammad Amir,0,0,0,0,[],0,,,0,0,119,119,118,India,1,0,0,2,0,,,0,1
+417818,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,3,RG Sharma,S Dhawan,Mohammad Amir,0,1,1,1,['wides'],0,,,1,0,119,118,118,India,1,0,0,2,0,,,1,0
+417819,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,3,RG Sharma,S Dhawan,Mohammad Amir,0,1,1,0,['legbyes'],0,,,2,0,119,117,117,India,1,0,0,3,0,,,0,1
+417820,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,4,S Dhawan,RG Sharma,Mohammad Amir,1,0,1,0,[],0,,,3,0,119,116,116,India,1,1,0,1,3,,,1,1
+417821,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,5,RG Sharma,S Dhawan,Mohammad Amir,1,0,1,0,[],0,,,4,0,119,115,115,India,1,1,1,4,1,,,1,1
+417822,951341,3/19/2016,Eden Gardens,Pakistan,India,2,1,6,S Dhawan,RG Sharma,Mohammad Amir,0,0,0,0,[],0,,,4,0,119,115,114,India,1,1,1,2,4,,,0,1
+417823,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,1,RG Sharma,S Dhawan,Mohammad Irfan,4,0,4,0,[],0,,,8,0,119,111,113,India,1,5,1,5,2,,,4,1
+417824,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,2,RG Sharma,S Dhawan,Mohammad Irfan,0,1,1,1,['wides'],0,,,9,0,119,110,113,India,1,5,1,5,2,,,1,0
+417825,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,2,RG Sharma,S Dhawan,Mohammad Irfan,0,0,0,0,[],0,,,9,0,119,110,112,India,1,5,1,6,2,,,0,1
+417826,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,3,RG Sharma,S Dhawan,Mohammad Irfan,0,0,0,0,[],0,,,9,0,119,110,111,India,1,5,1,7,2,,,0,1
+417827,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,4,RG Sharma,S Dhawan,Mohammad Irfan,0,0,0,0,[],0,,,9,0,119,110,110,India,1,5,1,8,2,,,0,1
+417828,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,5,RG Sharma,S Dhawan,Mohammad Irfan,4,0,4,0,[],0,,,13,0,119,106,109,India,1,9,1,9,2,,,4,1
+417829,951341,3/19/2016,Eden Gardens,Pakistan,India,2,2,6,RG Sharma,S Dhawan,Mohammad Irfan,1,0,1,0,[],0,,,14,0,119,105,108,India,1,10,1,10,2,,,1,1
+417830,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,1,RG Sharma,S Dhawan,Mohammad Amir,0,0,0,0,[],1,caught,RG Sharma,14,1,119,105,107,India,1,0,1,0,2,10,11,0,1
+417831,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,2,S Dhawan,V Kohli,Mohammad Amir,0,2,2,0,['legbyes'],0,,,16,1,119,103,106,India,1,1,0,3,0,,,0,1
+417832,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,3,S Dhawan,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,16,1,119,103,105,India,1,1,0,4,0,,,0,1
+417833,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,4,S Dhawan,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,16,1,119,103,104,India,1,1,0,5,0,,,0,1
+417834,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,5,S Dhawan,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,16,1,119,103,103,India,1,1,0,6,0,,,0,1
+417835,951341,3/19/2016,Eden Gardens,Pakistan,India,2,3,6,S Dhawan,V Kohli,Mohammad Amir,0,0,0,0,[],0,,,16,1,119,103,102,India,1,1,0,7,0,,,0,1
+417836,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,1,V Kohli,S Dhawan,Mohammad Irfan,1,0,1,0,[],0,,,17,1,119,102,101,India,1,1,1,1,7,,,1,1
+417837,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,2,S Dhawan,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,17,1,119,102,100,India,1,1,1,8,1,,,0,1
+417838,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,3,S Dhawan,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,17,1,119,102,99,India,1,1,1,9,1,,,0,1
+417839,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,4,S Dhawan,V Kohli,Mohammad Irfan,0,0,0,0,[],0,,,17,1,119,102,98,India,1,1,1,10,1,,,0,1
+417840,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,5,S Dhawan,V Kohli,Mohammad Irfan,1,0,1,0,[],0,,,18,1,119,101,97,India,1,2,1,11,1,,,1,1
+417841,951341,3/19/2016,Eden Gardens,Pakistan,India,2,4,6,V Kohli,S Dhawan,Mohammad Irfan,0,0,0,0,[],0,,,18,1,119,101,96,India,1,1,2,2,11,,,0,1
+417842,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,1,S Dhawan,V Kohli,Mohammad Sami,4,0,4,0,[],0,,,22,1,119,97,95,India,1,6,1,12,2,,,4,1
+417843,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,2,S Dhawan,V Kohli,Mohammad Sami,0,1,1,1,['noballs'],0,,,23,1,119,96,95,India,1,6,1,12,2,,,1,0
+417844,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,2,S Dhawan,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,23,1,119,96,94,India,1,6,1,13,2,,,0,1
+417845,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,3,S Dhawan,V Kohli,Mohammad Sami,0,0,0,0,[],1,bowled,S Dhawan,23,2,119,96,93,India,1,0,1,0,2,6,14,0,1
+417846,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,4,SK Raina,V Kohli,Mohammad Sami,0,0,0,0,[],1,bowled,SK Raina,23,3,119,96,92,India,1,0,1,0,2,0,1,0,1
+417847,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,5,Yuvraj Singh,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,23,3,119,96,91,India,1,0,1,1,2,,,0,1
+417848,951341,3/19/2016,Eden Gardens,Pakistan,India,2,5,6,Yuvraj Singh,V Kohli,Mohammad Sami,0,0,0,0,[],0,,,23,3,119,96,90,India,1,0,1,2,2,,,0,1
+417849,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,1,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,24,3,119,95,89,India,1,2,0,3,2,,,1,1
+417850,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,2,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,25,3,119,94,88,India,1,1,2,3,3,,,1,1
+417851,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,3,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,26,3,119,93,87,India,1,3,1,4,3,,,1,1
+417852,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,4,Yuvraj Singh,V Kohli,Shahid Afridi,0,1,1,1,['wides'],0,,,27,3,119,92,87,India,1,1,3,4,4,,,1,0
+417853,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,4,Yuvraj Singh,V Kohli,Shahid Afridi,0,0,0,0,[],0,,,27,3,119,92,86,India,1,1,3,5,4,,,0,1
+417854,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,5,Yuvraj Singh,V Kohli,Shahid Afridi,0,0,0,0,[],0,,,27,3,119,92,85,India,1,1,3,6,4,,,0,1
+417855,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,6,Yuvraj Singh,V Kohli,Shahid Afridi,0,1,1,1,['wides'],0,,,28,3,119,91,85,India,1,1,3,6,4,,,1,0
+417856,951341,3/19/2016,Eden Gardens,Pakistan,India,2,6,6,Yuvraj Singh,V Kohli,Shahid Afridi,0,0,0,0,[],0,,,28,3,119,91,84,India,1,1,3,7,4,,,0,1
+417857,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,1,V Kohli,Yuvraj Singh,Mohammad Sami,4,0,4,0,[],0,,,32,3,119,87,83,India,1,7,1,5,7,,,4,1
+417858,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,2,V Kohli,Yuvraj Singh,Mohammad Sami,1,0,1,0,[],0,,,33,3,119,86,82,India,1,8,1,6,7,,,1,1
+417859,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,3,Yuvraj Singh,V Kohli,Mohammad Sami,4,0,4,0,[],0,,,37,3,119,82,81,India,1,5,8,8,6,,,4,1
+417860,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,4,Yuvraj Singh,V Kohli,Mohammad Sami,1,0,1,0,[],0,,,38,3,119,81,80,India,1,6,8,9,6,,,1,1
+417861,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,5,V Kohli,Yuvraj Singh,Mohammad Sami,2,0,2,0,[],0,,,40,3,119,79,79,India,1,10,6,7,9,,,2,1
+417862,951341,3/19/2016,Eden Gardens,Pakistan,India,2,7,6,V Kohli,Yuvraj Singh,Mohammad Sami,0,0,0,0,[],0,,,40,3,119,79,78,India,1,10,6,8,9,,,0,1
+417863,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,1,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,41,3,119,78,77,India,1,7,10,10,8,,,1,1
+417864,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,2,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,42,3,119,77,76,India,1,11,7,9,10,,,1,1
+417865,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,3,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,43,3,119,76,75,India,1,8,11,11,9,,,1,1
+417866,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,4,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,44,3,119,75,74,India,1,12,8,10,11,,,1,1
+417867,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,5,Yuvraj Singh,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,45,3,119,74,73,India,1,9,12,12,10,,,1,1
+417868,951341,3/19/2016,Eden Gardens,Pakistan,India,2,8,6,V Kohli,Yuvraj Singh,Shahid Afridi,1,0,1,0,[],0,,,46,3,119,73,72,India,1,13,9,11,12,,,1,1
+417869,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,1,V Kohli,Yuvraj Singh,Shoaib Malik,1,0,1,0,[],0,,,47,3,119,72,71,India,1,14,9,12,12,,,1,1
+417870,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,2,Yuvraj Singh,V Kohli,Shoaib Malik,1,0,1,0,[],0,,,48,3,119,71,70,India,1,10,14,13,12,,,1,1
+417871,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,3,V Kohli,Yuvraj Singh,Shoaib Malik,0,1,1,1,['wides'],0,,,49,3,119,70,70,India,1,14,10,13,13,,,1,0
+417872,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,3,V Kohli,Yuvraj Singh,Shoaib Malik,1,0,1,0,[],0,,,50,3,119,69,69,India,1,15,10,14,13,,,1,1
+417873,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,4,Yuvraj Singh,V Kohli,Shoaib Malik,2,0,2,0,[],0,,,52,3,119,67,68,India,1,12,15,14,14,,,2,1
+417874,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,5,Yuvraj Singh,V Kohli,Shoaib Malik,0,0,0,0,[],0,,,52,3,119,67,67,India,1,12,15,15,14,,,0,1
+417875,951341,3/19/2016,Eden Gardens,Pakistan,India,2,9,6,Yuvraj Singh,V Kohli,Shoaib Malik,2,0,2,0,[],0,,,54,3,119,65,66,India,1,14,15,16,14,,,2,1
+417876,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,1,V Kohli,Yuvraj Singh,Wahab Riaz,4,0,4,0,[],0,,,58,3,119,61,65,India,1,19,14,15,16,,,4,1
+417877,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,2,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,59,3,119,60,64,India,1,20,14,16,16,,,1,1
+417878,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,3,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,59,3,119,60,63,India,1,14,20,17,16,,,0,1
+417879,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,4,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],0,,,59,3,119,60,62,India,1,14,20,18,16,,,0,1
+417880,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,5,Yuvraj Singh,V Kohli,Wahab Riaz,1,0,1,0,[],0,,,60,3,119,59,61,India,1,15,20,19,16,,,1,1
+417881,951341,3/19/2016,Eden Gardens,Pakistan,India,2,10,6,V Kohli,Yuvraj Singh,Wahab Riaz,0,0,0,0,[],0,,,60,3,119,59,60,India,1,20,15,17,19,,,0,1
+417882,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,1,Yuvraj Singh,V Kohli,Shoaib Malik,0,2,2,1,['wides'],0,,,62,3,119,57,60,India,1,15,20,20,17,,,2,0
+417883,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,1,V Kohli,Yuvraj Singh,Shoaib Malik,1,0,1,0,[],0,,,63,3,119,56,59,India,1,21,15,18,20,,,1,1
+417884,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,2,Yuvraj Singh,V Kohli,Shoaib Malik,1,0,1,0,[],0,,,64,3,119,55,58,India,1,16,21,21,18,,,1,1
+417885,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,3,V Kohli,Yuvraj Singh,Shoaib Malik,6,0,6,0,[],0,,,70,3,119,49,57,India,1,27,16,19,21,,,6,1
+417886,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,4,V Kohli,Yuvraj Singh,Shoaib Malik,0,0,0,0,[],0,,,70,3,119,49,56,India,1,27,16,20,21,,,0,1
+417887,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,5,V Kohli,Yuvraj Singh,Shoaib Malik,4,0,4,0,[],0,,,74,3,119,45,55,India,1,31,16,21,21,,,4,1
+417888,951341,3/19/2016,Eden Gardens,Pakistan,India,2,11,6,V Kohli,Yuvraj Singh,Shoaib Malik,0,0,0,0,[],0,,,74,3,119,45,54,India,1,31,16,22,21,,,0,1
+417889,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,1,Yuvraj Singh,V Kohli,Wahab Riaz,6,0,6,0,[],0,,,80,3,119,39,53,India,1,22,31,22,22,,,6,1
+417890,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,2,Yuvraj Singh,V Kohli,Wahab Riaz,1,0,1,0,[],0,,,81,3,119,38,52,India,1,23,31,23,22,,,1,1
+417891,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,3,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,82,3,119,37,51,India,1,32,23,23,23,,,1,1
+417892,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,4,Yuvraj Singh,V Kohli,Wahab Riaz,1,0,1,0,[],0,,,83,3,119,36,50,India,1,24,32,24,23,,,1,1
+417893,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,5,V Kohli,Yuvraj Singh,Wahab Riaz,1,0,1,0,[],0,,,84,3,119,35,49,India,1,33,24,24,24,,,1,1
+417894,951341,3/19/2016,Eden Gardens,Pakistan,India,2,12,6,Yuvraj Singh,V Kohli,Wahab Riaz,0,0,0,0,[],1,caught,Yuvraj Singh,84,4,119,35,48,India,1,0,33,0,24,24,25,0,1
+417895,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,1,V Kohli,MS Dhoni,Shahid Afridi,4,0,4,0,[],0,,,88,4,119,31,47,India,1,37,0,25,0,,,4,1
+417896,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,2,V Kohli,MS Dhoni,Shahid Afridi,0,0,0,0,[],0,,,88,4,119,31,46,India,1,37,0,26,0,,,0,1
+417897,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,3,V Kohli,MS Dhoni,Shahid Afridi,0,0,0,0,[],0,,,88,4,119,31,45,India,1,37,0,27,0,,,0,1
+417898,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,4,V Kohli,MS Dhoni,Shahid Afridi,1,0,1,0,[],0,,,89,4,119,30,44,India,1,38,0,28,0,,,1,1
+417899,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,5,MS Dhoni,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,90,4,119,29,43,India,1,1,38,1,28,,,1,1
+417900,951341,3/19/2016,Eden Gardens,Pakistan,India,2,13,6,V Kohli,MS Dhoni,Shahid Afridi,1,0,1,0,[],0,,,91,4,119,28,42,India,1,39,1,29,1,,,1,1
+417901,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,1,V Kohli,MS Dhoni,Mohammad Amir,1,0,1,0,[],0,,,92,4,119,27,41,India,1,40,1,30,1,,,1,1
+417902,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,2,MS Dhoni,V Kohli,Mohammad Amir,1,0,1,0,[],0,,,93,4,119,26,40,India,1,2,40,2,30,,,1,1
+417903,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,3,V Kohli,MS Dhoni,Mohammad Amir,1,0,1,0,[],0,,,94,4,119,25,39,India,1,41,2,31,2,,,1,1
+417904,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,4,MS Dhoni,V Kohli,Mohammad Amir,1,0,1,0,[],0,,,95,4,119,24,38,India,1,3,41,3,31,,,1,1
+417905,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,5,V Kohli,MS Dhoni,Mohammad Amir,0,0,0,0,[],0,,,95,4,119,24,37,India,1,41,3,32,3,,,0,1
+417906,951341,3/19/2016,Eden Gardens,Pakistan,India,2,14,6,V Kohli,MS Dhoni,Mohammad Amir,4,0,4,0,[],0,,,99,4,119,20,36,India,1,45,3,33,3,,,4,1
+417907,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,1,MS Dhoni,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,100,4,119,19,35,India,1,4,45,4,33,,,1,1
+417908,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,2,V Kohli,MS Dhoni,Shahid Afridi,4,0,4,0,[],0,,,104,4,119,15,34,India,1,49,4,34,4,,,4,1
+417909,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,3,V Kohli,MS Dhoni,Shahid Afridi,1,0,1,0,[],0,,,105,4,119,14,33,India,1,50,4,35,4,,,1,1
+417910,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,4,MS Dhoni,V Kohli,Shahid Afridi,0,0,0,0,[],0,,,105,4,119,14,32,India,1,4,50,5,35,,,0,1
+417911,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,5,MS Dhoni,V Kohli,Shahid Afridi,1,0,1,0,[],0,,,106,4,119,13,31,India,1,5,50,6,35,,,1,1
+417912,951341,3/19/2016,Eden Gardens,Pakistan,India,2,15,6,V Kohli,MS Dhoni,Shahid Afridi,0,0,0,0,[],0,,,106,4,119,13,30,India,1,50,5,36,6,,,0,1
+417913,951341,3/19/2016,Eden Gardens,Pakistan,India,2,16,1,MS Dhoni,V Kohli,Mohammad Irfan,1,0,1,0,[],0,,,107,4,119,12,29,India,1,6,50,7,36,,,1,1
+417914,951341,3/19/2016,Eden Gardens,Pakistan,India,2,16,2,V Kohli,MS Dhoni,Mohammad Irfan,4,0,4,0,[],0,,,111,4,119,8,28,India,1,54,6,37,7,,,4,1
+417915,951341,3/19/2016,Eden Gardens,Pakistan,India,2,16,3,V Kohli,MS Dhoni,Mohammad Irfan,1,0,1,0,[],0,,,112,4,119,7,27,India,1,55,6,38,7,,,1,1
+417916,951341,3/19/2016,Eden Gardens,Pakistan,India,2,16,4,MS Dhoni,V Kohli,Mohammad Irfan,6,0,6,0,[],0,,,118,4,119,1,26,India,1,12,55,8,38,,,6,1
+417917,951341,3/19/2016,Eden Gardens,Pakistan,India,2,16,5,MS Dhoni,V Kohli,Mohammad Irfan,1,0,1,0,[],0,,,119,4,119,0,25,India,1,13,55,9,38,,,1,1
