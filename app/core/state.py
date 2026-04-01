@@ -22,6 +22,7 @@ class AppState:
         self.scaler = None                                # RobustScaler if needed
         self.needs_scaling: bool = False
         self.strong_correlations: list = []
+        self.encoding_maps: dict = {}
 
     def reset(self):
         """Clear all state — useful for starting fresh with a new dataset."""

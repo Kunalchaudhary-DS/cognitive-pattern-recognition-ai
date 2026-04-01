@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import APP_TITLE, APP_VERSION
-from app.api import pages, dataset, preprocessing, training, analysis ,finder
+from app.api import pages, dataset, preprocessing, training, analysis ,finder, kaggle
 
 app = FastAPI(
     title=APP_TITLE,
@@ -24,3 +24,4 @@ app.include_router(preprocessing.router)
 app.include_router(training.router)
 app.include_router(analysis.router)
 app.include_router(finder.router)
+app.include_router(kaggle.router)

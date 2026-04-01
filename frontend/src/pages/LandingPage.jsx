@@ -1,16 +1,21 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { findDatasets } from '../api/client.js'
+import { findDatasets, searchKaggleDatasets, downloadKaggleDataset, loadDemoDataset } from '../api/client.js'
 import useAppStore from '../store/appStore'
 import Badge from '../components/ui/Badge'
 
 export default function LandingPage({ onComplete }) {
-  const [problem,   setProblem]   = useState('')
-  const [loading,   setLoading]   = useState(false)
-  const [matches,   setMatches]   = useState([])
-  const [searched,  setSearched]  = useState(false)
-  const [hoveredDs, setHoveredDs] = useState(null)
-  const [error,     setError]     = useState('')
+  const [problem,        setProblem]        = useState('')
+  const [loading,        setLoading]        = useState(false)
+  const [matches,        setMatches]        = useState([])
+  const [searched,       setSearched]       = useState(false)
+  const [hoveredDs,      setHoveredDs]      = useState(null)
+  const [error,          setError]          = useState('')
+  const [kaggleResults,  setKaggleResults]  = useState([])
+  const [kaggleLoading,  setKaggleLoading]  = useState(false)
+  const [downloading,    setDownloading]    = useState(null)
+  const [showKaggle,     setShowKaggle]     = useState(false)
+  const [downloadedFile, setDownloadedFile] = useState(null)
 
   const { setFoundDatasets, setProblemStatement } = useAppStore()
 
@@ -26,6 +31,7 @@ export default function LandingPage({ onComplete }) {
     setError('')
     setLoading(true)
     setMatches([])
+    setShowKaggle(false)
     try {
       const res = await findDatasets(problem)
       if (res.error) return setError(res.error)
@@ -34,21 +40,59 @@ export default function LandingPage({ onComplete }) {
       setProblemStatement(problem)
       setFoundDatasets(res.matches || [])
     } catch {
-      setError('Search failed. Make sure Ollama is running.')
+      setError('Search failed. Make sure backend is running.')
     }
     setLoading(false)
+  }
+
+  async function handleKaggleSearch() {
+    if (!problem.trim()) return setError('Please enter a problem statement')
+    setError('')
+    setKaggleLoading(true)
+    setKaggleResults([])
+    setShowKaggle(true)
+    setSearched(false)
+    try {
+      const res = await searchKaggleDatasets(problem)
+      if (res.error) return setError(res.error)
+      setKaggleResults(res.datasets || [])
+    } catch {
+      setError('Kaggle search failed. Make sure backend is running.')
+    }
+    setKaggleLoading(false)
+  }
+
+  async function handleKaggleDownload(ds) {
+    setDownloading(ds.ref)
+    setError('')
+    try {
+      const res = await downloadKaggleDataset(ds.ref, ds.title)
+      if (res.error) {
+        setError(res.error)
+        setDownloading(null)
+        return
+      }
+      setDownloadedFile(res.files?.[0])
+      if (res.files && res.files.length > 0) {
+        const dataRes = await loadDemoDataset(res.files[0])
+        if (!dataRes.error) {
+          setFoundDatasets([{ file: res.files[0], name: ds.title }])
+          setProblemStatement(problem)
+          onComplete({ file: res.files[0], name: ds.title })
+        } else {
+          setError('Dataset downloaded but could not be loaded: ' + dataRes.error)
+        }
+      }
+    } catch (e) {
+      setError('Download failed: ' + e.message)
+    }
+    setDownloading(null)
   }
 
   function getScoreColor(score) {
     if (score >= 80) return 'var(--neon-green)'
     if (score >= 60) return 'var(--neon-amber)'
     return 'var(--neon-red)'
-  }
-
-  function getScoreBadge(score) {
-    if (score >= 80) return 'green'
-    if (score >= 60) return 'amber'
-    return 'red'
   }
 
   const catColors = {
@@ -83,7 +127,7 @@ export default function LandingPage({ onComplete }) {
           style={{
             position: 'absolute', top: '20%', left: '10%',
             width: 400, height: 400, borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0,212,255,0.06), transparent)',
+            background: 'radial-gradient(circle, rgba(139,92,246,0.06), transparent)',
             filter: 'blur(40px)'
           }}
         />
@@ -93,14 +137,14 @@ export default function LandingPage({ onComplete }) {
           style={{
             position: 'absolute', bottom: '20%', right: '10%',
             width: 500, height: 500, borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(124,58,237,0.06), transparent)',
+            background: 'radial-gradient(circle, rgba(99,102,241,0.06), transparent)',
             filter: 'blur(40px)'
           }}
         />
       </div>
 
       <div style={{
-        width: '100%', maxWidth: 800,
+        width: '100%', maxWidth: 820,
         position: 'relative', zIndex: 1
       }}>
 
@@ -119,16 +163,16 @@ export default function LandingPage({ onComplete }) {
             🧠
           </motion.div>
           <h1 style={{
-            fontSize: 36, fontWeight: 900,
+            fontSize: 36, fontWeight: 700,
             letterSpacing: '0.02em', marginBottom: 12,
-            background: 'linear-gradient(135deg, var(--accent), var(--neon-violet))',
+            background: 'var(--gradient-accent)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}>
             AI Cognitive Pattern Recognition
           </h1>
           <p style={{
-            fontSize: 15, color: 'var(--text-secondary)',
+            fontSize: 14, color: 'var(--text-secondary)',
             fontFamily: 'JetBrains Mono, monospace',
             letterSpacing: '0.05em'
           }}>
@@ -145,7 +189,7 @@ export default function LandingPage({ onComplete }) {
           style={{ padding: 32, marginBottom: 24 }}
         >
           <div style={{
-            fontSize: 12, fontFamily: 'JetBrains Mono, monospace',
+            fontSize: 11, fontFamily: 'JetBrains Mono, monospace',
             color: 'var(--text-muted)', letterSpacing: '0.1em',
             textTransform: 'uppercase', marginBottom: 12
           }}>
@@ -155,13 +199,18 @@ export default function LandingPage({ onComplete }) {
           <textarea
             value={problem}
             onChange={e => setProblem(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && !e.shiftKey && handleSearch()}
+            onKeyDown={e => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault()
+                handleSearch()
+              }
+            }}
             placeholder="e.g. I want to predict whether an employee will leave the company based on HR data..."
             rows={3}
             style={{
               width: '100%', padding: '14px 16px',
               background: 'var(--bg-tertiary)',
-              border: '1px solid var(--border-hover)',
+              border: '1px solid var(--border)',
               borderRadius: 10, color: 'var(--text-primary)',
               fontFamily: 'Inter, sans-serif', fontSize: 14,
               resize: 'none', outline: 'none',
@@ -169,7 +218,7 @@ export default function LandingPage({ onComplete }) {
               lineHeight: 1.6,
             }}
             onFocus={e => e.target.style.borderColor = 'var(--accent)'}
-            onBlur={e => e.target.style.borderColor = 'var(--border-hover)'}
+            onBlur={e => e.target.style.borderColor = 'var(--border)'}
           />
 
           {error && (
@@ -188,50 +237,87 @@ export default function LandingPage({ onComplete }) {
             marginTop: 16, flexWrap: 'wrap', gap: 12
           }}>
             <div style={{
-              fontSize: 12, color: 'var(--text-muted)',
+              fontSize: 11, color: 'var(--text-muted)',
               fontFamily: 'JetBrains Mono, monospace'
             }}>
-              Press Enter to search
+              Local: search demo datasets · Kaggle: search 100,000+ datasets
             </div>
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              onClick={handleSearch}
-              disabled={loading}
-              style={{
-                padding: '12px 32px',
-                background: loading
-                  ? 'var(--bg-tertiary)'
-                  : 'linear-gradient(135deg, var(--accent), var(--neon-violet))',
-                border: 'none', borderRadius: 10,
-                color: 'white', fontFamily: 'Inter, sans-serif',
-                fontSize: 14, fontWeight: 600,
-                cursor: loading ? 'not-allowed' : 'pointer',
-                display: 'flex', alignItems: 'center', gap: 10,
-                transition: 'all 0.2s',
-              }}
-            >
-              {loading ? (
-                <>
-                  <div style={{
-                    width: 16, height: 16,
-                    border: '2px solid rgba(255,255,255,0.2)',
-                    borderTop: '2px solid white',
-                    borderRadius: '50%',
-                    animation: 'spin 0.7s linear infinite'
-                  }}/>
-                  AI is searching...
-                </>
-              ) : (
-                <>🔍 Find Best Datasets</>
-              )}
-            </motion.button>
+
+            <div style={{ display: 'flex', gap: 10 }}>
+              {/* Local search button */}
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={handleSearch}
+                disabled={loading}
+                style={{
+                  padding: '10px 20px',
+                  background: 'transparent',
+                  border: '1px solid var(--border-hover)',
+                  borderRadius: 10,
+                  color: 'var(--text-primary)',
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: 13, fontWeight: 500,
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 8,
+                  transition: 'all 0.2s',
+                }}
+              >
+                {loading ? (
+                  <>
+                    <div style={{
+                      width: 13, height: 13,
+                      border: '2px solid rgba(255,255,255,0.2)',
+                      borderTop: '2px solid currentColor',
+                      borderRadius: '50%',
+                      animation: 'spin 0.7s linear infinite'
+                    }}/>
+                    Searching...
+                  </>
+                ) : <>🔍 Local Search</>}
+              </motion.button>
+
+              {/* Kaggle search button */}
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={handleKaggleSearch}
+                disabled={kaggleLoading}
+                style={{
+                  padding: '10px 24px',
+                  background: kaggleLoading
+                    ? 'var(--bg-tertiary)'
+                    : 'var(--gradient-accent)',
+                  border: 'none', borderRadius: 10,
+                  color: 'white',
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: 13, fontWeight: 500,
+                  cursor: kaggleLoading ? 'not-allowed' : 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 8,
+                  boxShadow: '0 2px 12px rgba(139,92,246,0.3)',
+                  transition: 'all 0.2s',
+                }}
+              >
+                {kaggleLoading ? (
+                  <>
+                    <div style={{
+                      width: 13, height: 13,
+                      border: '2px solid rgba(255,255,255,0.2)',
+                      borderTop: '2px solid white',
+                      borderRadius: '50%',
+                      animation: 'spin 0.7s linear infinite'
+                    }}/>
+                    Searching Kaggle...
+                  </>
+                ) : <>🌐 Search Kaggle</>}
+              </motion.button>
+            </div>
           </div>
         </motion.div>
 
         {/* Example prompts */}
         <AnimatePresence>
-          {!searched && !loading && (
+          {!searched && !loading && !showKaggle && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -274,7 +360,7 @@ export default function LandingPage({ onComplete }) {
           )}
         </AnimatePresence>
 
-        {/* Loading state */}
+        {/* Local loading state */}
         <AnimatePresence>
           {loading && (
             <motion.div
@@ -282,22 +368,20 @@ export default function LandingPage({ onComplete }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               className="glass"
-              style={{ padding: 32, textAlign: 'center' }}
+              style={{ padding: 32, textAlign: 'center', marginBottom: 20 }}
             >
               <div style={{ fontSize: 32, marginBottom: 16 }}>🔍</div>
-              <div style={{
-                fontSize: 15, fontWeight: 600, marginBottom: 8
-              }}>
-                Phi-3 is analyzing all datasets...
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+                Searching local datasets...
               </div>
               <div style={{
                 fontSize: 12, color: 'var(--text-muted)',
                 fontFamily: 'JetBrains Mono, monospace'
               }}>
-                Reading columns, sample data and scoring relevance
+                Matching your problem against dataset profiles
               </div>
               <div style={{
-                marginTop: 20, height: 4,
+                marginTop: 20, height: 3,
                 background: 'var(--bg-tertiary)',
                 borderRadius: 2, overflow: 'hidden'
               }}>
@@ -315,23 +399,63 @@ export default function LandingPage({ onComplete }) {
           )}
         </AnimatePresence>
 
-        {/* Results */}
+        {/* Kaggle loading state */}
+        <AnimatePresence>
+          {kaggleLoading && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="glass"
+              style={{ padding: 32, textAlign: 'center', marginBottom: 20 }}
+            >
+              <div style={{ fontSize: 32, marginBottom: 16 }}>🌐</div>
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+                Searching Kaggle...
+              </div>
+              <div style={{
+                fontSize: 12, color: 'var(--text-muted)',
+                fontFamily: 'JetBrains Mono, monospace'
+              }}>
+                Finding the best datasets from 100,000+ on Kaggle
+              </div>
+              <div style={{
+                marginTop: 20, height: 3,
+                background: 'var(--bg-tertiary)',
+                borderRadius: 2, overflow: 'hidden'
+              }}>
+                <motion.div
+                  animate={{ x: ['-100%', '100%'] }}
+                  transition={{ duration: 1.2, repeat: Infinity }}
+                  style={{
+                    height: '100%', width: '40%',
+                    background: 'linear-gradient(90deg, transparent, var(--neon-violet), transparent)',
+                    borderRadius: 2
+                  }}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Local Results */}
         <AnimatePresence>
           {searched && !loading && matches.length > 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              style={{ marginBottom: 24 }}
             >
               <div style={{
                 display: 'flex', alignItems: 'center',
                 justifyContent: 'space-between', marginBottom: 16
               }}>
                 <div style={{
-                  fontSize: 12, fontFamily: 'JetBrains Mono, monospace',
+                  fontSize: 11, fontFamily: 'JetBrains Mono, monospace',
                   color: 'var(--text-muted)', letterSpacing: '0.1em',
                   textTransform: 'uppercase'
                 }}>
-                  {matches.length} datasets found — ranked by relevance
+                  {matches.length} local datasets — ranked by relevance
                 </div>
                 <button
                   onClick={() => { setSearched(false); setMatches([]); setProblem('') }}
@@ -345,9 +469,7 @@ export default function LandingPage({ onComplete }) {
                 </button>
               </div>
 
-              <div style={{
-                display: 'flex', flexDirection: 'column', gap: 12
-              }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {matches.map((ds, i) => (
                   <motion.div
                     key={ds.file}
@@ -358,17 +480,14 @@ export default function LandingPage({ onComplete }) {
                     onMouseLeave={() => setHoveredDs(null)}
                     style={{ position: 'relative' }}
                   >
-                    {/* Main card */}
                     <motion.div
                       whileHover={{ scale: 1.01 }}
                       className="glass"
                       style={{
                         padding: '20px 24px',
                         cursor: 'pointer',
-                        borderColor: hoveredDs === ds.file
-                          ? 'var(--border-hover)' : 'var(--border)',
                         background: i === 0
-                          ? 'linear-gradient(135deg, rgba(16,185,129,0.06), rgba(0,212,255,0.03))'
+                          ? 'linear-gradient(135deg, rgba(52,211,153,0.06), rgba(139,92,246,0.03))'
                           : 'var(--bg-glass)',
                       }}
                       onClick={() => onComplete(ds)}
@@ -377,85 +496,52 @@ export default function LandingPage({ onComplete }) {
                         display: 'flex', alignItems: 'center',
                         justifyContent: 'space-between', flexWrap: 'wrap', gap: 12
                       }}>
-                        <div style={{
-                          display: 'flex', alignItems: 'center', gap: 12
-                        }}>
-                          {/* Rank */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                           <div style={{
                             width: 32, height: 32, borderRadius: 8,
-                            background: i === 0
-                              ? 'rgba(16,185,129,0.2)'
-                              : 'var(--bg-tertiary)',
-                            border: `1px solid ${i === 0 ? 'rgba(16,185,129,0.4)' : 'var(--border)'}`,
-                            display: 'flex', alignItems: 'center',
-                            justifyContent: 'center',
+                            background: i === 0 ? 'rgba(52,211,153,0.15)' : 'var(--bg-tertiary)',
+                            border: `1px solid ${i === 0 ? 'rgba(52,211,153,0.3)' : 'var(--border)'}`,
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
                             fontSize: 13, fontWeight: 700,
                             color: i === 0 ? 'var(--neon-green)' : 'var(--text-muted)',
-                            fontFamily: 'JetBrains Mono, monospace',
-                            flexShrink: 0
+                            fontFamily: 'JetBrains Mono, monospace', flexShrink: 0
                           }}>
                             {i === 0 ? '★' : i + 1}
                           </div>
-
                           <div>
                             <div style={{
-                              fontSize: 15, fontWeight: 700,
+                              fontSize: 15, fontWeight: 600,
                               marginBottom: 4, display: 'flex',
                               alignItems: 'center', gap: 8
                             }}>
                               {ds.name}
-                              {i === 0 && (
-                                <Badge color="green" style={{ fontSize: 10 }}>
-                                  BEST MATCH
-                                </Badge>
-                              )}
+                              {i === 0 && <Badge color="green" style={{ fontSize: 10 }}>BEST MATCH</Badge>}
                             </div>
-                            <div style={{
-                              fontSize: 12, color: 'var(--text-muted)',
-                              lineHeight: 1.5
-                            }}>
+                            <div style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.5 }}>
                               {ds.reason}
                             </div>
                           </div>
                         </div>
 
-                        <div style={{
-                          display: 'flex', alignItems: 'center', gap: 12,
-                          flexShrink: 0
-                        }}>
-                          <Badge color={catColors[ds.category] || 'blue'}>
-                            {ds.category}
-                          </Badge>
-                          {/* Score ring */}
-                          <div style={{
-                            display: 'flex', flexDirection: 'column',
-                            alignItems: 'center', gap: 2
-                          }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+                          <Badge color={catColors[ds.category] || 'blue'}>{ds.category}</Badge>
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
                             <div style={{
-                              fontSize: 22, fontWeight: 900,
+                              fontSize: 22, fontWeight: 800,
                               color: getScoreColor(ds.score),
-                              fontFamily: 'JetBrains Mono, monospace',
-                              lineHeight: 1
+                              fontFamily: 'JetBrains Mono, monospace', lineHeight: 1
                             }}>
-                              {ds.score}
-                              <span style={{ fontSize: 12, fontWeight: 400 }}>%</span>
+                              {ds.score}<span style={{ fontSize: 12, fontWeight: 400 }}>%</span>
                             </div>
                             <div style={{
                               fontSize: 9, color: 'var(--text-muted)',
-                              fontFamily: 'JetBrains Mono, monospace',
-                              letterSpacing: '0.05em'
-                            }}>
-                              MATCH
-                            </div>
+                              fontFamily: 'JetBrains Mono, monospace'
+                            }}>MATCH</div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Progress bar */}
-                      <div style={{
-                        marginTop: 12, height: 3,
-                        background: 'var(--bg-tertiary)', borderRadius: 2
-                      }}>
+                      <div style={{ marginTop: 12, height: 3, background: 'var(--bg-tertiary)', borderRadius: 2 }}>
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${ds.score}%` }}
@@ -463,13 +549,12 @@ export default function LandingPage({ onComplete }) {
                           style={{
                             height: '100%', borderRadius: 2,
                             background: getScoreColor(ds.score),
-                            boxShadow: `0 0 8px ${getScoreColor(ds.score)}`
                           }}
                         />
                       </div>
                     </motion.div>
 
-                    {/* Hover insight card */}
+                    {/* Hover card */}
                     <AnimatePresence>
                       {hoveredDs === ds.file && (
                         <motion.div
@@ -488,71 +573,45 @@ export default function LandingPage({ onComplete }) {
                           }}
                         >
                           <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 1fr 1fr',
-                            gap: 16, marginBottom: 16
+                            display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
+                            gap: 12, marginBottom: 12
                           }}>
                             {[
                               { label: 'Total Rows', value: ds.total_rows?.toLocaleString() },
-                              { label: 'Columns', value: ds.total_columns },
-                              { label: 'Numerical', value: ds.numerical_cols?.length },
+                              { label: 'Columns',    value: ds.total_columns },
+                              { label: 'Numerical',  value: ds.numerical_cols?.length },
                             ].map(stat => (
                               <div key={stat.label} style={{
-                                background: 'var(--bg-tertiary)',
-                                borderRadius: 8, padding: '10px 14px',
-                                border: '1px solid var(--border)'
+                                background: 'var(--bg-tertiary)', borderRadius: 8,
+                                padding: '10px 14px', border: '1px solid var(--border)'
                               }}>
                                 <div style={{
-                                  fontSize: 10,
-                                  fontFamily: 'JetBrains Mono, monospace',
-                                  color: 'var(--text-muted)',
-                                  marginBottom: 4
-                                }}>
-                                  {stat.label}
-                                </div>
-                                <div style={{
-                                  fontSize: 18, fontWeight: 700,
-                                  color: 'var(--text-primary)'
-                                }}>
-                                  {stat.value}
-                                </div>
+                                  fontSize: 10, fontFamily: 'JetBrains Mono, monospace',
+                                  color: 'var(--text-muted)', marginBottom: 4
+                                }}>{stat.label}</div>
+                                <div style={{ fontSize: 18, fontWeight: 700 }}>{stat.value}</div>
                               </div>
                             ))}
                           </div>
-
-                          {/* Key columns */}
                           {ds.key_columns?.length > 0 && (
                             <div style={{ marginBottom: 12 }}>
                               <div style={{
-                                fontSize: 10,
-                                fontFamily: 'JetBrains Mono, monospace',
-                                color: 'var(--text-muted)',
-                                letterSpacing: '0.08em',
-                                marginBottom: 8
-                              }}>
-                                KEY COLUMNS FOR YOUR PROBLEM
-                              </div>
-                              <div style={{
-                                display: 'flex', flexWrap: 'wrap', gap: 6
-                              }}>
+                                fontSize: 10, fontFamily: 'JetBrains Mono, monospace',
+                                color: 'var(--text-muted)', marginBottom: 8
+                              }}>KEY COLUMNS</div>
+                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                                 {ds.key_columns.map(col => (
-                                  <Badge key={col} color="cyan"
-                                    style={{ fontSize: 11 }}>
-                                    {col}
-                                  </Badge>
+                                  <Badge key={col} color="cyan" style={{ fontSize: 11 }}>{col}</Badge>
                                 ))}
                               </div>
                             </div>
                           )}
-
                           <div style={{
                             padding: '10px 14px',
-                            background: 'rgba(0,212,255,0.05)',
+                            background: 'rgba(139,92,246,0.05)',
                             borderLeft: '2px solid var(--accent)',
                             borderRadius: '0 6px 6px 0',
-                            fontSize: 12,
-                            color: 'var(--text-secondary)',
-                            lineHeight: 1.6
+                            fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.6
                           }}>
                             Click to load this dataset and start analysis →
                           </div>
@@ -566,28 +625,181 @@ export default function LandingPage({ onComplete }) {
           )}
         </AnimatePresence>
 
-        {/* No results */}
+        {/* No local results */}
         <AnimatePresence>
           {searched && !loading && matches.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="glass"
-              style={{ padding: 40, textAlign: 'center' }}
+              style={{ padding: 40, textAlign: 'center', marginBottom: 24 }}
             >
               <div style={{ fontSize: 32, marginBottom: 12 }}>🤔</div>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
-                No strong matches found
+                No strong local matches found
               </div>
               <div style={{
-                fontSize: 13, color: 'var(--text-muted)',
-                fontFamily: 'JetBrains Mono, monospace'
+                fontSize: 12, color: 'var(--text-muted)',
+                fontFamily: 'JetBrains Mono, monospace', marginBottom: 16
               }}>
-                Try rephrasing your problem statement
+                Try searching Kaggle for 100,000+ datasets
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={handleKaggleSearch}
+                style={{
+                  padding: '10px 24px',
+                  background: 'var(--gradient-accent)',
+                  border: 'none', borderRadius: 10,
+                  color: 'white', fontFamily: 'Inter, sans-serif',
+                  fontSize: 13, fontWeight: 500, cursor: 'pointer'
+                }}
+              >
+                🌐 Search Kaggle Instead
+              </motion.button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Kaggle Results */}
+        <AnimatePresence>
+          {showKaggle && !kaggleLoading && kaggleResults.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <div style={{
+                display: 'flex', alignItems: 'center',
+                justifyContent: 'space-between', marginBottom: 16
+              }}>
+                <div style={{
+                  fontSize: 11, fontFamily: 'JetBrains Mono, monospace',
+                  color: 'var(--text-muted)', letterSpacing: '0.1em',
+                  textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 8
+                }}>
+                  <span style={{
+                    background: 'var(--gradient-accent)',
+                    WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                    fontWeight: 600
+                  }}>
+                    🌐 KAGGLE
+                  </span>
+                  {kaggleResults.length} datasets found · click download to use
+                </div>
+                <button
+                  onClick={() => { setShowKaggle(false); setKaggleResults([]) }}
+                  style={{
+                    background: 'transparent', border: 'none',
+                    color: 'var(--text-muted)', cursor: 'pointer',
+                    fontSize: 12, fontFamily: 'JetBrains Mono, monospace'
+                  }}
+                >
+                  ✕ Close
+                </button>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {kaggleResults.map((ds, i) => (
+                  <motion.div
+                    key={ds.ref}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                    className="glass"
+                    style={{ padding: '18px 22px' }}
+                  >
+                    <div style={{
+                      display: 'flex', alignItems: 'center',
+                      justifyContent: 'space-between', flexWrap: 'wrap', gap: 12
+                    }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{
+                          fontSize: 14, fontWeight: 600,
+                          marginBottom: 6, color: 'var(--text-primary)',
+                          display: 'flex', alignItems: 'center', gap: 8
+                        }}>
+                          {i === 0 && <Badge color="violet" style={{ fontSize: 9 }}>TOP RESULT</Badge>}
+                          {ds.title}
+                        </div>
+                        <div style={{
+                          display: 'flex', gap: 16, flexWrap: 'wrap',
+                          fontSize: 11, fontFamily: 'JetBrains Mono, monospace',
+                          color: 'var(--text-muted)'
+                        }}>
+                          <span>📦 {ds.size_mb} MB</span>
+                          <span>⬇️ {ds.download_count?.toLocaleString()} downloads</span>
+                          <span>⭐ {ds.vote_count} votes</span>
+                          <span>📅 {ds.last_updated}</span>
+                          <span style={{ color: 'var(--text-muted)', fontSize: 10 }}>{ds.ref}</span>
+                        </div>
+                      </div>
+
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => handleKaggleDownload(ds)}
+                        disabled={downloading !== null}
+                        style={{
+                          padding: '9px 20px',
+                          background: downloading === ds.ref
+                            ? 'var(--bg-tertiary)'
+                            : 'rgba(139,92,246,0.1)',
+                          border: '1px solid rgba(139,92,246,0.3)',
+                          borderRadius: 9,
+                          cursor: downloading !== null ? 'not-allowed' : 'pointer',
+                          color: 'var(--neon-violet)',
+                          fontFamily: 'Inter, sans-serif',
+                          fontSize: 12, fontWeight: 500,
+                          display: 'flex', alignItems: 'center', gap: 8,
+                          whiteSpace: 'nowrap', flexShrink: 0,
+                          transition: 'all 0.2s'
+                        }}
+                      >
+                        {downloading === ds.ref ? (
+                          <>
+                            <div style={{
+                              width: 12, height: 12,
+                              border: '2px solid rgba(139,92,246,0.2)',
+                              borderTop: '2px solid var(--neon-violet)',
+                              borderRadius: '50%',
+                              animation: 'spin 0.7s linear infinite'
+                            }}/>
+                            Downloading...
+                          </>
+                        ) : <>⬇️ Download & Use</>}
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Kaggle no results */}
+        <AnimatePresence>
+          {showKaggle && !kaggleLoading && kaggleResults.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="glass"
+              style={{ padding: 40, textAlign: 'center' }}
+            >
+              <div style={{ fontSize: 32, marginBottom: 12 }}>🌐</div>
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+                No Kaggle datasets found
+              </div>
+              <div style={{
+                fontSize: 12, color: 'var(--text-muted)',
+                fontFamily: 'JetBrains Mono, monospace'
+              }}>
+                Try different keywords in your problem statement
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
     </div>
   )

@@ -79,3 +79,16 @@ export async function getSamplePredictions() {
 export async function getEncodingMaps() {
   return request('/encoding-maps/')
 }
+
+export async function searchKaggleDatasets(problemStatement) {
+  const fd = new FormData()
+  fd.append('problem_statement', problemStatement)
+  return request('/kaggle-search/', { method: 'POST', body: fd })
+}
+
+export async function downloadKaggleDataset(ref, title) {
+  const fd = new FormData()
+  fd.append('dataset_ref', ref)
+  fd.append('dataset_title', title)
+  return request('/kaggle-download/', { method: 'POST', body: fd })
+}
