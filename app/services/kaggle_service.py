@@ -8,6 +8,7 @@ import zipfile
 import shutil
 import kaggle
 from app.core.config import DATASET_FOLDER
+from app.services.dataset_finder_service import register_dataset
 
 
 def get_kaggle_api():
@@ -120,6 +121,14 @@ def download_kaggle_dataset(dataset_ref: str, dataset_title: str) -> dict:
             downloaded.append(filename)
 
         shutil.rmtree(temp_dir, ignore_errors=True)
+
+        # ── Register in local search registry ──────────────────────
+        register_dataset(
+            filenames=downloaded,
+            kaggle_ref=dataset_ref,
+            kaggle_title=dataset_title,
+            category="Kaggle"
+        )
 
         return {
             "success": True,

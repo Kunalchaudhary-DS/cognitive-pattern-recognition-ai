@@ -2,14 +2,23 @@
 Dataset Finder Service — Smart keyword-based matching engine.
 Fast, accurate, no AI needed for scoring.
 Phi-3 only used for generating the reason text after matching.
+
+Auto-discovers all CSV files in the datasets/ folder, including
+Kaggle-downloaded datasets, so every file is searchable locally.
 """
 
 import os
 import re
+import json
 import pandas as pd
 from app.core.config import DATASET_FOLDER
 
 
+# ── Persistent registry path ──────────────────────────────────────────────────
+REGISTRY_PATH = os.path.join(DATASET_FOLDER, "_dataset_registry.json")
+
+
+# ── Hardcoded demo datasets (original curated list) ───────────────────────────
 DEMO_DATASETS = [
     {
         "file": "accounting_dataset.csv",
@@ -111,6 +120,150 @@ DEMO_DATASETS = [
 ]
 
 
+# ── Registry helpers ───────────────────────────────────────────────────────────
+
+def _load_registry() -> list:
+    """Load the persistent dataset registry from disk."""
+    if not os.path.exists(REGISTRY_PATH):
+        return []
+    try:
+        with open(REGISTRY_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return []
+
+
+def _save_registry(entries: list):
+    """Persist the dataset registry to disk."""
+    os.makedirs(DATASET_FOLDER, exist_ok=True)
+    with open(REGISTRY_PATH, "w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2, ensure_ascii=False)
+
+
+def _generate_keywords_from_file(file_path: str) -> list:
+    """
+    Auto-generate search keywords from a CSV's filename + column headers.
+    Provides reasonable searchability even without curated keywords.
+    """
+    keywords = set()
+
+    # Keywords from filename
+    basename = os.path.splitext(os.path.basename(file_path))[0]
+    name_words = re.findall(r'[a-zA-Z]+', basename.lower())
+    noise = {"csv", "data", "dataset", "the", "and", "for", "with", "from"}
+    keywords.update(w for w in name_words if len(w) > 2 and w not in noise)
+
+    # Keywords from column headers
+    try:
+        try:
+            df = pd.read_csv(file_path, nrows=0)
+        except UnicodeDecodeError:
+            df = pd.read_csv(file_path, nrows=0, encoding="latin1")
+
+        for col in df.columns:
+            col_words = re.findall(r'[a-zA-Z]+', col.lower())
+            keywords.update(w for w in col_words if len(w) > 2 and w not in noise)
+    except Exception:
+        pass
+
+    return sorted(keywords)
+
+
+def _prettify_filename(filename: str) -> str:
+    """Convert 'some_file_name.csv' → 'Some File Name Dataset'."""
+    name = os.path.splitext(filename)[0]
+    words = re.findall(r'[a-zA-Z0-9]+', name)
+    title = " ".join(w.capitalize() for w in words)
+    if "dataset" not in title.lower():
+        title += " Dataset"
+    return title
+
+
+def register_dataset(
+    filenames: list[str],
+    kaggle_ref: str = "",
+    kaggle_title: str = "",
+    category: str = "Kaggle"
+) -> None:
+    """
+    Register one or more newly-downloaded CSV files into the local
+    dataset registry so they appear in local search immediately.
+
+    Called by kaggle_service after a successful download.
+    """
+    registry = _load_registry()
+    known_files = {entry["file"] for entry in registry}
+
+    for fname in filenames:
+        if fname in known_files:
+            continue
+
+        file_path = os.path.join(DATASET_FOLDER, fname)
+        keywords = _generate_keywords_from_file(file_path)
+
+        entry = {
+            "file":     fname,
+            "name":     kaggle_title or _prettify_filename(fname),
+            "category": category,
+            "keywords": keywords,
+            "source":   "kaggle",
+            "ref":      kaggle_ref,
+        }
+        registry.append(entry)
+
+    _save_registry(registry)
+    print(f"[Registry] Registered {len(filenames)} file(s) — total entries: {len(registry)}")
+
+
+# ── Auto-discover unregistered CSV files ───────────────────────────────────────
+
+def _get_all_datasets() -> list:
+    """
+    Build a unified list of all searchable datasets by merging:
+      1. Hardcoded DEMO_DATASETS
+      2. Persisted registry (Kaggle downloads)
+      3. Auto-discovered CSVs not in either list
+    """
+    known_files = {ds["file"] for ds in DEMO_DATASETS}
+    merged = list(DEMO_DATASETS)
+
+    # Layer 2 — registry entries
+    registry = _load_registry()
+    for entry in registry:
+        if entry["file"] not in known_files:
+            merged.append(entry)
+            known_files.add(entry["file"])
+
+    # Layer 3 — auto-discover any remaining CSVs on disk
+    try:
+        all_csvs = [
+            f for f in os.listdir(DATASET_FOLDER)
+            if f.endswith(".csv") and not f.startswith("_")
+        ]
+    except FileNotFoundError:
+        all_csvs = []
+
+    for csv_file in all_csvs:
+        if csv_file in known_files:
+            continue
+
+        file_path = os.path.join(DATASET_FOLDER, csv_file)
+        keywords = _generate_keywords_from_file(file_path)
+
+        merged.append({
+            "file":     csv_file,
+            "name":     _prettify_filename(csv_file),
+            "category": "Uncategorized",
+            "keywords": keywords,
+            "source":   "auto-discovered",
+        })
+        known_files.add(csv_file)
+
+    return merged
+
+
+# ── Profiling & scoring (unchanged logic) ──────────────────────────────────────
+
 def get_dataset_profile(file_path: str) -> dict:
     """Read basic stats from a dataset file."""
     try:
@@ -143,7 +296,7 @@ def compute_match_score(problem: str, ds: dict) -> dict:
 
     # Score 1 — keyword matches
     keyword_matches = sum(
-        1 for kw in ds["keywords"]
+        1 for kw in ds.get("keywords", [])
         if kw in problem_lower or kw in problem_words
     )
     keyword_score = min(keyword_matches * 12, 60)
@@ -160,7 +313,7 @@ def compute_match_score(problem: str, ds: dict) -> dict:
     column_score = min(col_matches * 8, 30)
 
     # Score 3 — category match bonus
-    category_words = set(ds["category"].lower().split())
+    category_words = set(ds.get("category", "").lower().split())
     category_score = 10 if problem_words & category_words else 0
 
     total_score = min(keyword_score + column_score + category_score, 100)
@@ -182,14 +335,17 @@ def compute_match_score(problem: str, ds: dict) -> dict:
     }
 
 
+# ── Main search function ──────────────────────────────────────────────────────
+
 def find_matching_datasets(problem_statement: str, top_n: int = 5) -> list:
     """
-    Main function — instantly scores all datasets using smart
+    Scores ALL datasets (demo + registry + auto-discovered) using smart
     keyword matching. Returns top N ranked by score.
     """
+    all_datasets = _get_all_datasets()
     results = []
 
-    for ds in DEMO_DATASETS:
+    for ds in all_datasets:
         file_path = os.path.join(DATASET_FOLDER, ds["file"])
         if not os.path.exists(file_path):
             continue

@@ -15,6 +15,7 @@ from app.services.dataset_service import (
     build_demo_profile,
     compute_strong_correlations,
 )
+from app.services.dataset_finder_service import _get_all_datasets
 
 router = APIRouter()
 
@@ -36,7 +37,14 @@ DEMO_DATASETS = [
 
 @router.get("/demo-datasets/")
 async def get_demo_datasets():
-    return {"datasets": DEMO_DATASETS}
+    """Return all browseable datasets including Kaggle downloads."""
+    all_ds = _get_all_datasets()
+    # Return only fields the frontend needs (file, name, category)
+    return {"datasets": [
+        {"file": ds["file"], "name": ds["name"], "category": ds.get("category", "Other")}
+        for ds in all_ds
+        if os.path.exists(os.path.join(DATASET_FOLDER, ds["file"]))
+    ]}
 
 
 @router.post("/load-demo-dataset/")

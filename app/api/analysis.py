@@ -66,16 +66,80 @@ async def dashboard_data():
             metric_value = metrics.get(metric_key, list(metrics.values())[0])
             model_comparison[model_name] = metric_value
 
-    # Insights
-    insights = generate_model_insights(state.training_results, state.problem_type)
-    if feature_importance:
-        top_feature = list(feature_importance.keys())[0]
-        insights.append(f"Feature '{top_feature}' has the highest influence on the target.")
-
     # Pattern / cluster / interaction analysis
     patterns             = discover_patterns(df, state.target_column)
     cluster_patterns     = discover_clusters(df)
     interaction_patterns = discover_feature_interactions(df, state.target_column)
+
+    # ── Key Insights — the most important findings from this dataset ───
+    insights = []
+
+    # 1. Top influential feature
+    if feature_importance:
+        top_features = list(feature_importance.keys())[:3]
+        others = ", ".join("'" + f + "'" for f in top_features[1:])
+        insights.append(
+            f"'{top_features[0]}' is the strongest predictor of '{state.target_column}'"
+            + (f", followed by {others}." if others else ".")
+        )
+
+    # 2. Strongest correlation pattern
+    if state.strong_correlations:
+        sc = state.strong_correlations[0]
+        direction = "positive" if sc["correlation"] > 0 else "negative"
+        insights.append(
+            f"Strong {direction} correlation ({sc['correlation']}) between "
+            f"'{sc['feature_1']}' and '{sc['feature_2']}' — these features move together."
+        )
+
+    # 3. Data quality signal
+    missing_pct = round(missing_total / (df.shape[0] * df.shape[1]) * 100, 1) if (df.shape[0] * df.shape[1]) > 0 else 0
+    dup_count = int(df.duplicated().sum())
+    if missing_pct > 5:
+        insights.append(f"{missing_pct}% of data is missing — this may affect model reliability.")
+    elif missing_pct == 0 and dup_count == 0:
+        insights.append("Dataset has zero missing values and no duplicates — excellent data quality.")
+
+    # 4. Cluster discovery highlight
+    if cluster_patterns:
+        insights.append(
+            f"{len(cluster_patterns)} distinct data clusters found — "
+            f"the dataset contains naturally separable groups."
+        )
+
+    # 5. Model performance verdict
+    model_insights = generate_model_insights(state.training_results, state.problem_type)
+    if model_insights:
+        insights.append(model_insights[0])
+
+    # 6. Class imbalance / target skew warning
+    if state.target_column in categorical_cols:
+        dist = df[state.target_column].value_counts(normalize=True)
+        if dist.max() > 0.75:
+            insights.append(
+                f"Target variable '{state.target_column}' is imbalanced — "
+                f"'{dist.idxmax()}' dominates at {round(dist.max()*100, 1)}%."
+            )
+    elif state.target_column in numerical_cols:
+        skew = df[state.target_column].skew()
+        if abs(skew) > 1.5:
+            direction = "right" if skew > 0 else "left"
+            insights.append(
+                f"Target '{state.target_column}' is heavily {direction}-skewed (skew={skew:.2f}) — "
+                f"consider log-transform for better model performance."
+            )
+
+    # 7. Outlier warning from patterns
+    outlier_patterns = [p for p in patterns if "outlier" in p.lower()]
+    if outlier_patterns:
+        insights.append(outlier_patterns[0])
+
+    # Fallback — never leave empty
+    if not insights:
+        insights.append(
+            f"Dataset contains {len(df)} rows across {len(df.columns)} features — "
+            f"{len(numerical_cols)} numerical, {len(categorical_cols)} categorical."
+        )
 
     # Auto graphs
     auto_graphs = build_auto_graphs(df, state.target_column, state.strong_correlations)

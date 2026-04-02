@@ -39,4 +39,5 @@ kaggle.json
 
 # Datasets folder
 datasets/
+_dataset_registry.json
 
