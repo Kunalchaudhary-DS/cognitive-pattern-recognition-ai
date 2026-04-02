@@ -37,6 +37,6 @@ htmlcov/
 # Kaggle API key
 kaggle.json
 
-# Uploaded/generated data (keep datasets folder structure but not actual CSVs in git)
-# Remove the line below if you WANT to commit your demo datasets
-# datasets/
+# Datasets folder
+datasets/
+
