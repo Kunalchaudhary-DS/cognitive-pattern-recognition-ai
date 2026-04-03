@@ -23,6 +23,8 @@ class AppState:
         self.needs_scaling: bool = False
         self.strong_correlations: list = []
         self.encoding_maps: dict = {}
+        self.X_test: Optional[np.ndarray] = None         # held-out test features (model-format)
+        self.y_test: Optional[np.ndarray] = None         # held-out test labels
 
     def reset(self):
         """Clear all state — useful for starting fresh with a new dataset."""

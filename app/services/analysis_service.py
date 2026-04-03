@@ -130,6 +130,10 @@ def discover_clusters(df: pd.DataFrame) -> list:
     if len(data) < 20:
         return cluster_insights
 
+    # Sample for speed — KMeans on 5000 rows is representative and much faster
+    if len(data) > 5000:
+        data = data.sample(5000, random_state=42)
+
     scaler      = StandardScaler()
     scaled_data = scaler.fit_transform(data)
     kmeans      = KMeans(n_clusters=3, random_state=42)
@@ -166,10 +170,13 @@ def discover_feature_interactions(df: pd.DataFrame, target_column: str) -> list:
         if not any(x in col.lower() for x in ["id", "sl", "index"])
     ]
 
+    # Sample for speed on large datasets — interactions are statistical, sample is sufficient
+    sample_df = df.sample(min(len(df), 5000), random_state=42) if len(df) > 5000 else df
+
     for i in range(len(numerical_cols)):
         for j in range(i + 1, len(numerical_cols)):
             col1, col2 = numerical_cols[i], numerical_cols[j]
-            data = df[[col1, col2]].dropna()
+            data = sample_df[[col1, col2]].dropna()
             if len(data) < 20:
                 continue
             corr = data[col1].corr(data[col2])
@@ -182,7 +189,7 @@ def discover_feature_interactions(df: pd.DataFrame, target_column: str) -> list:
 
     for num_col in numerical_cols:
         for cat_col in categorical_cols:
-            grouped = df.groupby(cat_col)[num_col].mean()
+            grouped = sample_df.groupby(cat_col)[num_col].mean()
             if len(grouped) < 2:
                 continue
             top_category    = grouped.idxmax()

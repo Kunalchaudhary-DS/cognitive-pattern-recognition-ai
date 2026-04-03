@@ -7,25 +7,52 @@ import numpy as np
 import pandas as pd
 
 
-def extract_feature_importance(best_model, feature_names: list) -> dict:
-    """Extract feature importances from any sklearn model (tree-based or linear)."""
-    if best_model is None or feature_names is None:
+def extract_feature_importance(
+    best_model,
+    feature_names: list,
+    X_test=None,
+    y_test=None,
+) -> dict:
+    """
+    Extract feature importances from any sklearn model.
+
+    Priority:
+      1. feature_importances_  (tree-based models: RF, GB, ET, AdaBoost, HistGB)
+      2. coef_                 (linear models: LR, Ridge, Lasso, ElasticNet, Logistic)
+      3. permutation_importance (fallback for KNN, SVM, NaiveBayes — any model)
+    """
+    if best_model is None or not feature_names:
         return {}
 
     importances = None
 
+    # Priority 1 — tree-based native importance
     if hasattr(best_model, "feature_importances_"):
         importances = best_model.feature_importances_
+
+    # Priority 2 — linear model coefficients
     elif hasattr(best_model, "coef_"):
-        importances = np.abs(best_model.coef_)
-        if len(importances.shape) > 1:
-            importances = np.mean(np.abs(importances), axis=0)
+        coef = np.abs(best_model.coef_)
+        importances = np.mean(coef, axis=0) if coef.ndim > 1 else coef
+
+    # Priority 3 — permutation importance (works on any model)
+    if importances is None and X_test is not None and y_test is not None:
+        try:
+            from sklearn.inspection import permutation_importance as perm_imp
+            result      = perm_imp(best_model, X_test, y_test,
+                                   n_repeats=5, random_state=42, n_jobs=-1)
+            importances = np.maximum(result.importances_mean, 0)   # clip negatives
+        except Exception:
+            return {}
 
     if importances is None:
         return {}
 
-    indices = np.argsort(importances)[::-1][:10]
+    importances = np.array(importances).flatten()
+    n           = min(len(feature_names), len(importances))
+    indices     = np.argsort(importances[:n])[::-1][:10]
     return {feature_names[i]: float(importances[i]) for i in indices}
+
 
 
 def generate_model_insights(training_results: dict, problem_type: str) -> list:

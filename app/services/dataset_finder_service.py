@@ -375,4 +375,4 @@ def find_matching_datasets(problem_statement: str, top_n: int = 5) -> list:
     results.sort(key=lambda x: x["score"], reverse=True)
 
     top = [r for r in results if r["score"] >= 20]
-    return top[:top_n] if top else results[:3]
+    return top[:top_n]  # returns [] when no dataset meets the threshold — let the API handle it

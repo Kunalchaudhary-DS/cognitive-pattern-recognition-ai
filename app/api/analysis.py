@@ -54,7 +54,7 @@ async def dashboard_data():
     dataset_summary += "Some missing values are present." if missing_total > 0 else "No missing values detected."
 
     # Feature importance from best model
-    feature_importance = extract_feature_importance(state.best_model, state.feature_names)
+    feature_importance = extract_feature_importance(state.best_model, state.feature_names, state.X_test, state.y_test)
 
     # Model comparison table
     model_comparison = {}
@@ -63,8 +63,11 @@ async def dashboard_data():
         for model_name, metrics in state.training_results.items():
             if model_name in ["BestModel", "ProblemType", "ConfusionMatrix"]:
                 continue
-            metric_value = metrics.get(metric_key, list(metrics.values())[0])
-            model_comparison[model_name] = metric_value
+            if not isinstance(metrics, dict):
+                continue
+            metric_value = metrics.get(metric_key)
+            if metric_value is not None:
+                model_comparison[model_name] = metric_value
 
     # Pattern / cluster / interaction analysis
     patterns             = discover_patterns(df, state.target_column)
@@ -169,11 +172,12 @@ async def dashboard_data():
         df, cluster_patterns, interaction_patterns, numerical_cols
     )
 
-    # Clean full data for JSON
+    # Cap at 1000 rows for dashboard display — no need to send 50k rows to the UI
+    display_df = df.sample(min(len(df), 1000), random_state=42) if len(df) > 1000 else df
     full_data = (
-        df.replace([np.inf, -np.inf], np.nan)
+        display_df.replace([np.inf, -np.inf], np.nan)
           .astype(object)
-          .where(pd.notnull(df), None)
+          .where(pd.notnull(display_df), None)
           .to_dict(orient="records")
     )
 
@@ -225,7 +229,7 @@ async def ai_training_explanation():
         return JSONResponse(content={"error": "Run training first"})
 
     from app.services.insight_service import extract_feature_importance
-    feature_importance = extract_feature_importance(state.best_model, state.feature_names)
+    feature_importance = extract_feature_importance(state.best_model, state.feature_names, state.X_test, state.y_test)
     top_features       = list(feature_importance.keys())[:3]
     best_model_name    = state.training_results.get("BestModel", "Unknown")
 
@@ -255,7 +259,7 @@ async def ai_pattern_explanation():
     df                 = state.df.copy()
     patterns           = discover_patterns(df, state.target_column)
     clusters           = discover_clusters(df)
-    feature_importance = extract_feature_importance(state.best_model, state.feature_names)
+    feature_importance = extract_feature_importance(state.best_model, state.feature_names, state.X_test, state.y_test)
     pattern_score      = compute_cognitive_pattern_score(df, feature_importance, patterns, clusters, [])
 
     explanation = generate_pattern_explanation(
@@ -278,7 +282,7 @@ async def ai_insight_summary():
     from app.services.analysis_service import discover_patterns, discover_clusters
 
     df                 = state.df.copy()
-    feature_importance = extract_feature_importance(state.best_model, state.feature_names)
+    feature_importance = extract_feature_importance(state.best_model, state.feature_names, state.X_test, state.y_test)
     top_feature        = list(feature_importance.keys())[0] if feature_importance else "N/A"
     patterns           = discover_patterns(df, state.target_column)
     clusters           = discover_clusters(df)
