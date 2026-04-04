@@ -92,3 +92,11 @@ export async function downloadKaggleDataset(ref, title) {
   fd.append('dataset_title', title)
   return request('/kaggle-download/', { method: 'POST', body: fd })
 }
+
+export async function getConfusionMatrix() {
+  return request('/confusion-matrix/')
+}
+
+export async function getRocCurve() {
+  return request('/roc-curve/')
+}

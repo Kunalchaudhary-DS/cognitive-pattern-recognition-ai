@@ -509,3 +509,74 @@ async def get_encoding_maps():
     if not state.encoding_maps:
         return JSONResponse(content={"encoding_maps": {}})
     return JSONResponse(content={"encoding_maps": state.encoding_maps})
+
+
+@router.get("/confusion-matrix/")
+async def confusion_matrix_data():
+    """
+    Returns the confusion matrix computed during training.
+    Already stored in state.training_results["ConfusionMatrix"] — no re-prediction needed.
+    """
+    if state.training_results is None:
+        return JSONResponse(content={"error": "Train a model first"})
+    if state.problem_type != "classification":
+        return JSONResponse(content={"error": "Only available for classification problems"})
+
+    matrix = state.training_results.get("ConfusionMatrix")
+    if not matrix:
+        return JSONResponse(content={"error": "No confusion matrix available (model may not have been evaluated on test set)"})
+
+    # Build label list — use label_encoder if available, else 0..N
+    if state.label_encoder is not None:
+        labels = [str(c) for c in state.label_encoder.classes_]
+    else:
+        n = len(matrix)
+        labels = [str(i) for i in range(n)]
+
+    return JSONResponse(content={
+        "matrix": matrix,
+        "labels": labels,
+        "model":  state.training_results.get("BestModel", "Unknown"),
+        "problem_type": state.problem_type,
+    })
+
+
+@router.get("/roc-curve/")
+async def roc_curve_data():
+    """
+    Computes the ROC curve on the held-out test set.
+    Only valid for binary classification.
+    """
+    if state.training_results is None or state.best_model is None:
+        return JSONResponse(content={"error": "Train a model first"})
+    if state.problem_type != "classification":
+        return JSONResponse(content={"error": "Only available for classification problems"})
+    if state.X_test is None or state.y_test is None:
+        return JSONResponse(content={"error": "No test data available"})
+
+    from sklearn.metrics import roc_curve, roc_auc_score
+
+    y_test = state.y_test
+    n_classes = len(np.unique(y_test))
+    if n_classes != 2:
+        return JSONResponse(content={"error": f"ROC curve requires binary classification (found {n_classes} classes)"})
+
+    try:
+        if hasattr(state.best_model, "predict_proba"):
+            y_score = state.best_model.predict_proba(state.X_test)[:, 1]
+        elif hasattr(state.best_model, "decision_function"):
+            y_score = state.best_model.decision_function(state.X_test)
+        else:
+            return JSONResponse(content={"error": "Model does not support probability estimates"})
+
+        fpr, tpr, _ = roc_curve(y_test, y_score)
+        auc          = float(roc_auc_score(y_test, y_score))
+
+        return JSONResponse(content={
+            "fpr":   [round(float(v), 4) for v in fpr],
+            "tpr":   [round(float(v), 4) for v in tpr],
+            "auc":   round(auc, 4),
+            "model": state.training_results.get("BestModel", "Unknown"),
+        })
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)})

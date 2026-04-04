@@ -65,6 +65,19 @@ def generate_statistical_insight(df: pd.DataFrame, graph: dict) -> str:
             f"suggesting this group tends to produce larger values."
         )
 
+    elif graph["type"] == "violin":
+        x, y   = graph["x"], graph["y"]
+        groups = df.groupby(x)[y].median().dropna()
+        if len(groups) == 0:
+            return "No violin distribution data available."
+        top_group = groups.idxmax()
+        bot_group = groups.idxmin()
+        spread    = round(float(groups.max() - groups.min()), 3)
+        insight = (
+            f"'{top_group}' has the highest median {y} while '{bot_group}' has the lowest, "
+            f"a spread of {spread}. The violin width shows data density per group."
+        )
+
     elif graph["type"] == "pie":
         col    = graph["x"]
         counts = df[col].value_counts()
@@ -301,16 +314,30 @@ def build_auto_graphs(
         if len(graphs) >= MAX_GRAPHS:
             break
 
-    # ── 4. Categorical distributions (2–8 unique, most balanced first) ────────
+    # ── 4. Violin plots — categorical feature (2–6 unique) vs numerical col ───
+    #    Best for revealing distributional differences across groups
+    if target in numerical_cols:
+        violin_candidates = [
+            col for col in categorical_cols
+            if col != target and 2 <= df[col].nunique() <= 6
+        ]
+        added_violins = 0
+        for col in violin_candidates:
+            if added_violins >= 2:
+                break
+            if _add({"type": "violin", "x": col, "y": target,
+                     "title": f"{target} distribution by {col}"}):
+                added_violins += 1
+
+    # ── 5. Categorical distributions (2–8 unique, most balanced first) ────────
     cat_candidates = []
     for col in categorical_cols:
         if col == target:
             continue
         n = df[col].nunique()
         if 2 <= n <= 8:
-            # Balance score: lower std of normalised counts = more balanced
-            dist   = df[col].value_counts(normalize=True)
-            balance = 1 - dist.std()        # higher = more balanced
+            dist    = df[col].value_counts(normalize=True)
+            balance = 1 - dist.std()
             cat_candidates.append((col, balance))
 
     cat_candidates.sort(key=lambda x: x[1], reverse=True)

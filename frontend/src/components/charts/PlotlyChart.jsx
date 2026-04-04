@@ -15,6 +15,7 @@ function detectType(data) {
   if (t.type === 'heatmap')   return 'heatmap'
   if (t.type === 'pie')       return 'pie'
   if (t.type === 'histogram') return 'histogram'
+  if (t.type === 'violin')    return 'violin'
   if (t.type === 'box')       return 'box'
   if (t.type === 'bar' && t.orientation === 'h') return 'bar_h'
   if (t.type === 'bar')       return 'bar'
@@ -72,6 +73,21 @@ function enhanceTraces(data, chartType, palette) {
           color: base.marker?.color ?? color,
         },
         hovertemplate: 'Range: %{x}<br>Count: %{y}<extra></extra>',
+      }
+    }
+
+    if (chartType === 'violin') {
+      return {
+        ...base,
+        type: 'violin',
+        box:      { visible: true, width: 0.3 },
+        meanline: { visible: true, color: '#f472b6', width: 1.5 },
+        points:   'outliers',
+        jitter:   0.3,
+        marker:   { size: 3, opacity: 0.45, ...base.marker, color: base.marker?.color ?? color },
+        line:     { width: 1.5 },
+        fillcolor: `${color}28`,
+        hovertemplate: '<b>%{x}</b><br>Value: %{y:.3f}<extra></extra>',
       }
     }
 
