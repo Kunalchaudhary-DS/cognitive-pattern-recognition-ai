@@ -7,6 +7,6 @@ export default function Spinner({ size = 20, color = 'var(--accent)' }) {
       borderRadius: '50%',
       animation: 'spin 0.7s linear infinite',
       flexShrink: 0
-    }}/>
+    }} />
   )
 }
