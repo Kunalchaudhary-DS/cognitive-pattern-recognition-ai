@@ -43,18 +43,24 @@ export default function TrainingPage() {
     )
   }
 
-  const ignore  = ['BestModel', 'ProblemType', 'ConfusionMatrix']
+  const ignore  = ['BestModel', 'ProblemType', 'ConfusionMatrix', 'PrimaryMetric', 'Imbalanced']
   const best    = trainingResults.BestModel
   const pType   = trainingResults.ProblemType
-  const metric  = pType === 'regression' ? 'CV_R2_Mean' : 'CV_Accuracy_Mean'
-  const mLabel  = pType === 'regression' ? 'R² Score' : 'Accuracy'
+  const metric  = trainingResults.PrimaryMetric
+              || (pType === 'regression' ? 'CV_R2_Mean' : 'CV_Accuracy_Mean')
+  const imbalanced = trainingResults.Imbalanced || false
+
+  // Human-readable label for the primary metric
+  const mLabel = pType === 'regression'
+    ? 'R² Score'
+    : (imbalanced ? 'F1-Macro (imbalanced)' : 'Accuracy')
 
   const models  = Object.entries(trainingResults)
     .filter(([k]) => !ignore.includes(k))
     .sort((a, b) => (b[1][metric] || 0) - (a[1][metric] || 0))
 
-  const maxScore = Math.max(...models.map(([, v]) => v[metric] || 0))
-  const metricKeys = models[0] ? Object.keys(models[0][1]) : []
+  const maxScore  = Math.max(...models.map(([, v]) => v[metric] || 0))
+  const metricKeys = models[0] ? Object.keys(models[0][1]).filter(k => !ignore.includes(k)) : []
 
   const bestScore = trainingResults[best]?.[metric] || 0
 

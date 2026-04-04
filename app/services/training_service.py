@@ -140,19 +140,39 @@ def get_model_pool(problem_type: str, large_dataset: bool = False) -> dict:
     return pool
 
 
-# ── Composite ranking score ───────────────────────────────────────────────────
+# ── Smart primary metric selection ───────────────────────────────────────────
 
-def _composite_score(metrics: dict, problem_type: str) -> float:
+IMBALANCE_THRESHOLD = 0.15   # a class with < 15% share → imbalanced dataset
+
+def _is_imbalanced(y: np.ndarray) -> bool:
+    """Return True if any class holds < IMBALANCE_THRESHOLD of all samples."""
+    classes, counts = np.unique(y, return_counts=True)
+    if len(classes) < 2:
+        return False
+    proportions = counts / counts.sum()
+    return bool(proportions.min() < IMBALANCE_THRESHOLD)
+
+
+def _primary_metric_key(problem_type: str, imbalanced: bool = False) -> str:
     """
-    Regression  → CV_R2_Mean
-    Classification → 0.5 * CV_Accuracy_Mean + 0.5 * CV_F1_Macro_Mean
+    Returns the single metric key used for ranking models.
+
+    Regression          → CV_R2_Mean        (highest R² wins)
+    Classification
+      balanced dataset  → CV_Accuracy_Mean  (straightforward and interpretable)
+      imbalanced dataset→ CV_F1_Macro_Mean  (accuracy is misleading; F1 is fairer)
     """
     if problem_type == "regression":
-        return metrics.get("CV_R2_Mean", -999.0)
-    else:
-        acc = metrics.get("CV_Accuracy_Mean", 0.0) or 0.0
-        f1  = metrics.get("CV_F1_Macro_Mean", 0.0) or 0.0
-        return 0.5 * acc + 0.5 * f1
+        return "CV_R2_Mean"
+    return "CV_F1_Macro_Mean" if imbalanced else "CV_Accuracy_Mean"
+
+
+def _rank_score(metrics: dict, metric_key: str) -> float:
+    """Extract a single float from the metrics dict for comparison."""
+    val = metrics.get(metric_key)
+    if val is None:
+        return -999.0
+    return float(val)
 
 
 # ── Single-model evaluation ───────────────────────────────────────────────────
@@ -405,9 +425,17 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     if not fully_trained:
         raise RuntimeError("All models failed during training.")
 
-    best_model_name = max(fully_trained, key=lambda n: _composite_score(fully_trained[n], problem_type))
+    # Detect imbalance so we choose the fairest ranking metric
+    imbalanced      = _is_imbalanced(y) if problem_type == "classification" else False
+    primary_metric  = _primary_metric_key(problem_type, imbalanced)
+
+    best_model_name = max(
+        fully_trained,
+        key=lambda n: _rank_score(fully_trained[n], primary_metric)
+    )
+    print(f"[Training] Imbalanced={imbalanced}  Primary metric={primary_metric}")
     print(f"[Training] Best model: {best_model_name} "
-          f"(composite score: {_composite_score(fully_trained[best_model_name], problem_type):.4f})")
+          f"({primary_metric}: {_rank_score(fully_trained[best_model_name], primary_metric):.4f})")
 
     # ── Confusion matrix for classification ───────────────────────────────────
     if problem_type == "classification":
@@ -434,6 +462,8 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     return {
         "results":          results,
         "best_model_name":  best_model_name,
+        "primary_metric":   primary_metric,     # key used to rank — send to frontend
+        "imbalanced":       imbalanced,
         "best_model":       final_model,
         "scaler":           final_scaler,
         "needs_scaling":    needs_scaling,

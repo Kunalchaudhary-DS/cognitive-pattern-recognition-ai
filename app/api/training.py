@@ -43,10 +43,12 @@ async def train_model():
     state.X_test           = output["X_test"]
     state.y_test           = output["y_test"]
 
-    # Merge BestModel / ProblemType INTO training_results so analysis.py can read them
+    # Merge metadata INTO training_results so analysis.py and the frontend can read them
     results_with_meta = dict(output["results"])
-    results_with_meta["BestModel"]   = output["best_model_name"]
-    results_with_meta["ProblemType"] = state.problem_type
+    results_with_meta["BestModel"]      = output["best_model_name"]
+    results_with_meta["ProblemType"]    = state.problem_type
+    results_with_meta["PrimaryMetric"]  = output["primary_metric"]   # key used to rank
+    results_with_meta["Imbalanced"]     = output["imbalanced"]
     state.training_results = results_with_meta
 
     return JSONResponse(content=_json_safe(results_with_meta))
