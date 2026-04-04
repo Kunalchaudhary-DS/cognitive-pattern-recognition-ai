@@ -487,8 +487,16 @@ export default function DashboardPage() {
           <div style={{ fontSize: 12, fontWeight: 600,
             letterSpacing: '0.06em', textTransform: 'uppercase',
             color: 'var(--text-secondary)', marginBottom: 20,
-            fontFamily: 'JetBrains Mono, monospace' }}>
-            Automatic Data Visualizations
+            fontFamily: 'JetBrains Mono, monospace',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between'
+          }}>
+            <span>Smart Data Visualizations</span>
+            <span style={{
+              fontSize: 10, color: 'var(--text-muted)',
+              fontWeight: 400, textTransform: 'none', letterSpacing: 0
+            }}>
+              Top {(d.auto_graphs || []).length} most informative graphs · feature-priority ranked
+            </span>
           </div>
           <div style={{ display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
@@ -499,21 +507,59 @@ export default function DashboardPage() {
               if (!raw) return null
 
               let traces = []
+              let chartLayout = {
+                margin: { l: 50, r: 10, t: 10, b: 50 },
+                xaxis: { title: graph.x },
+                yaxis: { title: graph.y || '' }
+              }
+
               if (graph.type === 'histogram') {
                 traces = [{ x: raw.map(r => r[graph.x]), type: 'histogram',
                   marker: { color: '#3b82f6', line: { width: 0 } }, opacity: 0.85 }]
+
               } else if (graph.type === 'bar') {
                 const counts = {}
                 raw.forEach(r => { counts[r[graph.x]] = (counts[r[graph.x]] || 0) + 1 })
                 traces = [{ x: Object.keys(counts), y: Object.values(counts),
                   type: 'bar', marker: { color: '#6366f1', line: { width: 0 } } }]
+
               } else if (graph.type === 'scatter') {
                 traces = [{ x: raw.map(r => r[graph.x]), y: raw.map(r => r[graph.y]),
                   mode: 'markers', type: 'scatter',
                   marker: { size: 4, color: '#2563eb', opacity: 0.6 } }]
+
               } else if (graph.type === 'box') {
                 traces = [{ x: raw.map(r => r[graph.x]), y: raw.map(r => r[graph.y]),
                   type: 'box', marker: { color: '#14b8a6' } }]
+
+              } else if (graph.type === 'pie') {
+                const counts = {}
+                raw.forEach(r => {
+                  const val = String(r[graph.x] ?? 'Unknown')
+                  counts[val] = (counts[val] || 0) + 1
+                })
+                const PIE_PALETTE = [
+                  '#8b5cf6','#06b6d4','#10b981','#f59e0b',
+                  '#ef4444','#3b82f6','#ec4899','#84cc16'
+                ]
+                traces = [{
+                  labels: Object.keys(counts),
+                  values: Object.values(counts),
+                  type: 'pie',
+                  hole: 0.38,
+                  marker: { colors: PIE_PALETTE },
+                  textinfo: 'label+percent',
+                  textfont: { size: 11 },
+                  insidetextorientation: 'radial'
+                }]
+                chartLayout = {
+                  margin: { l: 10, r: 10, t: 10, b: 10 },
+                  showlegend: true,
+                  legend: {
+                    font: { size: 11, color: 'var(--text-secondary)' },
+                    x: 1, y: 0.5
+                  }
+                }
               }
 
               if (!traces.length) return null
@@ -540,11 +586,7 @@ export default function DashboardPage() {
                   <div style={{ height: 260 }}>
                     <PlotlyChart
                       data={traces}
-                      layout={{
-                        margin: { l: 50, r: 10, t: 10, b: 50 },
-                        xaxis: { title: graph.x },
-                        yaxis: { title: graph.y || '' }
-                      }}
+                      layout={chartLayout}
                       delay={i * 0.04}
                     />
                   </div>

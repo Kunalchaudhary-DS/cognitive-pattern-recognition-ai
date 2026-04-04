@@ -144,8 +144,11 @@ async def dashboard_data():
             f"{len(numerical_cols)} numerical, {len(categorical_cols)} categorical."
         )
 
-    # Auto graphs
-    auto_graphs = build_auto_graphs(df, state.target_column, state.strong_correlations)
+    # Auto graphs — pass feature_importance so smart selection can prioritise them
+    auto_graphs = build_auto_graphs(
+        df, state.target_column, state.strong_correlations,
+        feature_importance=feature_importance,
+    )
 
     # Target distribution
     target_distribution = df[state.target_column].value_counts().to_dict()

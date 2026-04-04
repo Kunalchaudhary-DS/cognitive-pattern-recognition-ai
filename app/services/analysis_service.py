@@ -65,6 +65,18 @@ def generate_statistical_insight(df: pd.DataFrame, graph: dict) -> str:
             f"suggesting this group tends to produce larger values."
         )
 
+    elif graph["type"] == "pie":
+        col    = graph["x"]
+        counts = df[col].value_counts()
+        if len(counts) == 0:
+            return "No distribution data available."
+        dominant     = counts.idxmax()
+        dominant_pct = round(counts.max() / counts.sum() * 100, 1)
+        insight = (
+            f"'{dominant}' is the most common class in {col}, "
+            f"making up {dominant_pct}% of all records."
+        )
+
     return insight
 
 
@@ -202,38 +214,115 @@ def discover_feature_interactions(df: pd.DataFrame, target_column: str) -> list:
     return interactions
 
 
-# ── Auto graph selection ───────────────────────────────────────────────────────
+# ── Auto graph selection (smart, priority-based) ───────────────────────────────
 
-def build_auto_graphs(df: pd.DataFrame, target: str, strong_correlations: list) -> list:
+def build_auto_graphs(
+    df: pd.DataFrame,
+    target: str,
+    strong_correlations: list,
+    feature_importance: dict = None,
+) -> list:
+    """
+    Smart graph selection — max 8 graphs, no duplicate column pairs.
+
+    Priority order:
+      1. Top-3 feature-importance plots vs target (scatter / box)
+      2. Target distribution (pie for classification ≤10 classes, histogram for regression)
+      3. Top-3 strong-correlation scatters (only if |corr| > 0.5)
+      4. Up to 2 categorical distributions (2–8 unique values, most balanced first)
+    """
+    MAX_GRAPHS   = 8
+    seen_pairs   = set()          # frozenset({colA, colB}) — no duplicate pairs
+    graphs       = []
+
     numerical_cols   = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
     categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
-    auto_graphs = []
+    problem_type     = (
+        "classification"
+        if (target in categorical_cols or df[target].nunique() <= 15)
+        else "regression"
+    )
 
-    for col in numerical_cols[:5]:
-        auto_graphs.append({"type": "histogram", "x": col, "y": None, "title": f"Distribution of {col}"})
-
-    for col in categorical_cols[:5]:
-        auto_graphs.append({"type": "bar", "x": col, "y": None, "title": f"Category Counts of {col}"})
-
-    if target in numerical_cols:
-        for col in numerical_cols:
-            if col != target:
-                auto_graphs.append({"type": "scatter", "x": col, "y": target, "title": f"{col} vs {target}"})
-        for col in categorical_cols[:3]:
-            auto_graphs.append({"type": "box", "x": col, "y": target, "title": f"{target} across {col}"})
-
-    for item in strong_correlations[:5]:
-        auto_graphs.append({
-            "type": "scatter",
-            "x": item["feature_1"],
-            "y": item["feature_2"],
-            "title": f"{item['feature_1']} vs {item['feature_2']}"
-        })
-
-    for graph in auto_graphs:
+    def _add(graph: dict) -> bool:
+        """Returns True if the graph was accepted (unique pair, within cap)."""
+        if len(graphs) >= MAX_GRAPHS:
+            return False
+        key = frozenset(filter(None, [graph.get("x"), graph.get("y")]))
+        if key in seen_pairs:
+            return False
+        seen_pairs.add(key)
         graph["insight"] = generate_statistical_insight(df, graph)
+        graphs.append(graph)
+        return True
 
-    return auto_graphs
+    # ── 1. Feature-importance plots (top 3 features vs target) ────────────────
+    top_features = []
+    if feature_importance and isinstance(feature_importance, dict):
+        top_features = list(feature_importance.keys())[:3]
+    elif target in numerical_cols:
+        # Fallback: compute correlation-based ranking if no fi dict supplied
+        other_num = [c for c in numerical_cols if c != target]
+        if other_num:
+            corrs = df[other_num].corrwith(df[target]).abs().sort_values(ascending=False)
+            top_features = corrs.head(3).index.tolist()
+
+    for feat in top_features:
+        if feat == target:
+            continue
+        if feat in numerical_cols and target in numerical_cols:
+            _add({"type": "scatter", "x": feat, "y": target,
+                  "title": f"{feat} vs {target}  [top feature]"})
+        elif feat in categorical_cols and target in numerical_cols:
+            _add({"type": "box", "x": feat, "y": target,
+                  "title": f"{target} across {feat}  [top feature]"})
+        elif feat in numerical_cols and target in categorical_cols:
+            _add({"type": "box", "x": target, "y": feat,
+                  "title": f"{feat} by {target}  [top feature]"})
+
+    # ── 2. Target distribution ────────────────────────────────────────────────
+    n_unique_target = df[target].nunique()
+    if problem_type == "classification" and n_unique_target <= 10:
+        _add({"type": "pie", "x": target, "y": None,
+              "title": f"Distribution of {target}"})
+    else:
+        _add({"type": "histogram", "x": target, "y": None,
+              "title": f"Distribution of {target}"})
+
+    # ── 3. Top strong-correlation scatters (only strong ones) ─────────────────
+    for item in strong_correlations:
+        corr_val = abs(item.get("correlation", 0))
+        if corr_val < 0.5:
+            continue
+        f1, f2 = item["feature_1"], item["feature_2"]
+        if f1 == target or f2 == target:
+            continue          # already shown in section 1
+        _add({"type": "scatter", "x": f1, "y": f2,
+              "title": f"{f1} vs {f2}  (r={item['correlation']:.2f})"})
+        if len(graphs) >= MAX_GRAPHS:
+            break
+
+    # ── 4. Categorical distributions (2–8 unique, most balanced first) ────────
+    cat_candidates = []
+    for col in categorical_cols:
+        if col == target:
+            continue
+        n = df[col].nunique()
+        if 2 <= n <= 8:
+            # Balance score: lower std of normalised counts = more balanced
+            dist   = df[col].value_counts(normalize=True)
+            balance = 1 - dist.std()        # higher = more balanced
+            cat_candidates.append((col, balance))
+
+    cat_candidates.sort(key=lambda x: x[1], reverse=True)
+    added_cats = 0
+    for col, _ in cat_candidates:
+        if added_cats >= 2:
+            break
+        if _add({"type": "bar", "x": col, "y": None,
+                 "title": f"Distribution of {col}"}):
+            added_cats += 1
+
+    return graphs
 
 
 # ── Pattern visualizations ─────────────────────────────────────────────────────
