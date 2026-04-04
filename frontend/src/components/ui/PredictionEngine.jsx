@@ -10,6 +10,7 @@ export default function PredictionEngine({ featureNames = [], targetColumn, prob
   const [result,        setResult]        = useState(null)
   const [samples,       setSamples]       = useState([])
   const [samplesLoading,setSamplesLoading]= useState(false)
+  const [samplesError,  setSamplesError]  = useState('')
   const [error,         setError]         = useState('')
   const [encodingMaps, setEncodingMaps] = useState({})
 
@@ -43,10 +44,18 @@ async function loadEncodingMaps() {
 
   async function loadSamples() {
     setSamplesLoading(true)
+    setSamplesError('')
     try {
       const res = await getSamplePredictions()
-      if (!res.error) setSamples(res.samples || [])
-    } catch {}
+      if (res.error) {
+        setSamplesError(res.error)
+        setSamples([])
+      } else {
+        setSamples(res.samples || [])
+      }
+    } catch (e) {
+      setSamplesError('Failed to load sample predictions')
+    }
     setSamplesLoading(false)
   }
 
@@ -289,6 +298,17 @@ async function loadEncodingMaps() {
             fontFamily: 'JetBrains Mono, monospace'
           }}>
             <Spinner size={14}/> Loading samples...
+          </div>
+        ) : samplesError ? (
+          <div style={{
+            color: 'var(--neon-amber)', fontSize: 12,
+            fontFamily: 'JetBrains Mono, monospace',
+            padding: '8px 12px',
+            background: 'rgba(251,191,36,0.06)',
+            borderRadius: 6,
+            border: '1px solid rgba(251,191,36,0.2)'
+          }}>
+            ⚠ {samplesError}
           </div>
         ) : samples.length > 0 ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

@@ -403,6 +403,10 @@ async def sample_predictions():
     """
     Runs prediction on first 5 rows of the dataset.
     Returns actual vs predicted values.
+
+    FIX: Uses the already-fitted state.preprocessor.transform() instead of
+    re-calling run_preprocessing() from scratch on 5 rows (which re-fits the
+    OneHotEncoder on a tiny slice → wrong column count → shape mismatch crash).
     """
     if state.best_model is None:
         return JSONResponse(content={"error": "Train a model first"})
@@ -410,26 +414,54 @@ async def sample_predictions():
     if state.df is None:
         return JSONResponse(content={"error": "No dataset loaded"})
 
-    try:
-        import pandas as pd
-        from app.services.preprocessing_service import run_preprocessing
+    if state.preprocessor is None:
+        return JSONResponse(content={"error": "Run preprocessing first"})
 
+    try:
         df     = state.df.copy()
         target = state.target_column
 
-        # Get sample rows
+        # ── Grab 5 sample rows (features only) ───────────────────────────────
         sample_df     = df.head(5).copy()
         actual_values = sample_df[target].tolist()
+        X_raw         = sample_df.drop(columns=[target])
 
-        # Preprocess sample
-        result        = run_preprocessing(sample_df, target)
-        X_sample      = result["X"]
+        # ── Impute missing values to mirror the training pipeline ─────────────
+        #    (SimpleImputer was applied per-column during run_preprocessing;
+        #     for 5 rows we just fill NaNs with 0 / "unknown" — safe fallback)
+        numerical_cols   = X_raw.select_dtypes(include="number").columns.tolist()
+        categorical_cols = X_raw.select_dtypes(include="object").columns.tolist()
+        if numerical_cols:
+            X_raw[numerical_cols] = X_raw[numerical_cols].fillna(X_raw[numerical_cols].median())
+        if categorical_cols:
+            X_raw[categorical_cols] = X_raw[categorical_cols].fillna("unknown")
 
-        # Scale if needed
+        # ── Apply ordinal / binary / frequency encodings stored in state ──────
+        #    The fitted ColumnTransformer (state.preprocessor) handles OneHot
+        #    columns but ordinal/binary/frequency cols were encoded BEFORE it
+        #    was fitted, so we must replicate those steps first.
+        encoding_maps = state.encoding_maps or {}
+        for col, enc_map in encoding_maps.items():
+            if col not in X_raw.columns:
+                continue
+            # All encoding_maps store {original_value: numeric_code}
+            mapped = X_raw[col].astype(str).str.lower().map(
+                {str(k).lower(): v for k, v in enc_map.items()}
+            )
+            # Unknown categories → 0
+            X_raw[col] = mapped.fillna(0).astype(float)
+
+        # ── Use the ALREADY-FITTED preprocessor (handles OneHot correctly) ────
+        X_sample = state.preprocessor.transform(X_raw)
+
+        if hasattr(X_sample, "toarray"):
+            X_sample = X_sample.toarray()
+
+        # ── Scale with the ALREADY-FITTED scaler ──────────────────────────────
         if state.needs_scaling and state.scaler:
             X_sample = state.scaler.transform(X_sample)
 
-        # Predict
+        # ── Predict ───────────────────────────────────────────────────────────
         predictions = state.best_model.predict(X_sample)
 
         rows = []
@@ -464,7 +496,10 @@ async def sample_predictions():
         })
 
     except Exception as e:
-        return JSONResponse(content={"error": str(e)})
+        import traceback
+        print(f"[sample_predictions] ERROR: {e}")
+        traceback.print_exc()
+        return JSONResponse(content={"error": str(e), "detail": traceback.format_exc()})
     
 @router.get("/encoding-maps/")
 async def get_encoding_maps():

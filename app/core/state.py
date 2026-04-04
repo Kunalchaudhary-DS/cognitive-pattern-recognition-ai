@@ -25,6 +25,7 @@ class AppState:
         self.encoding_maps: dict = {}
         self.X_test: Optional[np.ndarray] = None         # held-out test features (model-format)
         self.y_test: Optional[np.ndarray] = None         # held-out test labels
+        self.label_encoder = None                         # LabelEncoder for classification y (inverse-transform predictions → original labels)
 
     def reset(self):
         """Clear all state — useful for starting fresh with a new dataset."""
