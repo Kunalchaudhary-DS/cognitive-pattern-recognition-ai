@@ -109,7 +109,7 @@ def get_model_pool(problem_type: str, large_dataset: bool = False) -> dict:
             "RandomForest":         {"model": RandomForestClassifier(n_estimators=n_est, random_state=RS),  "scale": False},
             "HistGradientBoosting": {"model": HistGradientBoostingClassifier(random_state=RS),             "scale": False},
             "ExtraTrees":           {"model": ExtraTreesClassifier(n_estimators=n_est, random_state=RS),   "scale": False},
-            "AdaBoost":             {"model": AdaBoostClassifier(random_state=RS),                         "scale": False},
+            "AdaBoost":             {"model": AdaBoostClassifier(random_state=RS, algorithm='SAMME'),                         "scale": False},
             "KNN":                  {"model": KNeighborsClassifier(),                                      "scale": True},
             "DecisionTree":         {"model": DecisionTreeClassifier(random_state=RS),                     "scale": False},
             "NaiveBayes":           {"model": GaussianNB(),                                                "scale": False},
@@ -283,9 +283,12 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=y
         )
-        _cv_splits        = 3 if large_dataset else CV_SPLITS
-        cv_strategy       = StratifiedKFold(n_splits=_cv_splits, shuffle=True, random_state=RANDOM_STATE)
-        cv_screen_strategy = StratifiedKFold(n_splits=3, shuffle=True, random_state=RANDOM_STATE)
+        # Dynamic CV splits: can't have more folds than smallest class count
+        min_class_count = int(np.bincount(y.astype(int)).min()) if len(np.unique(y)) > 1 else 2
+        _safe_splits      = max(2, min(CV_SPLITS if not large_dataset else 3, min_class_count))
+        cv_strategy        = StratifiedKFold(n_splits=_safe_splits, shuffle=True, random_state=RANDOM_STATE)
+        cv_screen_strategy = StratifiedKFold(n_splits=min(3, min_class_count), shuffle=True, random_state=RANDOM_STATE)
+        print(f"[Training] CV splits = {_safe_splits} (min class count = {min_class_count})")
 
     # ── Scaling — fit ONLY on X_train to prevent leakage ─────────────────────
     scaler         = RobustScaler()

@@ -114,9 +114,20 @@ def generate_training_explanation(
     AI explains the training results — why the best model won,
     what the score means, and what the features suggest.
     """
-    # Format model results for the prompt
+    # Format model results safely — values can be dict, list, or scalar
+    def _fmt_score(scores):
+        """Extract first numeric score regardless of type."""
+        try:
+            if isinstance(scores, dict):
+                return list(scores.values())[0]
+            if isinstance(scores, (list, tuple)):
+                return scores[0]
+            return float(scores)
+        except Exception:
+            return 0.0
+
     results_text = "\n".join([
-        f"  - {name}: {list(scores.values())[0]:.4f}"
+        f"  - {name}: {_fmt_score(scores):.4f}"
         for name, scores in model_results.items()
         if name not in ["BestModel", "ProblemType"]
     ])
