@@ -27,6 +27,7 @@ from app.services.ai_service import (
     generate_training_explanation,
     generate_pattern_explanation,
     generate_insight_summary,
+    generate_panel_insights,
     ask_phi3,
 )
 
@@ -307,7 +308,37 @@ async def ai_insight_summary():
     )
     return JSONResponse(content={"summary": summary})
 
+
+@router.post("/ai/panel-insights/")
+async def ai_panel_insights():
+    """
+    Generates short AI insights using the actual content of the
+    'Discovered Patterns' and 'Cluster Analysis' dashboard panels as context.
+    """
+    if state.df is None or state.target_column is None:
+        return JSONResponse(content={"error": "Run preprocessing first"})
+
+    from app.services.analysis_service import discover_patterns, discover_clusters
+
+    df       = state.df.copy()
+    patterns = discover_patterns(df, state.target_column)
+    clusters = discover_clusters(df)
+
+    insights = generate_panel_insights(
+        patterns      = patterns,
+        clusters      = clusters,
+        target_column = state.target_column,
+        problem_type  = state.problem_type or "regression",
+    )
+
+    return JSONResponse(content={
+        "patterns_insight": insights["patterns_insight"],
+        "clusters_insight": insights["clusters_insight"],
+    })
+
+
 @router.post("/predict/")
+
 async def predict(request: Request):
     """
     Takes feature values from user and returns model prediction.

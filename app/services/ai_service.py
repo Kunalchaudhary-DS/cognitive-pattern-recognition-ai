@@ -13,7 +13,7 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "tinyllama"
 
 
-def ask_phi3(prompt: str) -> str:
+def ask_phi3(prompt: str, num_predict: int = 120, temperature: float = 0.4) -> str:
     try:
         response = requests.post(
             OLLAMA_URL,
@@ -22,8 +22,8 @@ def ask_phi3(prompt: str) -> str:
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "temperature": 0.7,
-                    "num_predict": 150,
+                    "temperature": temperature,
+                    "num_predict": num_predict,
                 }
             },
             timeout=120
@@ -80,27 +80,20 @@ def generate_dataset_explanation(
     suggested_problem: str
 ) -> str:
     """
-    AI narrates the dataset profile in research-quality language.
-    Called after upload or demo dataset load.
+    AI narrates the dataset profile — short, punchy, direct.
     """
-    prompt = f"""You are an expert data scientist writing a research paper.
-Analyze this dataset profile and write 3-4 sentences of intelligent insight.
-Be specific, use proper ML terminology, and sound academic.
+    quality_verdict = "high-quality" if quality_score >= 90 else "moderate-quality" if quality_score >= 70 else "low-quality"
+    missing_note    = f"with {missing_percent}% missing values" if missing_percent > 0 else "with no missing values"
 
-Dataset Profile:
-- Rows: {rows}
-- Columns: {columns}
-- Numerical features: {numerical_count}
-- Categorical features: {categorical_count}
-- Missing data: {missing_percent}%
-- Data quality score: {quality_score}/100
-- Suggested problem type: {suggested_problem}
+    prompt = f"""Write exactly 2 sentences of ML insight about this dataset. Start directly with the finding. No introduction.
 
-Write 2-3 complete sentences about this dataset's characteristics,
-data quality, and suitability for machine learning.
-Every sentence must be complete. Do not use bullet points. Do not cut off mid-sentence."""
+Facts: {rows} rows, {columns} columns ({numerical_count} numerical, {categorical_count} categorical), {missing_note}, quality score {quality_score}/100, task: {suggested_problem}.
 
-    return ask_phi3(prompt)
+Sentence 1: Describe what this dataset is suited for and its key characteristic.
+Sentence 2: State one specific strength or risk for ML training based on the numbers above.
+No bullet points. No "I" statements. End each sentence with a period."""
+
+    return ask_phi3(prompt, num_predict=100)
 
 
 def generate_training_explanation(
@@ -111,47 +104,36 @@ def generate_training_explanation(
     top_features: list
 ) -> str:
     """
-    AI explains the training results — why the best model won,
-    what the score means, and what the features suggest.
+    AI explains training results — direct insight on WHY the best model won.
     """
-    # Format model results safely — values can be dict, list, or scalar
-    def _fmt_score(scores):
-        """Extract first numeric score regardless of type."""
-        try:
-            if isinstance(scores, dict):
-                return list(scores.values())[0]
-            if isinstance(scores, (list, tuple)):
-                return scores[0]
-            return float(scores)
-        except Exception:
-            return 0.0
-
-    results_text = "\n".join([
-        f"  - {name}: {_fmt_score(scores):.4f}"
-        for name, scores in model_results.items()
-        if name not in ["BestModel", "ProblemType"]
-    ])
-
-    metric_name = "R² score" if problem_type == "regression" else "accuracy"
+    metric_name   = "R²" if problem_type == "regression" else "accuracy"
     score_percent = round(best_score * 100, 1)
+    features_str  = ", ".join(f"'{f}'" for f in top_features[:3]) if top_features else "N/A"
 
-    prompt = f"""You are an expert ML researcher writing a research paper analysis.
-Based on these AutoML training results, write 3-4 sentences of intelligent insight.
-Use proper ML terminology. Sound academic and specific.
+    # Build a lean model ranking string (top 3 only)
+    def _get_score(v):
+        try:
+            if isinstance(v, dict): return list(v.values())[0]
+            return float(v)
+        except: return 0.0
 
-Training Results:
-- Problem type: {problem_type}
-- Best model: {best_model} ({metric_name}: {score_percent}%)
-- Top influential features: {', '.join(top_features[:3]) if top_features else 'N/A'}
+    ranking = sorted(
+        [(k, _get_score(v)) for k, v in model_results.items()
+         if k not in ["BestModel", "ProblemType", "PrimaryMetric", "Imbalanced", "ConstraintMap"]
+         and isinstance(v, dict)],
+        key=lambda x: x[1], reverse=True
+    )[:3]
+    ranking_str = ", ".join(f"{n} ({s*100:.1f}%)" for n, s in ranking)
 
-All model scores:
-{results_text}
+    prompt = f"""Write exactly 2 sentences explaining these AutoML results. Start with the key finding. No introduction.
 
-Write 2-3 complete sentences explaining why {best_model} performed best
-and what the {score_percent}% {metric_name} implies for real-world use.
-Every sentence must be complete. Do not cut off mid-sentence. Do not use bullet points.."""
+Best model: {best_model} | {metric_name}: {score_percent}% | Top features: {features_str} | Top 3 models: {ranking_str} | Task: {problem_type}
 
-    return ask_phi3(prompt)
+Sentence 1: State why {best_model} likely outperformed others for this {problem_type} task.
+Sentence 2: Explain what a {score_percent}% {metric_name} means practically for real-world deployment.
+No bullet points. No "I" statements. Each sentence ends with a period."""
+
+    return ask_phi3(prompt, num_predict=110)
 
 
 def generate_pattern_explanation(
@@ -163,33 +145,20 @@ def generate_pattern_explanation(
     problem_type: str
 ) -> str:
     """
-    AI interprets the cognitive pattern analysis results.
-    This is the most research-worthy explanation.
+    AI interprets pattern analysis results — focused on what they mean for the target.
     """
-    patterns_text = "\n".join([f"  - {p}" for p in patterns[:5]]) if patterns else "  - No significant patterns detected"
-    clusters_text = "\n".join([f"  - {c}" for c in clusters[:3]]) if clusters else "  - No clusters identified"
+    top_pattern  = patterns[0]  if patterns  else "No significant patterns detected"
+    cluster_info = f"{len(clusters)} distinct clusters found" if clusters else "No clusters identified"
 
-    prompt = f"""You are an expert AI researcher writing about cognitive pattern recognition.
-Analyze these ML pattern discovery results and write a research-quality conclusion.
-Use academic language, be specific, and relate findings to the target variable.
+    prompt = f"""Write exactly 2 sentences interpreting these ML pattern findings. Lead with the most important insight.
 
-Cognitive Pattern Analysis:
-- Target variable: {target_column}
-- Problem type: {problem_type}
-- Overall pattern score: {pattern_score}/100
-- Pattern strength level: {pattern_strength}
+Target: '{target_column}' | Score: {pattern_score}/100 ({pattern_strength}) | Strongest pattern: {top_pattern} | Clusters: {cluster_info}
 
-Discovered patterns:
-{patterns_text}
+Sentence 1: Interpret what the strongest pattern reveals about the relationship between features and '{target_column}'.
+Sentence 2: Explain what the {cluster_info} implies about the underlying data population structure.
+No bullet points. No "I" statements. Be specific. Each sentence ends with a period."""
 
-Cluster analysis:
-{clusters_text}
-
-Write 2-3 complete sentences specifically about the PATTERNS and CLUSTERS discovered
-in the data structure. Focus only on what patterns were found and why they matter.
-Every sentence must be complete. Do not cut off mid-sentence. Do not use bullet points."""
-
-    return ask_phi3(prompt)
+    return ask_phi3(prompt, num_predict=110)
 
 
 def generate_insight_summary(
@@ -201,29 +170,70 @@ def generate_insight_summary(
     top_feature: str
 ) -> str:
     """
-    Final overall AI summary — the 'conclusion' section of the analysis.
-    Perfect for showing to a mentor or including in a patent document.
+    Final research conclusion — direct, impressive, no filler.
     """
-    metric = "R²" if problem_type == "regression" else "accuracy"
+    metric        = "R²" if problem_type == "regression" else "accuracy"
     score_percent = round(best_score * 100, 1)
+    strength      = "strong" if pattern_score >= 75 else "moderate" if pattern_score >= 50 else "weak"
 
-    prompt = f"""You are an AI research system that has just completed a full
-cognitive pattern recognition analysis. Write an executive summary in 4-5 sentences.
-Sound like a published research paper conclusion. Be specific and impressive.
+    prompt = f"""Write exactly 2 sentences as a research conclusion. Open with the most impressive finding.
 
-Analysis Summary:
-- Target variable analyzed: {target_column}
-- ML task: {problem_type}
-- Best performing model: {best_model}
-- Model {metric}: {score_percent}%
-- Cognitive pattern score: {pattern_score}/100 
-- Most influential feature: {top_feature}
+Study: {problem_type} on '{target_column}' | Best model: {best_model} | {metric}: {score_percent}% | Pattern score: {pattern_score}/100 ({strength}) | Key driver: '{top_feature}'
 
-Write 2-3 complete sentences as a final RESEARCH CONCLUSION summarizing the model
-performance, prediction accuracy, and real-world significance of the findings.
-Every sentence must be complete. Do not cut off mid-sentence. Do not use bullet points."""
+Sentence 1: State the core finding — model performance and what it means for predicting '{target_column}'.
+Sentence 2: Connect '{top_feature}' and the {strength} pattern score to a real-world implication.
+No bullet points. No "I" statements. No restatement of raw numbers already visible. Each sentence ends with a period."""
 
-    return ask_phi3(prompt)
+    return ask_phi3(prompt, num_predict=110)
+
+
+# ── Panel-Level AI Insights (Discovered Patterns + Cluster Analysis) ──────────
+
+def generate_panel_insights(
+    patterns: list,
+    clusters: list,
+    target_column: str,
+    problem_type: str,
+) -> dict:
+    """
+    Generates short, specific AI insights for the two dashboard panels:
+    'Discovered Patterns' and 'Cluster Analysis'.
+
+    Returns:
+        {
+            "patterns_insight": str,
+            "clusters_insight": str,
+        }
+    """
+    # ── Patterns insight ─────────────────────────────────────────────────────
+    if patterns:
+        top3 = patterns[:3]
+        patterns_context = " | ".join(top3)
+        pattern_prompt = f"""Write 1 sentence of expert insight about these discovered ML patterns. Be specific and non-obvious.
+
+Target: '{target_column}' | Patterns found: {patterns_context}
+
+One sentence only. Start with the key finding. No introduction. End with a period."""
+        patterns_insight = ask_phi3(pattern_prompt, num_predict=80, temperature=0.3)
+    else:
+        patterns_insight = f"No statistically significant patterns were detected between features and '{target_column}'." 
+
+    # ── Clusters insight ─────────────────────────────────────────────────────
+    if clusters:
+        cluster_context = " | ".join(clusters[:3])
+        cluster_prompt = f"""Write 1 sentence of expert insight about these data clusters. Be specific and non-obvious.
+
+Target: '{target_column}' | Task: {problem_type} | Clusters: {cluster_context}
+
+One sentence only. Start with the key finding. No introduction. End with a period."""
+        clusters_insight = ask_phi3(cluster_prompt, num_predict=80, temperature=0.3)
+    else:
+        clusters_insight = "The dataset does not exhibit clear sub-group separation, suggesting a homogeneous sample distribution."
+
+    return {
+        "patterns_insight": patterns_insight,
+        "clusters_insight": clusters_insight,
+    }
 
 
 # ── Semantic Constraint Inference (Layer 2 of Prediction Interceptor) ──────────

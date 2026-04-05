@@ -58,6 +58,10 @@ export async function getAIInsightSummary() {
   return request('/ai/insight-summary/')
 }
 
+export async function getAIPanelInsights() {
+  return request('/ai/panel-insights/', { method: 'POST' })
+}
+
 export async function findDatasets(problemStatement) {
   const fd = new FormData()
   fd.append('problem_statement', problemStatement)
