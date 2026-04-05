@@ -311,6 +311,7 @@ async def ai_insight_summary():
 async def predict(request: Request):
     """
     Takes feature values from user and returns model prediction.
+    Applies the Semantic Prediction Interceptor to enforce logical constraints.
     """
     if state.best_model is None:
         return JSONResponse(content={"error": "Train a model first"})
@@ -360,24 +361,49 @@ async def predict(request: Request):
         if state.needs_scaling and state.scaler:
             X_input = state.scaler.transform(X_input)
 
-        # Predict
-        prediction = state.best_model.predict(X_input)[0]
+        # ── Raw model prediction ──────────────────────────────────────────────
+        raw_prediction = state.best_model.predict(X_input)[0]
 
-        # Format result
-        if state.problem_type == "classification":
-            result = str(prediction)
+        # ── Semantic Prediction Interceptor (regression only) ─────────────────
+        constraints_applied = []
+        soft_warnings       = []
+        raw_value_display   = None
+        was_corrected       = False
+
+        if state.problem_type == "regression":
+            from app.services.constraint_service import apply_constraints
+            interceptor_result = apply_constraints(
+                raw_prediction  = float(raw_prediction),
+                input_values    = input_values,
+                constraint_map  = state.constraint_map,
+                feature_names   = feature_names,
+                target_column   = state.target_column or "",
+            )
+            final_prediction    = interceptor_result["final_value"]
+            constraints_applied = interceptor_result["constraints_applied"]
+            soft_warnings       = interceptor_result["soft_warnings"]
+            was_corrected       = interceptor_result["was_corrected"]
+            raw_value_display   = round(interceptor_result["raw_value"], 4) if was_corrected else None
+            result              = round(float(final_prediction), 4)
         else:
-            result = round(float(prediction), 4)
+            result = str(raw_prediction)
 
-        # Generate AI explanation
+        # ── AI explanation ────────────────────────────────────────────────────
         top_features = feature_names[:3] if feature_names else []
         top_values   = [input_values.get(f, 0) for f in top_features]
+
+        correction_note = ""
+        if was_corrected:
+            correction_note = (
+                f"\nNote: The raw model output was {raw_value_display}, "
+                f"but it was corrected to {result} due to domain logic constraints."
+            )
 
         prompt = f"""You are an AI prediction system. Explain this prediction in 2 complete sentences.
 
 Target variable: {state.target_column}
 Problem type: {state.problem_type}
-Prediction result: {result}
+Prediction result: {result}{correction_note}
 Top input features: {dict(zip(top_features, top_values))}
 
 Write 2 complete sentences explaining what this prediction means in real-world terms.
@@ -386,11 +412,15 @@ Do not cut off mid-sentence."""
         explanation = ask_phi3(prompt)
 
         return JSONResponse(content={
-            "prediction":    result,
-            "target":        state.target_column,
-            "problem_type":  state.problem_type,
-            "explanation":   explanation,
-            "model_used":    state.training_results.get("BestModel", "Unknown"),
+            "prediction":           result,
+            "raw_prediction":       raw_value_display,
+            "was_corrected":        was_corrected,
+            "constraints_applied":  constraints_applied,
+            "soft_warnings":        soft_warnings,
+            "target":               state.target_column,
+            "problem_type":         state.problem_type,
+            "explanation":          explanation,
+            "model_used":           state.training_results.get("BestModel", "Unknown"),
             "encoding_maps": {
                 k: v for k, v in (state.encoding_maps or {}).items()
                 if k in feature_names
@@ -399,6 +429,7 @@ Do not cut off mid-sentence."""
 
     except Exception as e:
         return JSONResponse(content={"error": str(e)})
+
 
 
 @router.get("/sample-predictions/")

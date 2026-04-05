@@ -224,3 +224,129 @@ performance, prediction accuracy, and real-world significance of the findings.
 Every sentence must be complete. Do not cut off mid-sentence. Do not use bullet points."""
 
     return ask_phi3(prompt)
+
+
+# ── Semantic Constraint Inference (Layer 2 of Prediction Interceptor) ──────────
+
+def generate_semantic_constraints(
+    column_names: list,
+    target_column: str,
+    dtype_map: dict,
+    statistical_bounds: dict,
+    problem_type: str,
+) -> dict:
+    """
+    Asks Ollama to infer real-world domain constraints from column names.
+
+    Uses the statistical_bounds as grounding context so the LLM works within
+    observed data reality. Returns a structured constraint dict:
+      {
+        "target_bounds":  { "min": ..., "max": ..., "reason": "..." },
+        "relative_rules": [ { "target_col": ..., "operator": ..., "ref_col": ..., "reason": ... } ]
+      }
+
+    Always returns {} gracefully on any failure — system degrades to
+    statistical-only constraints without breaking.
+    """
+    if problem_type != "regression":
+        return {}
+
+    if not column_names or not target_column:
+        return {}
+
+    # Build a compact schema string for the prompt
+    schema_lines = []
+    stat_tb = statistical_bounds.get("target_bounds", {})
+
+    for col in column_names:
+        dtype = dtype_map.get(col, "numeric")
+        prefix = f"  - {col} (dtype: {dtype})"
+        if col == target_column:
+            prefix += (
+                f" [TARGET — observed range: "
+                f"{stat_tb.get('hard_min', '?')} to {stat_tb.get('hard_max', '?')}]"
+            )
+        schema_lines.append(prefix)
+
+    schema_text = "\n".join(schema_lines)
+
+    prompt = f"""You are a domain expert analyzing a machine learning dataset.
+Your task: infer logical real-world constraints for the TARGET variable based solely on column names and observed ranges.
+
+COLUMNS:
+{schema_text}
+
+TARGET column: "{target_column}"
+
+INSTRUCTIONS:
+1. Is there a real-world maximum or minimum for "{target_column}"? (e.g., scores cap at 100, ages cannot be negative)
+2. Is "{target_column}" logically bounded by any other column? (e.g., subset durations cannot exceed their parent duration)
+3. Only include constraints you are highly confident about from the column names alone.
+
+Return ONLY a valid JSON object. No explanation. No markdown. No extra text.
+Format:
+{{
+  "target_bounds": {{
+    "min": <number or null>,
+    "max": <number or null>,
+    "reason": "<brief reason>"
+  }},
+  "relative_rules": [
+    {{
+      "target_col": "{target_column}",
+      "operator": "<= or <",
+      "ref_col": "<column name from schema>",
+      "reason": "<brief reason>"
+    }}
+  ]
+}}"""
+
+    try:
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model":  MODEL_NAME,
+                "prompt": prompt,
+                "stream": False,
+                "options": {
+                    "temperature": 0.1,   # low temp for structured output
+                    "num_predict": 250,
+                },
+            },
+            timeout=60,
+        )
+
+        if response.status_code != 200:
+            print("[Constraints-LLM] Ollama returned non-200. Using statistical only.")
+            return {}
+
+        raw_text = response.json().get("response", "").strip()
+
+        # Extract JSON from response — handle cases where model wraps in markdown
+        import re
+        json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
+        if not json_match:
+            print(f"[Constraints-LLM] No JSON found in response: {raw_text[:200]}")
+            return {}
+
+        parsed = json.loads(json_match.group())
+
+        # Validate structure — must have known keys
+        if not isinstance(parsed, dict):
+            return {}
+
+        print(f"[Constraints-LLM] Semantic constraints inferred: {parsed}")
+        return parsed
+
+    except requests.exceptions.ConnectionError:
+        print("[Constraints-LLM] Ollama offline. Using statistical constraints only.")
+        return {}
+    except requests.exceptions.Timeout:
+        print("[Constraints-LLM] Ollama timed out. Using statistical constraints only.")
+        return {}
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"[Constraints-LLM] JSON parse error: {e}. Using statistical only.")
+        return {}
+    except Exception as e:
+        print(f"[Constraints-LLM] Unexpected error: {e}. Using statistical only.")
+        return {}

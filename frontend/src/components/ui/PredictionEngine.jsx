@@ -229,6 +229,22 @@ async function loadEncodingMaps() {
                 }}>
                   {result.prediction}
                 </div>
+
+                {/* Raw model output — shown only when correction was applied */}
+                {result.was_corrected && result.raw_prediction != null && (
+                  <div style={{
+                    marginTop: 6,
+                    fontSize: 12, fontFamily: 'JetBrains Mono, monospace',
+                    color: 'rgba(251,191,36,0.8)',
+                    display: 'flex', alignItems: 'center', gap: 6
+                  }}>
+                    <span style={{ fontSize: 10, opacity: 0.7 }}>RAW MODEL OUTPUT:</span>
+                    <span style={{ textDecoration: 'line-through', opacity: 0.6 }}>
+                      {result.raw_prediction}
+                    </span>
+                    <span style={{ fontSize: 10 }}>→ corrected</span>
+                  </div>
+                )}
               </div>
               <div style={{ textAlign: 'right' }}>
                 <Badge color="violet" style={{ marginBottom: 8, display: 'block' }}>
@@ -239,6 +255,76 @@ async function loadEncodingMaps() {
                 </Badge>
               </div>
             </div>
+
+            {/* Constraint Correction Banner */}
+            {result.was_corrected && result.constraints_applied?.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                style={{
+                  marginBottom: 12,
+                  padding: '12px 16px',
+                  background: 'rgba(251,191,36,0.06)',
+                  border: '1px solid rgba(251,191,36,0.25)',
+                  borderRadius: 8,
+                  borderLeft: '3px solid rgba(251,191,36,0.7)',
+                }}
+              >
+                <div style={{
+                  fontSize: 10, fontFamily: 'JetBrains Mono, monospace',
+                  color: 'rgba(251,191,36,0.9)',
+                  letterSpacing: '0.08em', marginBottom: 8,
+                  display: 'flex', alignItems: 'center', gap: 6
+                }}>
+                  <span>⚡</span>
+                  <span>SEMANTIC INTERCEPTOR ACTIVE — PREDICTION CORRECTED</span>
+                </div>
+                {result.constraints_applied.map((msg, i) => (
+                  <div key={i} style={{
+                    fontSize: 11, color: 'rgba(251,191,36,0.75)',
+                    fontFamily: 'JetBrains Mono, monospace',
+                    lineHeight: 1.6,
+                    paddingLeft: 8,
+                    borderLeft: '1px solid rgba(251,191,36,0.2)',
+                    marginBottom: 4
+                  }}>
+                    › {msg}
+                  </div>
+                ))}
+              </motion.div>
+            )}
+
+            {/* Soft Domain Warnings */}
+            {result.soft_warnings?.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                style={{
+                  marginBottom: 12,
+                  padding: '10px 14px',
+                  background: 'rgba(99,102,241,0.05)',
+                  border: '1px solid rgba(99,102,241,0.15)',
+                  borderRadius: 8,
+                }}
+              >
+                <div style={{
+                  fontSize: 10, fontFamily: 'JetBrains Mono, monospace',
+                  color: 'rgba(99,102,241,0.7)', letterSpacing: '0.08em',
+                  marginBottom: 6
+                }}>
+                  DOMAIN NOTICES
+                </div>
+                {result.soft_warnings.map((msg, i) => (
+                  <div key={i} style={{
+                    fontSize: 11, color: 'var(--text-muted)',
+                    fontFamily: 'JetBrains Mono, monospace',
+                    lineHeight: 1.6
+                  }}>
+                    {msg}
+                  </div>
+                ))}
+              </motion.div>
+            )}
 
             {result.explanation && (
               <div style={{
