@@ -1,7 +1,4 @@
-"""
-Insight service — AI-style conclusions, cognitive pattern score,
-model performance insights, feature importance extraction.
-"""
+# Feature importance, model insights, pattern scoring, prediction analysis.
 
 import numpy as np
 import pandas as pd
@@ -13,14 +10,7 @@ def extract_feature_importance(
     X_test=None,
     y_test=None,
 ) -> dict:
-    """
-    Extract feature importances from any sklearn model.
-
-    Priority:
-      1. feature_importances_  (tree-based models: RF, GB, ET, AdaBoost, HistGB)
-      2. coef_                 (linear models: LR, Ridge, Lasso, ElasticNet, Logistic)
-      3. permutation_importance (fallback for KNN, SVM, NaiveBayes — any model)
-    """
+    # Priority: feature_importances_ → coef_ → permutation importance
     if best_model is None or not feature_names:
         return {}
 

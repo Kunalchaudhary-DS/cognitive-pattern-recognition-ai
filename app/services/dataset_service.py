@@ -13,8 +13,7 @@ from app.core.config import (
 )
 
 
-# ── Validation ─────────────────────────────────────────────────────────────────
-
+#Validation
 def validate_dataframe(df: pd.DataFrame) -> str | None:
     """
     Runs all dataset checks.
@@ -31,7 +30,7 @@ def validate_dataframe(df: pd.DataFrame) -> str | None:
     return None
 
 
-# ── Loading ────────────────────────────────────────────────────────────────────
+#Loading
 
 def load_csv_bytes(contents: bytes) -> pd.DataFrame:
     """Load a CSV from raw bytes (file upload)."""
@@ -46,7 +45,7 @@ def load_csv_path(file_path: str) -> pd.DataFrame:
         return pd.read_csv(file_path, encoding="latin1")
 
 
-# ── Profiling ──────────────────────────────────────────────────────────────────
+#Profiling
 
 def compute_strong_correlations(df: pd.DataFrame) -> list:
     numerical_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()

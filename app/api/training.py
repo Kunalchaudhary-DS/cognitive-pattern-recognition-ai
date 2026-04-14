@@ -38,7 +38,7 @@ async def train_model():
 
     output = run_training(state.X, state.y, state.problem_type)
 
-    # ── Persist model to state ────────────────────────────────────────────────
+    # Persist model to state
     state.best_model       = output["best_model"]
     state.scaler           = output["scaler"]
     state.needs_scaling    = output["needs_scaling"]
@@ -53,7 +53,7 @@ async def train_model():
     results_with_meta["Imbalanced"]     = output["imbalanced"]
     state.training_results = results_with_meta
 
-    # ── Semantic Prediction Interceptor — Constraint Generation ───────────────
+    # Semantic Prediction Interceptor — Constraint Generation 
     # Only for regression (classification output is already a finite class label)
     constraint_summary = {}
     if state.problem_type == "regression" and state.df is not None and state.target_column:

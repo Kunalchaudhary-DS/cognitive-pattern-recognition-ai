@@ -19,7 +19,7 @@ from sklearn.compose import ColumnTransformer
 from app.core.config import ONEHOT_CARDINALITY_LIMIT
 
 
-# ── Known ordinal patterns (values listed lowest → highest) ───────────────────
+# Known ordinal patterns (values listed lowest → highest)
 ORDINAL_PATTERNS = [
     ["low", "medium", "high"],
     ["low", "med", "high"],
@@ -42,7 +42,7 @@ ORDINAL_PATTERNS = [
 ]
 
 
-# ── Problem-type detection ─────────────────────────────────────────────────────
+#Problem-type detection
 
 def detect_problem_type(df: pd.DataFrame, target_column: str) -> str:
     """
@@ -71,7 +71,7 @@ def detect_problem_type(df: pd.DataFrame, target_column: str) -> str:
     return "regression"
 
 
-# ── Ordinal detection helper ───────────────────────────────────────────────────
+# Ordinal detection helper
 
 def _detect_ordinal(col: pd.Series):
     """
@@ -86,7 +86,7 @@ def _detect_ordinal(col: pd.Series):
     return None
 
 
-# ── Pre-training correlation importance (no model needed) ──────────────────────
+#Pre-training correlation importance (no model needed) 
 
 def compute_feature_importance(df: pd.DataFrame, target_column: str) -> dict:
     """
@@ -114,8 +114,7 @@ def compute_feature_importance(df: pd.DataFrame, target_column: str) -> dict:
     return {"feature_importance": result, "problem_type": problem_type}
 
 
-# ── Main preprocessing pipeline ───────────────────────────────────────────────
-
+# Main preprocessing pipeline
 def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
     """
     Full pipeline:
@@ -134,7 +133,7 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
     df = df.dropna(subset=[target_column])
     dropped_rows = original_shape[0] - df.shape[0]
 
-    # ── Impute ─────────────────────────────────────────────────────────────────
+    # Impute
     numerical_cols   = df.select_dtypes(include="number").columns.tolist()
     categorical_cols = df.select_dtypes(include="object").columns.tolist()
 
@@ -143,14 +142,14 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
     if categorical_cols:
         df[categorical_cols] = SimpleImputer(strategy="most_frequent").fit_transform(df[categorical_cols])
 
-    # ── Separate features / target ─────────────────────────────────────────────
+    #Separate features / target
     X            = df.drop(columns=[target_column]).copy()
     y            = df[target_column].copy()
     cat_features = X.select_dtypes(include="object").columns.tolist()
     encoding_maps = {}
     id_dropped    = []
 
-    # ── Step 0: Drop ID-like columns ──────────────────────────────────────────
+    #Step 0: Drop ID-like columns
     for col in cat_features:
         n_unique      = X[col].nunique()
         unique_ratio  = n_unique / max(len(X), 1)
@@ -160,7 +159,7 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
         X = X.drop(columns=id_dropped)
     cat_features = [c for c in cat_features if c not in id_dropped]
 
-    # ── Step 1: Ordinal encoding ───────────────────────────────────────────────
+    # Step 1: Ordinal encoding
     ordinal_encoded = []
     for col in list(cat_features):
         pattern = _detect_ordinal(X[col])
@@ -171,7 +170,7 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
             ordinal_encoded.append(col)
     cat_features = [c for c in cat_features if c not in ordinal_encoded]
 
-    # ── Categorise remaining categorical columns ───────────────────────────────
+    # Categorise remaining categorical columns 
     binary_columns  = []
     low_cardinality = []   # 3 – ONEHOT_CARDINALITY_LIMIT  → OneHot
     high_cardinality = []  # > ONEHOT_CARDINALITY_LIMIT    → Frequency
@@ -185,19 +184,19 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
         else:
             high_cardinality.append(col)
 
-    # ── Step 2: Binary → LabelEncoder ─────────────────────────────────────────
+    # Step 2: Binary → LabelEncoder
     for col in binary_columns:
         le     = LabelEncoder()
         X[col] = le.fit_transform(X[col].astype(str))
         encoding_maps[col] = {str(cls): int(code) for code, cls in enumerate(le.classes_)}
 
-    # ── Step 3: High-cardinality → Frequency encoding ─────────────────────────
+    # Step 3: High-cardinality → Frequency encoding
     for col in high_cardinality:
         freq   = X[col].value_counts(normalize=True)
         X[col] = X[col].map(freq)
         encoding_maps[col] = {str(k): round(float(v), 4) for k, v in freq.items()}
 
-    # ── Step 4: Low-cardinality → OneHot via ColumnTransformer ────────────────
+    # Step 4: Low-cardinality → OneHot via ColumnTransformer
     num_features = X.select_dtypes(include="number").columns.tolist()
 
     preprocessor = ColumnTransformer(
@@ -210,7 +209,7 @@ def run_preprocessing(df: pd.DataFrame, target_column: str) -> dict:
 
     X_processed = preprocessor.fit_transform(X)
 
-    # ── Extract final feature names ────────────────────────────────────────────
+    # Extract final feature names
     feature_names = list(num_features)
     if low_cardinality:
         onehot_names = preprocessor.named_transformers_["onehot"].get_feature_names_out(low_cardinality)

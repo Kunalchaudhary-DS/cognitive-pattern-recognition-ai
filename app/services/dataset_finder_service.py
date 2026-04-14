@@ -14,11 +14,11 @@ import pandas as pd
 from app.core.config import DATASET_FOLDER
 
 
-# ── Persistent registry path ──────────────────────────────────────────────────
+#Persistent registry path
 REGISTRY_PATH = os.path.join(DATASET_FOLDER, "_dataset_registry.json")
 
 
-# ── Hardcoded demo datasets (original curated list) ───────────────────────────
+# Hardcoded demo datasets (original curated list)
 DEMO_DATASETS = [
     {
         "file": "accounting_dataset.csv",
@@ -120,7 +120,7 @@ DEMO_DATASETS = [
 ]
 
 
-# ── Registry helpers ───────────────────────────────────────────────────────────
+# Registry helpers
 
 def _load_registry() -> list:
     """Load the persistent dataset registry from disk."""
@@ -215,8 +215,7 @@ def register_dataset(
     print(f"[Registry] Registered {len(filenames)} file(s) — total entries: {len(registry)}")
 
 
-# ── Auto-discover unregistered CSV files ───────────────────────────────────────
-
+#Auto-discover unregistered CSV files 
 def _get_all_datasets() -> list:
     """
     Build a unified list of all searchable datasets by merging:
@@ -262,7 +261,7 @@ def _get_all_datasets() -> list:
     return merged
 
 
-# ── Profiling & scoring (unchanged logic) ──────────────────────────────────────
+# Profiling & scoring (unchanged logic)
 
 def get_dataset_profile(file_path: str) -> dict:
     """Read basic stats from a dataset file."""
@@ -335,8 +334,7 @@ def compute_match_score(problem: str, ds: dict) -> dict:
     }
 
 
-# ── Main search function ──────────────────────────────────────────────────────
-
+# Main search function
 def find_matching_datasets(problem_statement: str, top_n: int = 5) -> list:
     """
     Scores ALL datasets (demo + registry + auto-discovered) using smart

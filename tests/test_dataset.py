@@ -14,7 +14,7 @@ def make_df(rows=10, cols=3):
     return pd.DataFrame(np.random.rand(rows, cols), columns=[f"col_{i}" for i in range(cols)])
 
 
-# ── validate_dataframe ─────────────────────────────────────────────────────────
+# validate_dataframe
 
 def test_valid_dataframe_passes():
     df = make_df(10, 3)
@@ -45,12 +45,12 @@ def test_all_missing_values_fails():
     assert error is not None
 
 
-# ── compute_strong_correlations ────────────────────────────────────────────────
+# compute_strong_correlations
 
 def test_strong_correlations_detected():
     df = pd.DataFrame({
         "a": [1, 2, 3, 4, 5],
-        "b": [2, 4, 6, 8, 10],   # perfect correlation with a
+        "b": [2, 4, 6, 8, 10],   
         "c": [5, 3, 1, 9, 2],
     })
     correlations = compute_strong_correlations(df)
@@ -65,7 +65,7 @@ def test_no_false_strong_correlations():
     assert len(correlations) == 0
 
 
-# ── build_upload_profile ───────────────────────────────────────────────────────
+#build_upload_profile
 
 def test_upload_profile_keys():
     df = make_df(20, 4)

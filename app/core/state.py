@@ -1,7 +1,4 @@
-"""
-Central session state — replaces all scattered global variables from main.py.
-All routes and services read/write through this single object.
-"""
+# Central session state — all routes and services read/write through this object.
 
 import pandas as pd
 import numpy as np
@@ -33,5 +30,5 @@ class AppState:
         self.__init__()
 
 
-# Single shared instance — imported by all routers and services
+# Singleton shared by all routers and services
 state = AppState()

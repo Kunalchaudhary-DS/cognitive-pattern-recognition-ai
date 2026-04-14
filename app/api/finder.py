@@ -1,7 +1,4 @@
-"""
-Dataset finder route — takes a problem statement and returns
-best matching datasets ranked by AI relevance score.
-"""
+# Dataset finder route — matches a problem statement to local datasets by relevance.
 
 from fastapi import APIRouter, Form
 from fastapi.responses import JSONResponse

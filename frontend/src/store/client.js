@@ -6,7 +6,7 @@ async function request(path, options = {}) {
   return data
 }
 
-// ── Dataset ────────────────────────────────────────────────
+//Dataset
 export async function uploadDataset(file) {
   const fd = new FormData()
   fd.append('file', file)
@@ -23,7 +23,7 @@ export async function loadDemoDataset(name) {
   return request('/load-demo-dataset/', { method: 'POST', body: fd })
 }
 
-// ── Preprocessing ───────────────────────────────────────────
+//Preprocessing
 export async function getFeatureImportance(target) {
   const fd = new FormData()
   fd.append('target_column', target)
@@ -36,17 +36,17 @@ export async function runPreprocessing(target) {
   return request('/preprocess/', { method: 'POST', body: fd })
 }
 
-// ── Training ────────────────────────────────────────────────
+//Training
 export async function trainModels() {
   return request('/train/', { method: 'POST' })
 }
 
-// ── Dashboard ───────────────────────────────────────────────
+//Dashboard
 export async function getDashboardData() {
   return request('/dashboard-data/')
 }
 
-// ── AI Endpoints ────────────────────────────────────────────
+//AI Endpoints
 export async function getAIDatasetExplanation() {
   return request('/ai/dataset-explanation/', { method: 'POST' })
 }

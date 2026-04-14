@@ -9,10 +9,11 @@ app = FastAPI(
     description="Upload a CSV, auto-preprocess, train multiple ML models, and discover patterns."
 )
 
-# ── CORS — allows React (localhost:5173) to talk to FastAPI (localhost:8000) ──
+# ── CORS — open for tunnel + Vercel deployment ────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],       # restrict to your Vercel URL after go-live
+    allow_credentials=False,   # must be False when allow_origins=["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )

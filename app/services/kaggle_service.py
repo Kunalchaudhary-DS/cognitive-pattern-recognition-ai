@@ -24,8 +24,7 @@ def get_kaggle_api():
     return kaggle.api
 
 
-# ── Robust attribute reader (handles different Kaggle SDK versions) ────────────
-
+#Robust attribute reader (handles different Kaggle SDK versions) 
 def _read(obj, *names, cast=None, default=0):
     """
     Try to read an attribute from a Kaggle API object, trying multiple
@@ -116,8 +115,7 @@ def _debug_attrs(obj):
         print(f"[Kaggle DEBUG] dir(): {[x for x in dir(obj) if not x.startswith('_')]}")
 
 
-# ── Stage 1: Lightweight priority filter ──────────────────────────────────────
-
+# Stage 1: Lightweight priority filter 
 def _stage1_priority_score(ds_raw: object, problem_keywords: set) -> float:
     """
     Computes a rough priority score for Stage 1 filtering.
@@ -151,7 +149,7 @@ def _stage1_priority_score(ds_raw: object, problem_keywords: set) -> float:
     return score
 
 
-# ── Stage 2: Deep relevance scoring ───────────────────────────────────────────
+# Stage 2: Deep relevance scoring
 
 def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     """
@@ -167,7 +165,7 @@ def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     from datetime import datetime, timezone
     score = 0
 
-    # ── Title relevance (max 40 pts) ──────────────────────────────────────────
+    # Title relevance (max 40 pts)
     stop_chars = set('.,!?;:()')
     title_words = set(
         ''.join(c for c in w if c not in stop_chars)
@@ -177,7 +175,7 @@ def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     overlap = len(problem_words & title_words)
     score  += min(overlap * 15, 40)
 
-    # ── Download popularity (max 20 pts) ──────────────────────────────────────
+    #Download popularity (max 20 pts)
     dl = ds.get('download_count', 0) or 0
     if   dl > 100_000: score += 20
     elif dl >  10_000: score += 15
@@ -186,17 +184,17 @@ def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     # Give a small bonus even for very low downloads so not everything stays flat at 0
     elif dl >       0: score +=  2
 
-    # ── Usability rating (max 20 pts) ─────────────────────────────────────────
+    # Usability rating (max 20 pts)
     usability = ds.get('usability', 0) or 0
     score += int(usability * 20)
 
-    # ── Vote count tiebreaker bonus (max 5 pts) ───────────────────────────────
+    #Vote count tiebreaker bonus (max 5 pts)
     votes = ds.get('vote_count', 0) or 0
     if   votes > 500: score += 5
     elif votes > 100: score += 3
     elif votes >  10: score += 1
 
-    # ── Recency bonus (max 10 pts) ────────────────────────────────────────────
+    # Recency bonus (max 10 pts)
     try:
         updated_str = ds.get('last_updated', '')
         if updated_str and updated_str not in ('None', '', 'unknown'):
@@ -210,7 +208,7 @@ def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     except Exception:
         pass
 
-    # ── Size penalty ──────────────────────────────────────────────────────────
+    # Size penalty
     size = ds.get('size_mb', 0) or 0
     if   size > 100: score -= 10
     elif size >  50: score -=  5
@@ -218,7 +216,7 @@ def _stage2_relevance_score(problem_words: set, ds: dict) -> int:
     return max(0, min(score, 100))
 
 
-# ── AI-style overview generator (human-readable, no jargon) ───────────────────
+# AI-style overview generator (human-readable, no jargon)
 
 def _generate_overview(title: str, description: str, size_mb: float,
                        downloads: int, usability: float) -> str:
@@ -269,8 +267,7 @@ def _generate_overview(title: str, description: str, size_mb: float,
     return ' '.join(parts)
 
 
-# ── Main search function ───────────────────────────────────────────────────────
-
+# Main search function
 def search_kaggle_datasets(problem_statement: str, max_results: int = 6) -> list:
     """
     Two-stage Kaggle dataset search and ranking engine.
@@ -298,7 +295,7 @@ def search_kaggle_datasets(problem_statement: str, max_results: int = 6) -> list
 
         print(f"[Kaggle Stage 1] Searching: '{search_query}'")
 
-        # ── Stage 1: Broad retrieval ───────────────────────────────────────────
+        # Stage 1: Broad retrieval
         raw_datasets = list(api.dataset_list(search=search_query, max_size=None, file_type='csv'))
         print(f"[Kaggle Stage 1] Retrieved {len(raw_datasets)} raw datasets")
 
@@ -366,7 +363,7 @@ def search_kaggle_datasets(problem_statement: str, max_results: int = 6) -> list
         stage1_candidates = stage1_candidates[:15]
         print(f"[Kaggle Stage 1] {len(stage1_candidates)} candidates survive filter")
 
-        # ── Stage 2: Deep relevance scoring ───────────────────────────────────
+        #Stage 2: Deep relevance scoring
         for ds in stage1_candidates:
             ds["relevance_score"] = _stage2_relevance_score(problem_words, ds)
 
@@ -389,8 +386,7 @@ def search_kaggle_datasets(problem_statement: str, max_results: int = 6) -> list
         return [{"error": str(e)}]
 
 
-# ── Download function ──────────────────────────────────────────────────────────
-
+# Download function
 def download_kaggle_dataset(dataset_ref: str, dataset_title: str) -> dict:
     """
     Downloads a Kaggle dataset and extracts CSV files to datasets/ folder.

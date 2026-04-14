@@ -1,13 +1,17 @@
 @import './styles/theme.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -24,7 +28,9 @@ body {
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 600px;
   background: var(--gradient-glow);
   pointer-events: none;
@@ -32,10 +38,23 @@ body::before {
 }
 
 /* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: var(--scrollbar-bg); }
-::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
 
 /* ── GLASS CARD — gradient border ── */
 .glass {
@@ -61,18 +80,40 @@ body::before {
   pointer-events: none;
 }
 
-.glass:hover::before { opacity: 1; }
-.glass:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.glass:hover::before {
+  opacity: 1;
+}
+
+.glass:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
 
 /* ── NEON TEXT ── */
-.neon-cyan   { color: var(--neon-cyan);   }
-.neon-violet { color: var(--neon-violet); }
-.neon-green  { color: var(--neon-green);  }
-.neon-amber  { color: var(--neon-amber);  }
-.neon-red    { color: var(--neon-red);    }
+.neon-cyan {
+  color: var(--neon-cyan);
+}
+
+.neon-violet {
+  color: var(--neon-violet);
+}
+
+.neon-green {
+  color: var(--neon-green);
+}
+
+.neon-amber {
+  color: var(--neon-amber);
+}
+
+.neon-red {
+  color: var(--neon-red);
+}
 
 /* ── MONO ── */
-.mono { font-family: 'JetBrains Mono', monospace; }
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
 
 /* ── GRADIENT TEXT ── */
 .gradient-text {
@@ -84,4 +125,6 @@ body::before {
 
 /* ── PLOTLY FIX ── */
 .js-plotly-plot .plotly,
-.main-svg { background: transparent !important; }
+.main-svg {
+  background: transparent !important;
+}

@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useAppStore = create((set) => ({
-  // ── Theme ──────────────────────────────
+  // Theme
   theme: 'dark',
   toggleTheme: () => set((state) => {
     const newTheme = state.theme === 'dark' ? 'light' : 'dark'
@@ -9,11 +9,11 @@ const useAppStore = create((set) => ({
     return { theme: newTheme }
   }),
 
-  // ── Workflow State ─────────────────────
+  // Workflow State
   currentStep: 1,
   setStep: (step) => set({ currentStep: step }),
 
-  // ── Dataset ────────────────────────────
+  //Dataset
   datasetLoaded: false,
   datasetInfo: null,
   datasetData: null,
@@ -24,7 +24,7 @@ const useAppStore = create((set) => ({
     currentStep: 2
   }),
 
-  // ── Preprocessing ──────────────────────
+  // Preprocessing 
   preprocessed: false,
   preprocessInfo: null,
   targetColumn: null,
@@ -35,7 +35,7 @@ const useAppStore = create((set) => ({
     currentStep: 3
   }),
 
-  // ── Training ───────────────────────────
+  //Training
   trained: false,
   trainingResults: null,
   setTrained: (results) => set({
@@ -44,43 +44,43 @@ const useAppStore = create((set) => ({
     currentStep: 4
   }),
 
-  // ── Dashboard ──────────────────────────
+  // Dashboard
   dashboardData: null,
   setDashboardData: (data) => set({ dashboardData: data }),
 
-  // ── AI Explanations ────────────────────
-  aiDatasetText:  '',
+  //AI Explanations
+  aiDatasetText: '',
   aiTrainingText: '',
-  aiPatternText:  '',
-  aiSummaryText:  '',
-  setAiDatasetText:  (text) => set({ aiDatasetText: text }),
+  aiPatternText: '',
+  aiSummaryText: '',
+  setAiDatasetText: (text) => set({ aiDatasetText: text }),
   setAiTrainingText: (text) => set({ aiTrainingText: text }),
-  setAiPatternText:  (text) => set({ aiPatternText: text }),
-  setAiSummaryText:  (text) => set({ aiSummaryText: text }),
+  setAiPatternText: (text) => set({ aiPatternText: text }),
+  setAiSummaryText: (text) => set({ aiSummaryText: text }),
 
 
-  // ── Dataset Finder ──────────────────────────────
+  // Dataset Finder 
   problemStatement: '',
   foundDatasets: [],
   setProblemStatement: (text) => set({ problemStatement: text }),
   setFoundDatasets: (datasets) => set({ foundDatasets: datasets }),
 
-  // ── Reset ──────────────────────────────
+  //Reset
   reset: () => set({
-    currentStep:    1,
-    datasetLoaded:  false,
-    datasetInfo:    null,
-    datasetData:    null,
-    preprocessed:   false,
+    currentStep: 1,
+    datasetLoaded: false,
+    datasetInfo: null,
+    datasetData: null,
+    preprocessed: false,
     preprocessInfo: null,
-    targetColumn:   null,
-    trained:        false,
-    trainingResults:null,
-    dashboardData:  null,
-    aiDatasetText:  '',
+    targetColumn: null,
+    trained: false,
+    trainingResults: null,
+    dashboardData: null,
+    aiDatasetText: '',
     aiTrainingText: '',
-    aiPatternText:  '',
-    aiSummaryText:  '',
+    aiPatternText: '',
+    aiSummaryText: '',
     problemStatement: '',
     foundDatasets: [],
   })

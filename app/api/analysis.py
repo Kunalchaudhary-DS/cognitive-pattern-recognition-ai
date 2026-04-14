@@ -1,6 +1,4 @@
-"""
-Analysis routes — dashboard data, full analysis after training.
-"""
+# Analysis routes — dashboard data, model results, predictions.
 
 import pandas as pd
 import numpy as np
@@ -46,7 +44,7 @@ async def dashboard_data():
     categorical_cols = df.select_dtypes(include=["object"]).columns.tolist()
     missing_total    = df.isnull().sum().sum()
 
-    # Dataset summary paragraph
+    # Dataset summary
     dataset_summary = (
         f"Dataset contains {len(df)} rows and {len(df.columns)} columns. "
         f"There are {len(numerical_cols)} numerical features and "
@@ -57,7 +55,7 @@ async def dashboard_data():
     # Feature importance from best model
     feature_importance = extract_feature_importance(state.best_model, state.feature_names, state.X_test, state.y_test)
 
-    # Model comparison table
+    # Build model comparison table
     model_comparison = {}
     if state.training_results:
         metric_key = "CV_R2_Mean" if state.problem_type == "regression" else "CV_Accuracy_Mean"
@@ -70,12 +68,12 @@ async def dashboard_data():
             if metric_value is not None:
                 model_comparison[model_name] = metric_value
 
-    # Pattern / cluster / interaction analysis
+    # Pattern / cluster / interaction discovery
     patterns             = discover_patterns(df, state.target_column)
     cluster_patterns     = discover_clusters(df)
     interaction_patterns = discover_feature_interactions(df, state.target_column)
 
-    # ── Key Insights — the most important findings from this dataset ───
+    # Key Insights — the most important findings from this dataset 
     insights = []
 
     # 1. Top influential feature
@@ -138,14 +136,14 @@ async def dashboard_data():
     if outlier_patterns:
         insights.append(outlier_patterns[0])
 
-    # Fallback — never leave empty
+    # Fallback - never leave empty
     if not insights:
         insights.append(
             f"Dataset contains {len(df)} rows across {len(df.columns)} features — "
             f"{len(numerical_cols)} numerical, {len(categorical_cols)} categorical."
         )
 
-    # Auto graphs — pass feature_importance so smart selection can prioritise them
+    # Auto graphs - pass feature_importance so smart selection can prioritise them
     auto_graphs = build_auto_graphs(
         df, state.target_column, state.strong_correlations,
         feature_importance=feature_importance,
@@ -176,7 +174,7 @@ async def dashboard_data():
         df, cluster_patterns, interaction_patterns, numerical_cols
     )
 
-    # Cap at 1000 rows for dashboard display — no need to send 50k rows to the UI
+    # Cap at 1000 rows for dashboard — avoid sending 50k rows to the UI
     display_df = df.sample(min(len(df), 1000), random_state=42) if len(df) > 1000 else df
     full_data = (
         display_df.replace([np.inf, -np.inf], np.nan)
@@ -311,10 +309,7 @@ async def ai_insight_summary():
 
 @router.post("/ai/panel-insights/")
 async def ai_panel_insights():
-    """
-    Generates short AI insights using the actual content of the
-    'Discovered Patterns' and 'Cluster Analysis' dashboard panels as context.
-    """
+    """Returns short AI insights for the Discovered Patterns and Cluster Analysis panels."""
     if state.df is None or state.target_column is None:
         return JSONResponse(content={"error": "Run preprocessing first"})
 
@@ -340,10 +335,7 @@ async def ai_panel_insights():
 @router.post("/predict/")
 
 async def predict(request: Request):
-    """
-    Takes feature values from user and returns model prediction.
-    Applies the Semantic Prediction Interceptor to enforce logical constraints.
-    """
+    """Takes feature values and returns prediction with constraint enforcement."""
     if state.best_model is None:
         return JSONResponse(content={"error": "Train a model first"})
 
@@ -392,10 +384,10 @@ async def predict(request: Request):
         if state.needs_scaling and state.scaler:
             X_input = state.scaler.transform(X_input)
 
-        # ── Raw model prediction ──────────────────────────────────────────────
+        # Raw model prediction 
         raw_prediction = state.best_model.predict(X_input)[0]
 
-        # ── Semantic Prediction Interceptor (regression only) ─────────────────
+        # Semantic Prediction Interceptor (regression only) 
         constraints_applied = []
         soft_warnings       = []
         raw_value_display   = None
@@ -419,7 +411,7 @@ async def predict(request: Request):
         else:
             result = str(raw_prediction)
 
-        # ── AI explanation ────────────────────────────────────────────────────
+        # AI explanation 
         top_features = feature_names[:3] if feature_names else []
         top_values   = [input_values.get(f, 0) for f in top_features]
 
@@ -465,14 +457,7 @@ Do not cut off mid-sentence."""
 
 @router.get("/sample-predictions/")
 async def sample_predictions():
-    """
-    Runs prediction on first 5 rows of the dataset.
-    Returns actual vs predicted values.
-
-    FIX: Uses the already-fitted state.preprocessor.transform() instead of
-    re-calling run_preprocessing() from scratch on 5 rows (which re-fits the
-    OneHotEncoder on a tiny slice → wrong column count → shape mismatch crash).
-    """
+    """Runs prediction on first 5 rows and returns actual vs predicted."""
     if state.best_model is None:
         return JSONResponse(content={"error": "Train a model first"})
 
@@ -486,14 +471,12 @@ async def sample_predictions():
         df     = state.df.copy()
         target = state.target_column
 
-        # ── Grab 5 sample rows (features only) ───────────────────────────────
+        # 5 sample rows, actual values, features only
         sample_df     = df.head(5).copy()
         actual_values = sample_df[target].tolist()
         X_raw         = sample_df.drop(columns=[target])
 
-        # ── Impute missing values to mirror the training pipeline ─────────────
-        #    (SimpleImputer was applied per-column during run_preprocessing;
-        #     for 5 rows we just fill NaNs with 0 / "unknown" — safe fallback)
+        # Fill missing values before transform
         numerical_cols   = X_raw.select_dtypes(include="number").columns.tolist()
         categorical_cols = X_raw.select_dtypes(include="object").columns.tolist()
         if numerical_cols:
@@ -501,10 +484,7 @@ async def sample_predictions():
         if categorical_cols:
             X_raw[categorical_cols] = X_raw[categorical_cols].fillna("unknown")
 
-        # ── Apply ordinal / binary / frequency encodings stored in state ──────
-        #    The fitted ColumnTransformer (state.preprocessor) handles OneHot
-        #    columns but ordinal/binary/frequency cols were encoded BEFORE it
-        #    was fitted, so we must replicate those steps first.
+        # Apply encoding maps (ordinal/binary/frequency) before ColumnTransformer
         encoding_maps = state.encoding_maps or {}
         for col, enc_map in encoding_maps.items():
             if col not in X_raw.columns:
@@ -516,17 +496,16 @@ async def sample_predictions():
             # Unknown categories → 0
             X_raw[col] = mapped.fillna(0).astype(float)
 
-        # ── Use the ALREADY-FITTED preprocessor (handles OneHot correctly) ────
+        # Transform with the already-fitted preprocessor
         X_sample = state.preprocessor.transform(X_raw)
 
         if hasattr(X_sample, "toarray"):
             X_sample = X_sample.toarray()
 
-        # ── Scale with the ALREADY-FITTED scaler ──────────────────────────────
+        # Scale with the already-fitted scaler
         if state.needs_scaling and state.scaler:
             X_sample = state.scaler.transform(X_sample)
 
-        # ── Predict ───────────────────────────────────────────────────────────
         predictions = state.best_model.predict(X_sample)
 
         rows = []
@@ -575,10 +554,7 @@ async def get_encoding_maps():
 
 @router.get("/confusion-matrix/")
 async def confusion_matrix_data():
-    """
-    Returns the confusion matrix computed during training.
-    Already stored in state.training_results["ConfusionMatrix"] — no re-prediction needed.
-    """
+    """Returns the confusion matrix stored from training."""
     if state.training_results is None:
         return JSONResponse(content={"error": "Train a model first"})
     if state.problem_type != "classification":
@@ -588,7 +564,7 @@ async def confusion_matrix_data():
     if not matrix:
         return JSONResponse(content={"error": "No confusion matrix available (model may not have been evaluated on test set)"})
 
-    # Build label list — use label_encoder if available, else 0..N
+    # Build label list from label_encoder or 0..N
     if state.label_encoder is not None:
         labels = [str(c) for c in state.label_encoder.classes_]
     else:
@@ -605,10 +581,7 @@ async def confusion_matrix_data():
 
 @router.get("/roc-curve/")
 async def roc_curve_data():
-    """
-    Computes the ROC curve on the held-out test set.
-    Only valid for binary classification.
-    """
+    """Computes ROC curve on the held-out test set (binary classification only)."""
     if state.training_results is None or state.best_model is None:
         return JSONResponse(content={"error": "Train a model first"})
     if state.problem_type != "classification":

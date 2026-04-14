@@ -25,10 +25,7 @@ import pandas as pd
 from typing import Optional
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # Layer 1 — Statistical Constraint Extractor
-# ─────────────────────────────────────────────────────────────────────────────
-
 def extract_statistical_constraints(
     df: pd.DataFrame,
     target_column: str,
@@ -49,7 +46,7 @@ def extract_statistical_constraints(
 
     result: dict = {}
 
-    # ── Target bounds ─────────────────────────────────────────────────────────
+    # Target bounds 
     target_series = df[target_column].dropna()
     if len(target_series) == 0:
         return {}
@@ -62,7 +59,7 @@ def extract_statistical_constraints(
         "source":   "statistical",
     }
 
-    # ── Cross-column relative rules ───────────────────────────────────────────
+    #Cross-column relative rules
     # Only inspect numeric columns (excluding the target itself)
     numeric_cols = [
         c for c in df.select_dtypes(include=[np.number]).columns
@@ -105,9 +102,7 @@ def extract_statistical_constraints(
     return result
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # Layer 3 — Constraint Merger
-# ─────────────────────────────────────────────────────────────────────────────
 
 def merge_constraints(
     statistical: dict,
@@ -131,7 +126,7 @@ def merge_constraints(
     """
     merged: dict = {}
 
-    # ── Target bounds ─────────────────────────────────────────────────────────
+    # Target bounds
     stat_bounds = statistical.get("target_bounds", {})
     sem_bounds  = semantic.get("target_bounds", {})
 
@@ -183,7 +178,7 @@ def merge_constraints(
             "reason_max":      semantic_reason_max or "statistical observation",
         }
 
-    # ── Relative rules ────────────────────────────────────────────────────────
+    # Relative rules
     # Statistical rules → hard (will cause clipping / warning)
     hard_rules = list(statistical.get("relative_rules", []))
 
@@ -214,9 +209,7 @@ def merge_constraints(
     return merged
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 # Layer 4 — Prediction Interceptor
-# ─────────────────────────────────────────────────────────────────────────────
 
 def apply_constraints(
     raw_prediction: float,
@@ -250,7 +243,7 @@ def apply_constraints(
     corrections_applied = []
     soft_warnings_out   = []
 
-    # ── Step 1: Absolute bounds clip ──────────────────────────────────────────
+    # Step 1: Absolute bounds clip 
     bounds = constraint_map.get("target_bounds", {})
     if bounds:
         eff_min = bounds.get("effective_min")
@@ -270,7 +263,7 @@ def apply_constraints(
             )
             final_value = eff_min
 
-    # ── Step 2: Relative rule checks ─────────────────────────────────────────
+    # Step 2: Relative rule checks 
     for rule in constraint_map.get("relative_rules", []):
         ref_col  = rule.get("ref_col")
         operator = rule.get("operator", "<=")
@@ -299,7 +292,7 @@ def apply_constraints(
                 f"({ref_val}). Corrected {round(original, 4)} → {final_value}"
             )
 
-    # ── Step 3: Soft warning checks (semantic-only rules) ────────────────────
+    # Step 3: Soft warning checks (semantic-only rules) 
     for rule in constraint_map.get("soft_warnings", []):
         ref_col  = rule.get("ref_col")
         operator = rule.get("operator", "<=")

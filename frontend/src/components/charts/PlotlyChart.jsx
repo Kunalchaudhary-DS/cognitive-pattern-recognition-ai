@@ -2,32 +2,32 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import useAppStore from '../../store/appStore'
 
-// ── Color palettes ────────────────────────────────────────────────────────────
+// Color palettes
 const PALETTE = {
-  dark:  ['#818cf8','#34d399','#f472b6','#fb923c','#60a5fa','#a78bfa','#4ade80','#facc15'],
-  light: ['#4f46e5','#059669','#db2777','#ea580c','#2563eb','#7c3aed','#16a34a','#ca8a04'],
+  dark: ['#818cf8', '#34d399', '#f472b6', '#fb923c', '#60a5fa', '#a78bfa', '#4ade80', '#facc15'],
+  light: ['#4f46e5', '#059669', '#db2777', '#ea580c', '#2563eb', '#7c3aed', '#16a34a', '#ca8a04'],
 }
 
-// ── Detect chart type from trace array ───────────────────────────────────────
+// Detect chart type from trace array
 function detectType(data) {
   if (!data || !data.length) return 'unknown'
   const t = data[0]
-  if (t.type === 'heatmap')   return 'heatmap'
-  if (t.type === 'pie')       return 'pie'
+  if (t.type === 'heatmap') return 'heatmap'
+  if (t.type === 'pie') return 'pie'
   if (t.type === 'histogram') return 'histogram'
-  if (t.type === 'violin')    return 'violin'
-  if (t.type === 'box')       return 'box'
+  if (t.type === 'violin') return 'violin'
+  if (t.type === 'box') return 'box'
   if (t.type === 'bar' && t.orientation === 'h') return 'bar_h'
-  if (t.type === 'bar')       return 'bar'
+  if (t.type === 'bar') return 'bar'
   if (t.type === 'scatter' || t.mode?.includes('markers')) return 'scatter'
   return 'unknown'
 }
 
-// ── Enhance raw traces with professional defaults ─────────────────────────────
+// Enhance raw traces with professional defaults
 function enhanceTraces(data, chartType, palette) {
   return data.map((trace, idx) => {
     const color = palette[idx % palette.length]
-    const base  = { ...trace }
+    const base = { ...trace }
 
     if (chartType === 'bar' || chartType === 'bar_h') {
       return {
@@ -80,12 +80,12 @@ function enhanceTraces(data, chartType, palette) {
       return {
         ...base,
         type: 'violin',
-        box:      { visible: true, width: 0.3 },
+        box: { visible: true, width: 0.3 },
         meanline: { visible: true, color: '#f472b6', width: 1.5 },
-        points:   'outliers',
-        jitter:   0.3,
-        marker:   { size: 3, opacity: 0.45, ...base.marker, color: base.marker?.color ?? color },
-        line:     { width: 1.5 },
+        points: 'outliers',
+        jitter: 0.3,
+        marker: { size: 3, opacity: 0.45, ...base.marker, color: base.marker?.color ?? color },
+        line: { width: 1.5 },
         fillcolor: `${color}28`,
         hovertemplate: '<b>%{x}</b><br>Value: %{y:.3f}<extra></extra>',
       }
@@ -126,49 +126,49 @@ function enhanceTraces(data, chartType, palette) {
   })
 }
 
-// ── Build full layout from base + type-specific overrides ─────────────────────
+// Build full layout from base + type-specific overrides
 function getChartLayout(chartType, customLayout = {}, theme = 'dark') {
-  const isDark   = theme === 'dark'
-  const textColor  = isDark ? '#94a3b8' : '#64748b'
-  const gridColor  = isDark ? 'rgba(148,163,184,0.07)' : 'rgba(71,85,105,0.10)'
-  const palette    = PALETTE[isDark ? 'dark' : 'light']
+  const isDark = theme === 'dark'
+  const textColor = isDark ? '#94a3b8' : '#64748b'
+  const gridColor = isDark ? 'rgba(148,163,184,0.07)' : 'rgba(71,85,105,0.10)'
+  const palette = PALETTE[isDark ? 'dark' : 'light']
 
-  // ── Shared axis defaults ──────────────────────────────────────────────────
+  // Shared axis defaults
   const axisBase = {
-    showline:  false,
-    zeroline:  false,
-    showgrid:  true,
+    showline: false,
+    zeroline: false,
+    showgrid: true,
     gridcolor: gridColor,
     gridwidth: 0.5,
-    tickfont:  { size: 11, color: textColor, family: 'Inter, sans-serif' },
+    tickfont: { size: 11, color: textColor, family: 'Inter, sans-serif' },
     titlefont: { size: 12, color: textColor, family: 'Inter, sans-serif' },
     automargin: true,
   }
 
-  // ── Base layout all charts share ─────────────────────────────────────────
+  //Base layout all charts share
   const base = {
     paper_bgcolor: 'transparent',
-    plot_bgcolor:  'transparent',
+    plot_bgcolor: 'transparent',
     font: {
       family: 'Inter, sans-serif',
-      size:   11,
-      color:  textColor,
+      size: 11,
+      color: textColor,
     },
-    colorway:   palette,
-    margin:     { l: 55, r: 16, t: 20, b: 55 },
-    xaxis:      { ...axisBase },
-    yaxis:      { ...axisBase },
+    colorway: palette,
+    margin: { l: 55, r: 16, t: 20, b: 55 },
+    xaxis: { ...axisBase },
+    yaxis: { ...axisBase },
     hoverlabel: {
-      bgcolor:     isDark ? 'rgba(17,19,24,0.95)' : 'rgba(248,250,252,0.97)',
+      bgcolor: isDark ? 'rgba(17,19,24,0.95)' : 'rgba(248,250,252,0.97)',
       bordercolor: isDark ? 'rgba(139,92,246,0.45)' : 'rgba(79,70,229,0.35)',
       font: {
-        color:  isDark ? '#f1f0ff' : '#1e1b4b',
-        size:   12,
+        color: isDark ? '#f1f0ff' : '#1e1b4b',
+        size: 12,
         family: 'Inter, sans-serif',
       },
     },
     legend: {
-      bgcolor:     'transparent',
+      bgcolor: 'transparent',
       borderwidth: 0,
       font: { size: 11, color: textColor, family: 'Inter, sans-serif' },
       x: 1, xanchor: 'right',
@@ -177,11 +177,11 @@ function getChartLayout(chartType, customLayout = {}, theme = 'dark') {
     transition: { duration: 420, easing: 'cubic-in-out' },
   }
 
-  // ── Type-specific overrides ───────────────────────────────────────────────
+  // Type-specific overrides
   const overrides = {}
 
   if (chartType === 'bar' || chartType === 'bar_h') {
-    overrides.bargap     = 0.28
+    overrides.bargap = 0.28
     overrides.bargroupgap = 0.06
     if (chartType === 'bar') {
       overrides.yaxis = { ...axisBase, showgrid: true }
@@ -200,14 +200,14 @@ function getChartLayout(chartType, customLayout = {}, theme = 'dark') {
 
   if (chartType === 'heatmap') {
     overrides.margin = { l: 80, r: 20, t: 20, b: 80 }
-    overrides.xaxis  = { ...axisBase, showgrid: false, side: 'bottom' }
-    overrides.yaxis  = { ...axisBase, showgrid: false, autorange: 'reversed' }
+    overrides.xaxis = { ...axisBase, showgrid: false, side: 'bottom' }
+    overrides.yaxis = { ...axisBase, showgrid: false, autorange: 'reversed' }
   }
 
   if (chartType === 'pie') {
-    overrides.margin     = { l: 10, r: 10, t: 10, b: 10 }
+    overrides.margin = { l: 10, r: 10, t: 10, b: 10 }
     overrides.showlegend = true
-    overrides.legend     = {
+    overrides.legend = {
       ...base.legend,
       x: 1, xanchor: 'right',
       y: 0.5, yanchor: 'middle',
@@ -221,8 +221,8 @@ function getChartLayout(chartType, customLayout = {}, theme = 'dark') {
 
   if (chartType === 'histogram') {
     overrides.bargap = 0.04
-    overrides.yaxis  = { ...axisBase }
-    overrides.xaxis  = { ...axisBase, showgrid: false }
+    overrides.yaxis = { ...axisBase }
+    overrides.xaxis = { ...axisBase, showgrid: false }
   }
 
   if (chartType === 'box') {
@@ -235,7 +235,7 @@ function getChartLayout(chartType, customLayout = {}, theme = 'dark') {
   return deepMerge(deepMerge(base, overrides), customLayout)
 }
 
-// ── Minimal deep-merge (plain objects only) ───────────────────────────────────
+// Minimal deep-merge (plain objects only)
 function deepMerge(target, source) {
   const out = { ...target }
   for (const key of Object.keys(source ?? {})) {
@@ -254,22 +254,22 @@ function deepMerge(target, source) {
   return out
 }
 
-// ── Component ─────────────────────────────────────────────────────────────────
+// Component
 export default function PlotlyChart({ data, layout = {}, delay = 0 }) {
-  const ref   = useRef(null)
+  const ref = useRef(null)
   const theme = useAppStore(s => s.theme)
 
   useEffect(() => {
     if (!ref.current || !data || !window.Plotly) return
 
-    const chartType    = detectType(data)
-    const palette      = PALETTE[theme === 'dark' ? 'dark' : 'light']
+    const chartType = detectType(data)
+    const palette = PALETTE[theme === 'dark' ? 'dark' : 'light']
     const enhancedData = enhanceTraces(data, chartType, palette)
-    const finalLayout  = getChartLayout(chartType, layout, theme)
+    const finalLayout = getChartLayout(chartType, layout, theme)
 
     window.Plotly.newPlot(ref.current, enhancedData, finalLayout, {
       displayModeBar: false,
-      responsive:     true,
+      responsive: true,
     })
 
     return () => {

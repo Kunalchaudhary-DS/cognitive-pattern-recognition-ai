@@ -7,7 +7,7 @@ import pytest
 from app.services.training_service import run_training, get_model_pool
 
 
-# ── get_model_pool ─────────────────────────────────────────────────────────────
+# get_model_pool
 
 def test_regression_pool_has_expected_models():
     pool = get_model_pool("regression")
@@ -23,7 +23,7 @@ def test_classification_pool_has_expected_models():
     assert "NaiveBayes" in pool
 
 
-# ── run_training ───────────────────────────────────────────────────────────────
+#run_training
 
 def make_regression_data():
     np.random.seed(42)

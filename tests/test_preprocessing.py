@@ -26,7 +26,7 @@ def sample_regression_df():
     })
 
 
-# ── detect_problem_type ────────────────────────────────────────────────────────
+# detect_problem_type
 
 def test_detects_classification():
     df = sample_classification_df()
@@ -38,7 +38,7 @@ def test_detects_regression():
     assert detect_problem_type(df, "price") == "regression"
 
 
-# ── run_preprocessing ──────────────────────────────────────────────────────────
+#run_preprocessing
 
 def test_preprocessing_returns_arrays():
     df = sample_classification_df()

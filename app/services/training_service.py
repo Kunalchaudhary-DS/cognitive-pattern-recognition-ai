@@ -40,7 +40,7 @@ from app.core.config import (
     LARGE_DATASET_THRESHOLD, SCREEN_SAMPLE_SIZE, TOP_N_FOR_FULL_TRAIN,
 )
 
-# ── Optional fast boosting libraries ─────────────────────────────────────────
+# Optional fast boosting libraries 
 try:
     from xgboost import XGBRegressor, XGBClassifier
     XGBOOST_AVAILABLE = True
@@ -55,7 +55,7 @@ except ImportError:
 
 
 
-# ── Model pools ───────────────────────────────────────────────────────────────
+#Model pools
 
 def get_model_pool(problem_type: str, large_dataset: bool = False) -> dict:
     """
@@ -140,8 +140,7 @@ def get_model_pool(problem_type: str, large_dataset: bool = False) -> dict:
     return pool
 
 
-# ── Smart primary metric selection ───────────────────────────────────────────
-
+# Smart primary metric selection 
 IMBALANCE_THRESHOLD = 0.15   # a class with < 15% share → imbalanced dataset
 
 def _is_imbalanced(y: np.ndarray) -> bool:
@@ -175,7 +174,7 @@ def _rank_score(metrics: dict, metric_key: str) -> float:
     return float(val)
 
 
-# ── Single-model evaluation ───────────────────────────────────────────────────
+#Single-model evaluation
 
 def _eval_model(
     name, config,
@@ -190,7 +189,7 @@ def _eval_model(
     model         = config["model"]
     needs_scaling = config["scale"]
 
-    # ── Cross-validation ──────────────────────────────────────────────────────
+    # Cross-validation 
     if problem_type == "regression":
         r2_scores  = cross_val_score(model, X_cv, y_train if len(X_cv) == len(y_train) else None,
                                      cv=cv_strategy, scoring="r2")
@@ -207,7 +206,7 @@ def _eval_model(
         cv_acc_mean = float(acc_scores.mean())
         cv_f1_mean  = float(f1_scores.mean())
 
-    # ── Hold-out test ─────────────────────────────────────────────────────────
+    # Hold-out test 
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test_use)
 
@@ -236,7 +235,7 @@ def _eval_model(
         return entry
 
 
-# ── Main training function ────────────────────────────────────────────────────
+# Main training function
 
 def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     """
@@ -250,7 +249,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     import pandas as pd
     from sklearn.preprocessing import LabelEncoder
 
-    # ── Sanitize y ────────────────────────────────────────────────────────────
+    #Sanitize y
     # Remove any rows where y is NaN / None (pd.NA also caught by pd.isna)
     y_series   = pd.Series(y)
     valid_mask = y_series.notna().values
@@ -270,7 +269,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     large_dataset = n_samples > LARGE_DATASET_THRESHOLD
 
 
-    # ── Train/test split ──────────────────────────────────────────────────────
+    # Train/test split
     if problem_type == "regression":
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE
@@ -290,7 +289,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
         cv_screen_strategy = StratifiedKFold(n_splits=min(3, min_class_count), shuffle=True, random_state=RANDOM_STATE)
         print(f"[Training] CV splits = {_safe_splits} (min class count = {min_class_count})")
 
-    # ── Scaling — fit ONLY on X_train to prevent leakage ─────────────────────
+    # Scaling — fit ONLY on X_train to prevent leakage 
     scaler         = RobustScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled  = scaler.transform(X_test)
@@ -300,9 +299,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     models  = get_model_pool(problem_type, large_dataset=large_dataset)
     results = {}
 
-    # ═══════════════════════════════════════════════════════════════════════════
     # STAGE 1 — Screen all models on a sample (large datasets only)
-    # ═══════════════════════════════════════════════════════════════════════════
     if large_dataset:
         sample_size = min(SCREEN_SAMPLE_SIZE, n_samples)
         rng = np.random.RandomState(RANDOM_STATE)
@@ -366,9 +363,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
         models_to_train = models
         print(f"[Training] Small dataset ({n_samples} rows). Training all models.")
 
-    # ═══════════════════════════════════════════════════════════════════════════
     # STAGE 2 — Full evaluation on surviving models
-    # ═══════════════════════════════════════════════════════════════════════════
     for name, cfg in models_to_train.items():
         needs_scaling = cfg["scale"]
 
@@ -422,7 +417,7 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
             print(f"[Training] {name} failed: {e}")
             continue
 
-    # ── Pick best model ───────────────────────────────────────────────────────
+    # Pick best model
     fully_trained = {k: v for k, v in results.items() if not v.get("screened_out")}
 
     if not fully_trained:
@@ -440,14 +435,14 @@ def run_training(X: np.ndarray, y: np.ndarray, problem_type: str) -> dict:
     print(f"[Training] Best model: {best_model_name} "
           f"({primary_metric}: {_rank_score(fully_trained[best_model_name], primary_metric):.4f})")
 
-    # ── Confusion matrix for classification ───────────────────────────────────
+    #Confusion matrix for classification
     if problem_type == "classification":
         bm_cfg      = models_to_train[best_model_name]
         X_te_bm     = X_test_scaled if bm_cfg["scale"] else X_test
         y_pred_best = bm_cfg["model"].predict(X_te_bm)
         results["ConfusionMatrix"] = confusion_matrix(y_test, y_pred_best).tolist()
 
-    # ── Refit best model on ALL data ─────────────────────────────────────────
+    #Refit best model on ALL data
     best_cfg      = models_to_train[best_model_name]
     final_model   = best_cfg["model"]
     needs_scaling = best_cfg["scale"]

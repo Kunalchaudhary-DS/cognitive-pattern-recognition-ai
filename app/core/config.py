@@ -1,7 +1,4 @@
-"""
-App-wide configuration.
-Add any new settings here — never hardcode paths or values in routes/services.
-"""
+# App-wide configuration — add new settings here, never hardcode values in routes/services.
 
 import os
 from pathlib import Path

@@ -4,7 +4,7 @@ import { findDatasets, searchKaggleDatasets, downloadKaggleDataset, loadDemoData
 import useAppStore from '../store/appStore'
 import Badge from '../components/ui/Badge'
 
-// ── Usability stars ────────────────────────────────────────────────────────────
+//Usability stars 
 function UsabilityStars({ rating }) {
   const filled = Math.round((rating || 0) * 5)
   return (
@@ -19,7 +19,7 @@ function UsabilityStars({ rating }) {
   )
 }
 
-// ── INLINE info panel shown below each Kaggle dataset row ─────────────────────
+// INLINE info panel shown below each Kaggle dataset row
 function KaggleInfoPanel({ ds }) {
   const overview = ds.description && ds.description !== 'No description available.'
     ? ds.description
@@ -47,11 +47,11 @@ function KaggleInfoPanel({ ds }) {
         {/* Quick stats */}
         <div style={{ display: 'flex', gap: 10, flexShrink: 0, flexWrap: 'wrap' }}>
           {[
-            { label: 'Size',      value: `${ds.size_mb || 0} MB`,        sub: null },
+            { label: 'Size', value: `${ds.size_mb || 0} MB`, sub: null },
             { label: 'Downloads', value: (ds.download_count || 0).toLocaleString(), sub: null },
-            { label: 'Rows',      value: '—',                            sub: 'after download' },
-            { label: 'Columns',   value: '—',                            sub: 'after download' },
-            { label: 'Format',    value: 'CSV',                          sub: null },
+            { label: 'Rows', value: '—', sub: 'after download' },
+            { label: 'Columns', value: '—', sub: 'after download' },
+            { label: 'Format', value: 'CSV', sub: null },
           ].map(s => (
             <div key={s.label} style={{
               textAlign: 'center',
@@ -84,10 +84,10 @@ function KaggleInfoPanel({ ds }) {
   )
 }
 
-// ── INLINE info panel shown below each Local dataset row ──────────────────────
+//INLINE info panel shown below each Local dataset row 
 function LocalInfoPanel({ ds }) {
-  const rows   = ds.total_rows ? ds.total_rows.toLocaleString() : '—'
-  const cols   = ds.total_columns || '—'
+  const rows = ds.total_rows ? ds.total_rows.toLocaleString() : '—'
+  const cols = ds.total_columns || '—'
   const sizeMb = ds.size_mb ? `${ds.size_mb} MB` : '—'
 
   // Generate a 3-sentence overview matching the same style as Kaggle
@@ -155,9 +155,9 @@ function LocalInfoPanel({ ds }) {
         {/* Quick stats */}
         <div style={{ display: 'flex', gap: 10, flexShrink: 0, flexWrap: 'wrap' }}>
           {[
-            { label: 'Rows',    value: rows },
+            { label: 'Rows', value: rows },
             { label: 'Columns', value: cols },
-            { label: 'Size',    value: sizeMb },
+            { label: 'Size', value: sizeMb },
           ].map(s => (
             <div key={s.label} style={{
               textAlign: 'center',
@@ -202,7 +202,7 @@ function LocalInfoPanel({ ds }) {
 }
 
 
-// ── Main component ─────────────────────────────────────────────────────────────
+//Main component
 export default function LandingPage({ onComplete }) {
   const [problem, setProblem] = useState('')
   const [loading, setLoading] = useState(false)
@@ -332,7 +332,7 @@ export default function LandingPage({ onComplete }) {
       position: 'relative',
     }}>
 
-      {/* ── Background blobs ─────────────────────────────────────────────── */}
+      {/* Background blobs*/}
       <div style={{ position: 'fixed', inset: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
         <motion.div
           animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
@@ -356,7 +356,7 @@ export default function LandingPage({ onComplete }) {
         />
       </div>
 
-      {/* ── Header (hidden when results shown) ───────────────────────────── */}
+      {/* Header (hidden when results shown)*/}
       <AnimatePresence>
         {!hasResults && (
           <motion.div
@@ -394,7 +394,7 @@ export default function LandingPage({ onComplete }) {
         )}
       </AnimatePresence>
 
-      {/* ── SPLIT SCREEN CONTAINER ─────────────────────────────────────────── */}
+      {/* SPLIT SCREEN CONTAINER*/}
       <div style={{
         width: '100%',
         maxWidth: hasResults ? 1280 : 820,
@@ -406,9 +406,7 @@ export default function LandingPage({ onComplete }) {
         transition: 'max-width 0.4s ease',
       }}>
 
-        {/* ════════════════════════════════════════════════════════════════════
-            LEFT PANEL — search box (40% in split mode)
-        ════════════════════════════════════════════════════════════════════ */}
+        {/*LEFT PANEL — search box (40% in split mode)*/}
         <motion.div
           layout
           style={{ width: hasResults ? '40%' : '100%', flexShrink: 0 }}
@@ -583,9 +581,7 @@ export default function LandingPage({ onComplete }) {
           </AnimatePresence>
         </motion.div>
 
-        {/* ════════════════════════════════════════════════════════════════════
-            RIGHT PANEL — results (slides in from right)
-        ════════════════════════════════════════════════════════════════════ */}
+        {/* RIGHT PANEL — results (slides in from right)*/}
         <AnimatePresence>
           {hasResults && (
             <motion.div
@@ -597,7 +593,7 @@ export default function LandingPage({ onComplete }) {
               style={{ flex: 1, minWidth: 0 }}
             >
 
-              {/* ── LOCAL RESULTS ─────────────────────────────────────────── */}
+              {/*LOCAL RESULTS*/}
               <AnimatePresence>
                 {searched && !loading && matches.length > 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -723,7 +719,7 @@ export default function LandingPage({ onComplete }) {
                 )}
               </AnimatePresence>
 
-              {/* ── No local results ──────────────────────────────────────── */}
+              {/* No local result */}
               <AnimatePresence>
                 {searched && !loading && matches.length === 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass" style={{ padding: 36, textAlign: 'center' }}>
@@ -747,7 +743,7 @@ export default function LandingPage({ onComplete }) {
                 )}
               </AnimatePresence>
 
-              {/* ── Kaggle loading ─────────────────────────────────────────── */}
+              {/* Kaggle loading*/}
               <AnimatePresence>
                 {kaggleLoading && (
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="glass" style={{ padding: 36, textAlign: 'center' }}>
@@ -766,7 +762,7 @@ export default function LandingPage({ onComplete }) {
                 )}
               </AnimatePresence>
 
-              {/* ── KAGGLE RESULTS ─────────────────────────────────────────── */}
+              {/*KAGGLE RESULTS */}
               <AnimatePresence>
                 {showKaggle && !kaggleLoading && kaggleResults.length > 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -892,7 +888,7 @@ export default function LandingPage({ onComplete }) {
                 )}
               </AnimatePresence>
 
-              {/* ── Kaggle no results ──────────────────────────────────────── */}
+              {/* Kaggle no results */}
               <AnimatePresence>
                 {showKaggle && !kaggleLoading && kaggleResults.length === 0 && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass" style={{ padding: 36, textAlign: 'center' }}>

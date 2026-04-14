@@ -236,7 +236,7 @@ One sentence only. Start with the key finding. No introduction. End with a perio
     }
 
 
-# ── Semantic Constraint Inference (Layer 2 of Prediction Interceptor) ──────────
+# Semantic Constraint Inference (Layer 2 of Prediction Interceptor) 
 
 def generate_semantic_constraints(
     column_names: list,
@@ -319,7 +319,7 @@ Format:
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "temperature": 0.1,   # low temp for structured output
+                    "temperature": 0.1, 
                     "num_predict": 250,
                 },
             },

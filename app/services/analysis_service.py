@@ -9,7 +9,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 
-# ── Statistical insight per graph type ────────────────────────────────────────
+# Statistical insight per graph type
 
 def generate_statistical_insight(df: pd.DataFrame, graph: dict) -> str:
     insight = ""
@@ -93,7 +93,7 @@ def generate_statistical_insight(df: pd.DataFrame, graph: dict) -> str:
     return insight
 
 
-# ── Pattern discovery ──────────────────────────────────────────────────────────
+# Pattern discovery
 
 def discover_patterns(df: pd.DataFrame, target_column: str) -> list:
     patterns = []
@@ -138,7 +138,7 @@ def discover_patterns(df: pd.DataFrame, target_column: str) -> list:
     return patterns
 
 
-# ── Cluster discovery ──────────────────────────────────────────────────────────
+#Cluster discovery
 
 def discover_clusters(df: pd.DataFrame) -> list:
     cluster_insights = []
@@ -184,7 +184,7 @@ def discover_clusters(df: pd.DataFrame) -> list:
     return cluster_insights
 
 
-# ── Feature interactions ───────────────────────────────────────────────────────
+#Feature interactions
 
 def discover_feature_interactions(df: pd.DataFrame, target_column: str) -> list:
     interactions   = []
@@ -227,7 +227,7 @@ def discover_feature_interactions(df: pd.DataFrame, target_column: str) -> list:
     return interactions
 
 
-# ── Auto graph selection (smart, priority-based) ───────────────────────────────
+# Auto graph selection (smart, priority-based)
 
 def build_auto_graphs(
     df: pd.DataFrame,
@@ -268,7 +268,7 @@ def build_auto_graphs(
         graphs.append(graph)
         return True
 
-    # ── 1. Feature-importance plots (top 3 features vs target) ────────────────
+    # 1. Feature-importance plots (top 3 features vs target)
     top_features = []
     if feature_importance and isinstance(feature_importance, dict):
         top_features = list(feature_importance.keys())[:3]
@@ -292,7 +292,7 @@ def build_auto_graphs(
             _add({"type": "box", "x": target, "y": feat,
                   "title": f"{feat} by {target}  [top feature]"})
 
-    # ── 2. Target distribution ────────────────────────────────────────────────
+    # 2. Target distribution
     n_unique_target = df[target].nunique()
     if problem_type == "classification" and n_unique_target <= 10:
         _add({"type": "pie", "x": target, "y": None,
@@ -301,7 +301,7 @@ def build_auto_graphs(
         _add({"type": "histogram", "x": target, "y": None,
               "title": f"Distribution of {target}"})
 
-    # ── 3. Top strong-correlation scatters (only strong ones) ─────────────────
+    #3. Top strong-correlation scatters (only strong ones)
     for item in strong_correlations:
         corr_val = abs(item.get("correlation", 0))
         if corr_val < 0.5:
@@ -314,7 +314,7 @@ def build_auto_graphs(
         if len(graphs) >= MAX_GRAPHS:
             break
 
-    # ── 4. Violin plots — categorical feature (2–6 unique) vs numerical col ───
+    # 4. Violin plots — categorical feature (2–6 unique) vs numerical col 
     #    Best for revealing distributional differences across groups
     if target in numerical_cols:
         violin_candidates = [
@@ -329,7 +329,7 @@ def build_auto_graphs(
                      "title": f"{target} distribution by {col}"}):
                 added_violins += 1
 
-    # ── 5. Categorical distributions (2–8 unique, most balanced first) ────────
+    # 5. Categorical distributions (2–8 unique, most balanced first)
     cat_candidates = []
     for col in categorical_cols:
         if col == target:
@@ -352,7 +352,7 @@ def build_auto_graphs(
     return graphs
 
 
-# ── Pattern visualizations ─────────────────────────────────────────────────────
+# Pattern visualizations 
 
 def generate_pattern_visualizations(
     df: pd.DataFrame,
