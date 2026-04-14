@@ -72,7 +72,7 @@ body::before {
   border-radius: 16px;
   padding: 1px;
   background: var(--gradient-border);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0.6;

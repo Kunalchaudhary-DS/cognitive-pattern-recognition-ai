@@ -1,6 +1,4 @@
-"""
-Kaggle routes — search and download datasets from Kaggle.
-"""
+# Kaggle routes — search and download datasets from Kaggle.
 
 from fastapi import APIRouter, Form
 from fastapi.responses import JSONResponse

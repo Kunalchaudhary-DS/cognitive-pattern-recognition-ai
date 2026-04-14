@@ -1,6 +1,4 @@
-"""
-Preprocessing routes — feature importance and full preprocessing pipeline.
-"""
+# Preprocessing routes — feature importance and full preprocessing pipeline.
 
 from fastapi import APIRouter, Form
 from fastapi.responses import JSONResponse
@@ -22,7 +20,7 @@ async def feature_importance(target_column: str = Form(...)):
 
     result = compute_feature_importance(df, target_column)
 
-    # Sanitize: replace NaN / inf float values (not JSON serializable)
+    # Replace NaN / inf before JSON serialisation
     import math
     def _sanitize(obj):
         if isinstance(obj, float):
@@ -50,7 +48,7 @@ async def preprocess_data(target_column: str = Form(...)):
 
     result = run_preprocessing(df, target_column)
 
-    # Save processed data to shared state
+    # Persist processed arrays to shared state
     state.X             = result.pop("X")
     state.y             = result.pop("y")
     state.preprocessor  = result.pop("preprocessor")
